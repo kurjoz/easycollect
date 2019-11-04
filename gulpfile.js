@@ -20,6 +20,7 @@ const webpackconfig = require("./webpack.config.js");
 const webpackstream = require("webpack-stream");
 const fileinclude = require('gulp-file-include');
 const gulpCopy = require('gulp-copy');
+const ghPages = require('gulp-gh-pages');
 
 // BrowserSync
 function browserSync(done) {
@@ -82,6 +83,12 @@ function copy () {
     .pipe(gulp.dest('./dist/assets'));
 }
 
+// Deploy
+function deploy () {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+}
+
 // Watch files
 function watchFiles() {
   gulp.watch(
@@ -121,6 +128,7 @@ exports.partials = partials;
 exports.html = html;
 exports.clean = clean;
 exports.copy = copy;
+exports.deploy = deploy;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;
