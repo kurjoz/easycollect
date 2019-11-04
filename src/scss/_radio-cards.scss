@@ -1,0 +1,63 @@
+.radio-cards {
+  margin: 0 0 16px;
+  display: flex;
+}
+.radio-card {
+  margin: 0 16px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  flex-grow: 1;
+
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.radio-card__input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.radio-card__content {
+  padding: 24px;
+  background-color: $white;
+  display: block;
+  color: $grey-dark;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+.radio-card__icons {
+  margin: 0 0 14px 0;
+}
+.radio-card__hd {
+  padding: 0 0 6px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid $primary;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}
+.radio-card__desc {}
+.radio-card__desc-lbl {
+  margin: 0 0 6px;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+.radio-card__desc-txt {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.radio-card__input:checked ~ .radio-card__content{
+  outline: 1px solid $primary;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.15);
+}

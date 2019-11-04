@@ -1,0 +1,79 @@
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  padding: 9px 15px;
+  display: inline-block;
+  font-family: $font-family;
+  //font-weight: $btn-font-weight;
+  color: $body-color;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  //border: $btn-border-width solid transparent;
+  //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+  //@include transition($btn-transition);
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    //box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    //opacity: $btn-disabled-opacity;
+    //@include box-shadow(none);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    //@include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+.btn-primary {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: center;
+  color: $white;
+  background-color: $green;
+  &:hover,
+  &.hover {
+    background-color: #2BA04B;
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    background-color: #51CE73;
+    //box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: #B1C3B6;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    //@include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}

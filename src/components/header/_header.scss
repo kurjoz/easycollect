@@ -1,0 +1,24 @@
+.header {
+  margin: 0 0 24px;
+  background-color: $white;
+  height: 56px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+}
+.header .logo {
+  padding-top: 12px;
+}
+.logo-link {
+  color: $body-color;
+  text-decoration: none;
+}
+
+.login-panel {
+  padding: 10px 0;
+  float: right;
+}
+.login-panel > .btn {
+  margin-left: 16px;
+}

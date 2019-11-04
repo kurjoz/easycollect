@@ -1,0 +1,11 @@
+html {}
+body {
+  padding-top: 80px;
+  padding-bottom: 160px;
+  min-height: 100%;
+  background: #F9F9FB;
+  color: $body-color;
+}
+.container-fluid {
+  max-width: 1440px;
+}

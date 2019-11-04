@@ -1,0 +1,21 @@
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+
+  &.icon__alert {
+    background-image: url('./assets/icons/icon-alert.svg');
+  }
+  &.icon__cog {
+    background-image: url('./assets/icons/icon-cog.svg');
+  }
+  &.icon__service-stripe {
+    background-image: url('./assets/icons/icon-service-stripe.svg');
+  }
+  &.icon__service-paypal {
+    background-image: url('./assets/icons/icon-service-paypal.svg');
+  }
+  &.icon__doc-csv {
+    background-image: url('./assets/icons/icon-doc-csv.svg');
+  }
+}
