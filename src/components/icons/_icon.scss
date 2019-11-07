@@ -2,6 +2,7 @@
   display: inline-block;
   width: 24px;
   height: 24px;
+  vertical-align: middle;
 
   &.icon__alert {
     background-image: url('./assets/icons/icon-alert.svg');
@@ -17,5 +18,8 @@
   }
   &.icon__doc-csv {
     background-image: url('./assets/icons/icon-doc-csv.svg');
+  }
+  &.icon__doc-download {
+    background-image: url('./assets/icons/icon-doc-download.svg');
   }
 }

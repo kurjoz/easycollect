@@ -1,0 +1,19 @@
+.sidebar-nav {}
+.sidebar-nav__item {
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 18px;
+&.__active {
+  .sidebar-nav__link {
+    color: $black;
+    text-decoration: underline;
+  }
+}
+}
+.sidebar-nav__link{
+  color: $body-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

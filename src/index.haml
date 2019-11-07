@@ -8,24 +8,33 @@
           %h2 Pages
           .box-panel
             %section.guideline-section
-              %h2 Pages. Phase 1
+              %h2 Pages. Part 1
               .row
                 .col-md-6
                   %ul.sitemap
                     %li.sitemap__item
-                      %a.sitemap__link{href: "start.html"} Start Page
+                      %a.sitemap__link{href: "registration.html"}
+                        01. Registration
                     %li.sitemap__item
-                      %a.sitemap__link{href: "login.html"} Login
+                      %a.sitemap__link{href: "login.html"}
+                        02. Login
                     %li.sitemap__item
-                      %a.sitemap__link{href: "registration.html"} Registration
+                      %a.sitemap__link{href: "password-recovery-email.html"}
+                        03. Forgot Password
+                    %li.sitemap__item
+                      %a.sitemap__link{href: "password-recovery.html"}
+                        04. Reset Password
                 .col-md-6
                   %ul.sitemap
                     %li.sitemap__item
-                      %a.sitemap__link{href: "password-recovery-email.html"} Password recovery
+                      %a.sitemap__link{href: "start.html"}
+                        05. Blank Page
                     %li.sitemap__item
-                      %a.sitemap__link{href: "password-recovery.html"} Password reset
+                      %a.sitemap__link{href: "form-1.html"}
+                        06. Form Page
                     %li.sitemap__item
-                      %a.sitemap__link{href: "#"} Errors
+                      %a.sitemap__link{href: "error-states.html"}
+                        07. Form Errors
           %h2 Styleguide
           .box-panel
             %section.guideline-section
@@ -180,28 +189,8 @@
 
           %section.guideline-section
             %h2 Cards Radiobuttons
-            .radio-cards
-              .radio-card
-                %input.radio-card__input#radio-card-1{type: "radio", name: "radio-cards"}
-                %label.radio-card__content{for: "radio-card-1"}
-                  .radio-card__icons
-                    %i.icon.icon__doc-csv
-                  .radio-card__hd
-                    Upload CSV
-                  .radio-card__desc
-                    .radio-card__desc-lbl Description
-                    .radio-card__desc-txt Here will be short text description about function
-              .radio-card
-                %input.radio-card__input#radio-card-2{type: "radio", name: "radio-cards"}
-                %label.radio-card__content{for: "radio-card-2"}
-                  .radio-card__icons
-                    %i.icon.icon__service-stripe
-                    %i.icon.icon__service-paypal
-                  .radio-card__hd
-                    Upload CSV
-                  .radio-card__desc
-                    .radio-card__desc-lbl Description
-                    .radio-card__desc-txt Here will be short text description about function
+            @@include('./components/radio-cards/_radio-cards.html')
+
 
 
     @@include('./components/footer/_footer.html')

@@ -1,5 +1,5 @@
 .radio-cards {
-  margin: 0 0 16px;
+  margin: 0 0 24px;
   display: flex;
 }
 .radio-card {
@@ -34,6 +34,12 @@
 }
 .radio-card__icons {
   margin: 0 0 14px 0;
+  > .icon {
+    margin-right: 18px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 .radio-card__hd {
   padding: 0 0 6px;

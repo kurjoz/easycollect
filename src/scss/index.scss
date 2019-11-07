@@ -17,11 +17,11 @@
 @import "logo";
 @import "forms";
 @import "buttons";
-@import "inputs";
 @import "checkbox";
 @import "radio";
 @import "toggle";
-@import "radio-cards";
+@import "./../components/radio-cards/_radio-cards.scss";
 @import "./../components/icons/_icon.scss";
+@import "./../components/sidebar-nav/_sidebar-nav.scss";
 @import "./../components/header/_header.scss";
 @import "./../components/footer/_footer.scss";
