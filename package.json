@@ -12,6 +12,7 @@
     "gulp": "^4.0.2",
     "gulp-file-include": "^2.1.1",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-uglify-es": "^2.0.0",
     "node-normalize-scss": "^8.0.1"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
     "child_process": "^1.0.2",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
+    "gulp-concat": "^2.6.1",
     "gulp-copy": "^4.0.1",
     "gulp-eslint": "^6.0.0",
     "gulp-haml": "^1.0.1",

@@ -8,20 +8,13 @@
           %h2.__content-spaced Error States
           %form.form.needs-validation{novalidate: true}
             .input-grp
-              %label.input-grp__lbl Required Text
-              %input.input-control.__text.__state-error{type: "text", name:"text", placeholder: "Plain Text"}
-              .feedback-message *Falsche Email, Password must be at least 8 characters long and have at least one of the following: uppercase, lowercase, numbers
-            .input-grp
               %label.input-grp__lbl Required Email
               %input.input-control.__text.__state-error{type: "email", name:"email", placeholder: "Email"}
               .feedback-message *Falsche Email, Password must be at least 8 characters long and have at least one of the following: uppercase, lowercase, numbers
-            .input-grp.input-grp__error
+            .input-grp
               %label.input-grp__lbl Required Password
               %input.input-control.__password.__state-error{type: "password", name:"password", placeholder: "Password"}
-              .feedback-message *Falsche Email, Password must be at least 8 characters long and have at least one of the following: uppercase, lowercase, numbers
-            .input-grp.__links
-              %a.input-grp__link{href: "#"} Passwort vergessen
-              %a.input-grp__link.__to-right{href: "#"} Account confirmation page
+              .feedback-message *It should be 8 symbol password and contain at least 1 number
             .input-grp.__submit
-              %button.btn.btn-primary{for: "group-2", type: "submit"} Einloggen
+              %button.btn.btn-primary{for: "group-2", type: "submit"} Registrieren
     @@include('./components/footer/_footer.html')

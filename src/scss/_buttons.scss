@@ -14,7 +14,14 @@ button {
   user-select: none;
   background-color: transparent;
   border: none;
+  text-decoration: none;
   border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  text-align: center;
   //border: $btn-border-width solid transparent;
   //@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   //@include transition($btn-transition);
@@ -42,13 +49,6 @@ button {
   }
 }
 .btn-primary {
-  font-family: $font-family;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 19px;
-  /* identical to box height */
-  text-align: center;
   color: $white;
   background-color: $green;
   &:hover,
@@ -59,6 +59,66 @@ button {
   &.focus {
     outline: 0;
     background-color: #51CE73;
+    //box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: #B1C3B6;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    //@include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+.btn-danger {
+  color: $white;
+  background-color: $red;
+  &:hover,
+  &.hover {
+    background-color: darken($red, 10%);
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    background-color: lighten($red, 10%);
+    //box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: #B1C3B6;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active {
+    //@include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+}
+
+.btn-secondary {
+  color: $white;
+  background-color: $grey-outlines;
+  &:hover,
+  &.hover {
+    background-color: darken($grey-outlines, 10%);
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    background-color: lighten($grey-outlines, 10%);
     //box-shadow: $btn-focus-box-shadow;
   }
 

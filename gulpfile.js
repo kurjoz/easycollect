@@ -21,6 +21,8 @@ const webpackstream = require("webpack-stream");
 const fileinclude = require('gulp-file-include');
 const gulpCopy = require('gulp-copy');
 const ghPages = require('gulp-gh-pages');
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
 
 // BrowserSync
 function browserSync(done) {
@@ -76,6 +78,30 @@ function html () {
     .pipe(gulp.dest('./dist'));
 
 }
+// Lint scripts
+function scriptsLint() {
+  return gulp
+    .src(["./src/js/**/*", "./gulpfile.js"])
+    .pipe(plumber())
+    .pipe(eslint({ configFile: '.eslintrc'}))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+}
+
+// Transpile, concatenate and minify scripts
+function scripts() {
+  return (
+    gulp
+      .src(["./src/js/**/*"])
+      .pipe(concat("index.min.js"))
+      .pipe(uglify())
+      .pipe(plumber())
+      //.pipe(webpackstream(webpackconfig, webpack))
+      // folder only, filename is specified in webpack config
+      .pipe(gulp.dest("./dist/js"))
+      .pipe(browsersync.stream())
+  );
+}
 
 //copy
 function copy () {
@@ -98,7 +124,7 @@ function watchFiles() {
     ],
     gulp.series(css, browserSyncReload)
   );
-  //gulp.watch("./assets/js/**/*", gulp.series(scriptsLint, scripts));
+  gulp.watch("./src/js/**/*", gulp.series(scriptsLint, scripts));
   gulp.watch(
     [
       //"./_includes/**/*",
@@ -114,21 +140,22 @@ function watchFiles() {
 }
 
 // define complex tasks
-//const js = gulp.series(scriptsLint, scripts);
+
 //const build = gulp.series(clean, gulp.parallel(css, images, jekyll, js));
-const build = gulp.series(clean, partials, gulp.parallel(html, css, copy ));
+const js = gulp.series(scriptsLint, scripts);
+const build = gulp.series(clean, partials, gulp.parallel(html, css, copy, js));
 const watch = gulp.parallel(watchFiles, browserSync);
 
 // export tasks
 //exports.images = images;
-exports.css = css;
-//exports.js = js;
-//exports.jekyll = jekyll;
-exports.partials = partials;
-exports.html = html;
-exports.clean = clean;
-exports.copy = copy;
-exports.deploy = deploy;
-exports.build = build;
-exports.watch = watch;
-exports.default = build;
+exports.partials =    partials;
+exports.html =        html;
+exports.css =         css;
+exports.js =          js;
+exports.clean =       clean;
+exports.concat =      concat;
+exports.copy =        copy;
+exports.build =       build;
+exports.watch =       watch;
+exports.deploy =      deploy;
+exports.default =     build;

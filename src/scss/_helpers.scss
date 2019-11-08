@@ -12,7 +12,10 @@
 //Color Thumbs;
 
 .color-thumb {
+  padding: 16px;
   margin-bottom: 16px;
+  background-color: $white;
+  @include box-shadow();
 }
 
 .color-thumb__prev {
@@ -61,4 +64,24 @@
 }
 .__color-thumb-white .color-thumb__prev {
   background-color: $white;
+}
+
+.toast.__toast-showcase {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.snippet {}
+.code-lbl {}
+.code-snippet {
+  display: block;
+  border-radius: 4px;
+  background-color: $grey-ultra-light;
+  padding: 24px;
+  line-height: 24px;
+  color: $grey-dark;
+    .code-snippet__inj {
+      color: $green;
+    }
 }

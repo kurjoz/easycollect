@@ -8,11 +8,17 @@
 }
 .input-grp__link {
   font-size: 14px;
+  line-height: 16px;
   > .icon {
     margin-right: 4px;
   }
   &.__to-right {
     float: right;
+  }
+}
+.input-grp__submit {
+  .btn ~ .btn {
+    margin-left: 10px;
   }
 }
 
@@ -63,7 +69,7 @@
     &.__state-error {
       border-color: $red;
       ~ .feedback-message {
-        margin-top: 6px;
+        margin-top: 8px;
         color: $red;
         font-size: 14px;
         font-weight: 500;

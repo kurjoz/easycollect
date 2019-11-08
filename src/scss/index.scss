@@ -4,6 +4,7 @@
 @import "./node_modules/bootstrap/scss/bootstrap-grid";
 
 //Base styles:
+@import "mixins";
 @import "base";
 @import "box-panel";
 @import "typography";
@@ -13,7 +14,9 @@
 
 //elements:
 
+
 //components:
+@import "toast";
 @import "logo";
 @import "forms";
 @import "buttons";
