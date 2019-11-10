@@ -1,1 +1,19 @@
-window.addEventListener("DOMContentLoaded",(function(){var t=document.querySelector('.input-grp [name="picker-start"]'),e=document.querySelector('.input-grp [name="picker-end"]');t.DatePickerX.init({format:"mm/dd/yyyy",todayButton:!1,clearButton:!1,mondayFirst:!1,weekDayLabels:["M","T","W","T","F","S","S"]}),e.DatePickerX.init({format:"mm/dd/yyyy",todayButton:!1,clearButton:!1,mondayFirst:!1,weekDayLabels:["M","T","W","T","F","S","S"]})}));
+window.addEventListener('DOMContentLoaded', function()
+        {
+            var $start = document.querySelector('.input-grp [name="picker-start"]'),
+                $end = document.querySelector('.input-grp [name="picker-end"]');
+            $start.DatePickerX.init({
+                format: 'mm/dd/yyyy',
+                todayButton: false,
+                clearButton: false,
+                mondayFirst: false,
+                weekDayLabels: ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+            });
+            $end.DatePickerX.init({
+              format: 'mm/dd/yyyy',
+              todayButton: false,
+              clearButton: false,
+              mondayFirst: false,
+              weekDayLabels: ['M', 'T', 'W', 'T', 'F', 'S', 'S']
+            });
+        });

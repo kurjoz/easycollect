@@ -1,1 +1,97 @@
-let dropArea=document.getElementById("drop-area");function preventDefaults(e){e.preventDefault(),e.stopPropagation()}function highlight(e){dropArea.classList.add("__highlight")}function unhighlight(e){dropArea.classList.remove("__active")}function handleDrop(e){handleFiles(e.dataTransfer.files)}["dragenter","dragover","dragleave","drop"].forEach(e=>{dropArea.addEventListener(e,preventDefaults,!1),document.body.addEventListener(e,preventDefaults,!1)}),["dragenter","dragover"].forEach(e=>{dropArea.addEventListener(e,highlight,!1)}),["dragleave","drop"].forEach(e=>{dropArea.addEventListener(e,unhighlight,!1)}),dropArea.addEventListener("drop",handleDrop,!1);let uploadProgress=[],progressBar=document.getElementById("progress-bar");function initializeProgress(e){progressBar.value=0,uploadProgress=[];for(let r=e;r>0;r--)uploadProgress.push(0)}function updateProgress(e,r){uploadProgress[e]=r;let t=uploadProgress.reduce((e,r)=>e+r,0)/uploadProgress.length;console.debug("update",e,r,t),progressBar.value=t}function handleFiles(e){initializeProgress((e=[...e]).length),e.forEach(uploadFile),e.forEach(previewFile)}function previewFile(e){let r=new FileReader;r.readAsDataURL(e),r.onloadend=function(){let e=document.createElement("img");e.src=r.result,document.getElementById("gallery").appendChild(e)}}function uploadFile(e,r){var t=new XMLHttpRequest,a=new FormData;t.open("POST","https://api.cloudinary.com/v1_1/kurjoz/upload",!0),t.setRequestHeader("X-Requested-With","XMLHttpRequest"),t.upload.addEventListener("progress",(function(e){updateProgress(r,100*e.loaded/e.total||100)})),t.addEventListener("readystatechange",(function(e){4==t.readyState&&200==t.status?updateProgress(r,100):4==t.readyState&&t.status})),a.append("upload_preset","obanzopa"),a.append("file",e),t.send(a)}
+// ************************ Drag and drop ***************** //
+let dropArea = document.getElementById("drop-area")
+
+// Prevent default drag behaviors
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, preventDefaults, false)
+  document.body.addEventListener(eventName, preventDefaults, false)
+})
+
+// Highlight drop area when item is dragged over it
+;['dragenter', 'dragover'].forEach(eventName => {
+  dropArea.addEventListener(eventName, highlight, false)
+})
+
+;['dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, unhighlight, false)
+})
+
+// Handle dropped files
+dropArea.addEventListener('drop', handleDrop, false)
+
+function preventDefaults (e) {
+  e.preventDefault()
+  e.stopPropagation()
+}
+
+function highlight(e) {
+  dropArea.className = 'file-upload __highlight'
+}
+
+function unhighlight(e) {
+  dropArea.className = 'file-upload'
+}
+
+function handleDrop(e) {
+  var dt = e.dataTransfer
+  var files = dt.files
+
+  handleFiles(files)
+}
+
+let uploadProgress = []
+
+function initializeProgress(numFiles) {
+  uploadProgress = []
+
+  for(let i = numFiles; i > 0; i--) {
+    uploadProgress.push(0)
+  }
+}
+
+function updateProgress(fileNumber, percent) {
+  uploadProgress[fileNumber] = percent
+  let total = uploadProgress.reduce((tot, curr) => tot + curr, 0) / uploadProgress.length
+  console.debug('update', fileNumber, percent, total)
+}
+
+function handleFiles(files) {
+  files = [...files]
+  initializeProgress(files.length)
+  files.forEach(uploadFile)
+  files.forEach(previewFile)
+}
+
+// Modify part below due to provide correct url for upload destination
+// Caution. Code below leads to my public cloudinary link, for test purpose only
+function uploadFile(file, i) {
+  var url = 'https://api.cloudinary.com/v1_1/kurjoz/upload'
+  var xhr = new XMLHttpRequest()
+  var formData = new FormData()
+  xhr.open('POST', url, true)
+  xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+
+  // Update progress (can be used to show progress indicator)
+  xhr.upload.addEventListener("progress", function(e) {
+    console.log('Progress');
+    dropArea.className = 'file-upload __progress'
+    updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
+  })
+
+  xhr.addEventListener('readystatechange', function(e) {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      dropArea.className = 'file-upload __success'
+      console.log('Success');
+      updateProgress(i, 100) // <- Add this
+    }
+    else if (xhr.readyState == 4 && xhr.status != 200) {
+      // Error. Inform the user
+      dropArea.className = 'file-upload __error'
+      console.log('Error');
+    }
+  })
+
+  formData.append('upload_preset', 'obanzopa')
+  formData.append('file', file)
+  xhr.send(formData)
+}
