@@ -1,0 +1,136 @@
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.file-upload {
+  margin: 0 0 16px 0;
+  padding: 30px 0;
+  border: 1px dashed #ACACB2;
+  border-radius: 4px;
+}
+.file-upload__container {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.file-upload__lead {
+  margin-bottom: 8px;
+  color: $black;
+  font-size: 14px;
+  &.__show-in-progress,
+  &.__show-in-error {
+    display: none;
+  }
+}
+.file-upload__browse {
+  color: $primary;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+.file-upload__rule {
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #B0B1B7;
+}
+.file-upload__template {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.file-upload__icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -27px;
+  width: 41px;
+  height: 54px;
+  background: transparent url('./assets/upload-status-default.svg') center no-repeat;
+}
+.file-upload.__highlight {
+  border: 1px solid #ACACB2;
+}
+
+.file-upload.__success {
+  border: 1px solid $primary;
+  .file-upload__icon {
+    background: transparent url('./assets/upload-status-success.svg') center no-repeat;
+  }
+}
+.file-upload.__progress {
+  border: 1px solid $primary;
+
+  .file-upload__lead {
+    &.__show-in-progress {
+      display: block;
+    }
+    &.__show-default,
+    &.__show-in-error {
+      display: none;
+    }
+  }
+  .file-upload__template {
+    display: none;
+  }
+  .file-upload__icon {
+    background: none;
+  }
+  .file-upload__container:before {
+    content: '';
+    position: absolute;
+    width: 41px;
+    height: 41px;
+    left: 0;
+    top: 50%;
+    margin-top: -20px;
+    animation: spinner 1s linear infinite;
+    background: transparent url('./assets/upload-status-progress.svg') center no-repeat;
+  }
+}
+.file-upload.__error {
+  border: 1px solid $red;
+
+  .file-upload__lead {
+    &.__show-in-error  {
+      display: block;
+    }
+    &.__show-default,
+    &.__show-in-progress {
+      display: none;
+    }
+  }
+
+  .file-upload__icon {
+    background: transparent url('./assets/upload-status-error.svg') center no-repeat;
+  }
+  .file-upload__template a {
+    color: $red;
+  }
+}
+
+
+#progress-bar {
+  display: none;
+}
+#gallery {
+  margin-top: 10px;
+  display: none;
+}
+#gallery img {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: none;
+}
+
+#fileElem {
+  display: none;
+}

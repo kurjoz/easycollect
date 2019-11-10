@@ -1,0 +1,19 @@
+%form.my-form
+  #drop-area.file-upload
+    .file-upload__container
+      %input{type: "file", id: "fileElem", multiple: true, accept: "*/*", onchange: "handleFiles(this.files)"}
+      %p.file-upload__lead.__show-default
+        Drag file here, or
+        &nbsp;
+        %label.file-upload__browse{for: "fileElem"}Browse
+        &nbsp;
+        File Rules:
+      %p.file-upload__lead.__show-in-progress
+        Uploading. File Rules:
+      %p.file-upload__lead.__show-in-error
+        File error
+      %p.file-upload__rule The file must not be bigger than lorem ipsum dolor sit amet
+      %p.file-upload__rule The file must not be bigger than lorem ipsum dolor sit amet
+      .file-upload__template
+        %a{href: "#"} Download Template
+      %i.file-upload__icon

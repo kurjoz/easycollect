@@ -23,6 +23,7 @@ const gulpCopy = require('gulp-copy');
 const ghPages = require('gulp-gh-pages');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
+const flattern = require('gulp-flatten');
 
 // BrowserSync
 function browserSync(done) {
@@ -92,9 +93,10 @@ function scriptsLint() {
 function scripts() {
   return (
     gulp
-      .src(["./src/js/**/*"])
+      .src(["./src/js/**/*", "./src/components/**/*.js"])
+      .pipe(flattern())
       //.pipe(concat("index.min.js"))
-      .pipe(uglify())
+      //.pipe(uglify())
       .pipe(plumber())
       //.pipe(webpackstream(webpackconfig, webpack))
       // folder only, filename is specified in webpack config
@@ -124,7 +126,7 @@ function watchFiles() {
     ],
     gulp.series(css, browserSyncReload)
   );
-  gulp.watch("./src/js/**/*", gulp.series(scriptsLint, scripts));
+  gulp.watch(["./src/js/**/*", "./src/components/**/*.js"], gulp.series(scriptsLint, scripts));
   gulp.watch(
     [
       //"./_includes/**/*",
