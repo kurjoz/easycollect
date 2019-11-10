@@ -16,6 +16,7 @@ button {
   border: none;
   text-decoration: none;
   border-radius: 4px;
+  white-space: nowrap;
 
   font-weight: bold;
   font-size: 16px;
@@ -136,4 +137,8 @@ button {
       //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
+}
+.btn-ico {
+  padding-right: 8px;
+  padding-left: 8px;
 }

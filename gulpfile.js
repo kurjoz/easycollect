@@ -93,7 +93,7 @@ function scripts() {
   return (
     gulp
       .src(["./src/js/**/*"])
-      .pipe(concat("index.min.js"))
+      //.pipe(concat("index.min.js"))
       .pipe(uglify())
       .pipe(plumber())
       //.pipe(webpackstream(webpackconfig, webpack))

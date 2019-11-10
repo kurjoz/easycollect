@@ -29,8 +29,8 @@
                       %a.sitemap__link{href: "start.html"}
                         05. Blank Page
                     %li.sitemap__item
-                      %a.sitemap__link{href: "form-1.html"}
-                        06. Form Page
+                      %a.sitemap__link{href: "upload-1.html"}
+                        06. Upload Page
                     %li.sitemap__item
                       %a.sitemap__link{href: "error-states.html"}
                         07. Form Errors
@@ -115,10 +115,16 @@
                     %label.input-grp__lbl Input Password
                     %input.input-control.__password{type: "password", placeholder: "Input Password"}
                   .input-grp
+                    %label.input-grp__lbl Select
+                    %select.select-control{}
+                      %option Choose..
+                      %option Option 1
+                      %option Option 2
+                  .input-grp
                     .row
                       .col-md-4
                         %label.input-grp__lbl Multiple inputs in one row
-                        %input.input-control.__text{type: "text", placeholder: "Input Multiple"}
+                        %input.input-control.__text{type: "text", placeholder: "Input Multiple", disabled: "true"}
                       .col-md-4
                         %label.input-grp__lbl Multiple inputs in one row
                         %input.input-control.__text{type: "text", placeholder: "Input Multiple"}
@@ -244,7 +250,5 @@
                     addToast ('default', 'Default Header', 'Toaster Error message')
 
     @@include('./components/footer/_footer.html')
-    .toaster-container
-      .toaster-container__limiter
-        .toaster#toaster
-    %script{type: "text/javascript", src: "js/index.min.js"}
+    @@include('./components/toaster/_toaster-container.html')
+    @@include('./components/scripts/_scripts.html')
