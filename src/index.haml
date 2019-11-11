@@ -1,6 +1,6 @@
 @@include('./components/head/_head.html')
   %body
-    @@include('./components/header/_header.html')
+    @@include('./components/header/_header__auth.html')
     .container-fluid
       .row.justify-content-center
         .col-md-8
@@ -12,28 +12,31 @@
                 .col-md-6
                   %ul.sitemap
                     %li.sitemap__item
-                      %a.sitemap__link{href: "registration.html"}
+                      %a.sitemap__link{href: "01-registration.html"}
                         01. Registration
                     %li.sitemap__item
-                      %a.sitemap__link{href: "login.html"}
+                      %a.sitemap__link{href: "02-login.html"}
                         02. Login
                     %li.sitemap__item
-                      %a.sitemap__link{href: "password-recovery-email.html"}
+                      %a.sitemap__link{href: "03-password-recovery-email.html"}
                         03. Forgot Password
                     %li.sitemap__item
-                      %a.sitemap__link{href: "password-recovery.html"}
+                      %a.sitemap__link{href: "04-password-recovery.html"}
                         04. Reset Password
                 .col-md-6
                   %ul.sitemap
                     %li.sitemap__item
-                      %a.sitemap__link{href: "start.html"}
+                      %a.sitemap__link{href: "05-start.html"}
                         05. Blank Page
                     %li.sitemap__item
-                      %a.sitemap__link{href: "upload-1.html"}
+                      %a.sitemap__link{href: "06-upload-1.html"}
                         06. Upload Page
                     %li.sitemap__item
-                      %a.sitemap__link{href: "error-states.html"}
+                      %a.sitemap__link{href: "07-error-states.html"}
                         07. Form Errors
+                    %li.sitemap__item
+                      %a.sitemap__link{href: "#"}
+                        08. Tabular Listing
           %h2 Styleguide
           .box-panel
             %section.guideline-section

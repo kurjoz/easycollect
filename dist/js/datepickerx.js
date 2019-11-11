@@ -1,1 +1,598 @@
-!function(){"use strict";var e={mondayFirst:!0,format:"yyyy/mm/dd",minDate:new Date(0,0),maxDate:new Date(9999,11,31),weekDayLabels:["Mo","Tu","We","Th","Fr","St","Su"],shortMonthLabels:["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],singleMonthLabels:["January","February","March","April","May","June","July","August","September","October","November","December"],todayButton:!0,todayButtonLabel:"Today",clearButton:!0,clearButtonLabel:"Clear"},t=null;function n(e,t,n,a,i){t=t||[],!Array.isArray(t)&&(t=[t]);for(var r=document.createElement(e),o=t.length;o--;r.classList.add(t[o]));return i&&(r.title=i),r.innerHTML=a||"",n instanceof Element&&n.appendChild(r),r}function a(e){return e=e||new Date,new Date(e.getFullYear(),e.getMonth(),e.getDate())}function i(i){var r={},o={},l=!1,s=null,c=2;function d(){var e=r.minDate;return e instanceof HTMLInputElement&&(e=null===(e=e.DatePickerX.getValue(!0))?r.minDate.DatePickerX.getMinDate():new Date(e)).setDate(e.getDate()+1),a(e)}function u(){var e=r.maxDate;return e instanceof HTMLInputElement&&(e=null===(e=e.DatePickerX.getValue(!0))?r.maxDate.DatePickerX.getMaxDate():new Date(e)).setDate(e.getDate()-1),a(e)}function p(e,t){var n={d:e.getDate(),dd:e.getDate(),D:e.getDay(),m:e.getMonth()+1,mm:e.getMonth()+1,M:e.getMonth(),MM:e.getMonth(),yy:e.getFullYear().toString().substr(-2),yyyy:e.getFullYear()};return n.dd<10&&(n.dd="0"+n.dd),n.mm<10&&(n.mm="0"+n.mm),n.D=r.weekDayLabels[n.D?n.D-1:6],n.M=r.shortMonthLabels[n.M],n.MM=r.singleMonthLabels[n.MM],t.replace(/(?:[dmM]{1,2}|D|yyyy|yy)/g,(function(e){return void 0!==n[e]?n[e]:e}))}function g(){return o.container.classList.contains("active")}function D(e){o.content.innerHTML="";var t=d(),i=u(),l=a();r.todayButton&&o.today.classList[l>=t&&l<=i?"remove":"add"]("dpx-disabled"),c<2&&(t.setDate(1),i.setDate(1),c||(t.setMonth(0),i.setMonth(0))),t=t.getTime(),i=i.getTime(),(e=a(new Date(e||s||Date.now()))).getTime()<t?e=new Date(t):e.getTime()>i&&(e=new Date(i));var p=e.getMonth(),g=e.getFullYear(),D=10*Math.floor(g/10);if(e=new Date(c?g:D,c<2?0:p),o.title.innerHTML=c?(2===c?r.singleMonthLabels[p]+" ":"")+g:D+" - "+(D+9),o.title.dpxValue=e.getTime(),o.title.title=2===c?g:D+" - "+(D+9),o.prevTitle.classList[e.getTime()<=t?"add":"remove"]("dpx-disabled"),2===c?e.setMonth(p-1):e.setFullYear(c?g-1:D-10),o.prevTitle.title=c?(2===c?r.singleMonthLabels[e.getMonth()]+" ":"")+e.getFullYear():D-10+" - "+(D-1),o.prevTitle.dpxValue=e.getTime(),2===c?e.setMonth(e.getMonth()+2):e.setFullYear(c?g+1:D+20),o.nextTitle.classList[e.getTime()>i?"add":"remove"]("dpx-disabled"),o.nextTitle.title=c?(2===c?r.singleMonthLabels[e.getMonth()]+" ":"")+e.getFullYear():D+10+" - "+(D+19),o.nextTitle.dpxValue=e.getTime(),2===c?e.setMonth(e.getMonth()-1):e.setFullYear(c?g:D),2===c){var m=r.weekDayLabels.length;!r.mondayFirst&&--m&&n("span",["dpx-item","dpx-weekday","dpx-weekend"],o.content,r.weekDayLabels[6]);for(var v=0;v<m;++v){var f=["dpx-item","dpx-weekday"];v>4&&f.push("dpx-weekend"),n("span",f,o.content,r.weekDayLabels[v])}}if(2===c){var h=e.getDay();e.setDate(r.mondayFirst?-(h?h-2:5):1-h)}else c?e.setMonth(e.getMonth()-2):e.setFullYear(D-3);var y=s;c<2&&(null!==y&&((y=new Date(y)).setDate(1),!c&&y.setMonth(0),y=y.getTime()),l.setDate(1),!c&&l.setMonth(0)),l=l.getTime(),o.container.setAttribute("data-dpx-type",["year","month","day"][c]);for(var M=["getFullYear","getMonth","getDate"][c],x=["setFullYear","setMonth","setDate"][c],L=2===c?42:16;L--;e[x](e[M]()+1)){f=["dpx-item"];var k=c?r.singleMonthLabels[e.getMonth()]+" ":"";2===c&&(k+=e.getDate()+", "),k+=e.getFullYear(),(c?2===c?e.getMonth()!==p:e.getFullYear()!==g:e.getFullYear()<D||e.getFullYear()>D+9)&&f.push("dpx-out"),2===c&&(6===e.getDay()||0===e.getDay())&&f.push("dpx-weekend"),e.getTime()===l&&f.push("dpx-current"),e.getTime()===s&&f.push("dpx-selected"),(e.getTime()<t||e.getTime()>i)&&f.push("dpx-disabled");var b=c?2===c?e.getDate():r.shortMonthLabels[e.getMonth()]:e.getFullYear();n("span",f,o.content,b,k).dpxValue=e.getTime()}}function m(e,t){if(void 0===r[e])return console.error("DatePickerX, setOption: Option doesn't exist.")&&!1;if("minDate"===e||"maxDate"===e){if(!(t instanceof HTMLInputElement)&&(!(t instanceof Date)&&(t=new Date(t)),isNaN(t)))return console.error("DatePickerX, setOption: Invalid date value.")&&!1}else{if(typeof r[e]!=typeof t)return console.error("DatePickerX, setOption: Option has invalid type.")&&!1;if(Array.isArray(r[e])){if(t.length<r[e].length)return console.warn("DatePickerX, setOption: Invalid option length.")&&!1;t=t.slice(0,r[e].length)}}r[e]=t}return{init:function(s){if(s=s||{},l)return console.error("DatePickerX, init: Date picker have already inited.")&&!1;for(var p in l=!0,r={},e)r[p]=e[p];if("object"!=typeof s)console.error("DatePickerX, init: Initial options must be an object.");else for(var p in s)m(p,s[p]);var v;return i.parentNode.classList.add("date-picker-x-container"),i.classList.add("date-picker-x-input"),i.readOnly=!0,function(){o.container=n("div","date-picker-x");var e=n("div","dpx-title-box",o.container);if(o.prevTitle=n("span","dpx-prev",e,"&#x276e;"),o.title=n("span","dpx-title",e),o.nextTitle=n("span","dpx-next",e,"&#x276f;"),o.content=n("div","dpx-content-box",o.container),i.nextElementSibling?i.parentNode.insertBefore(o.container,i.nextElementSibling):i.parentNode.appendChild(o.container),r.todayButton||r.clearButton){var t=n("div","dpx-btns",o.container);r.todayButton&&(o.today=n("span",["dpx-item","dpx-today"],t,r.todayButtonLabel,r.todayButtonLabel)),r.clearButton&&(o.clear=n("span",["dpx-item","dpx-clear"],t,r.clearButtonLabel,r.clearButtonLabel))}}(),v=this,i.addEventListener("click",(function(e){if(!g()){e.stopPropagation(),c=2,D(),o.container.classList.add("active"),o.container.classList.remove("to-top");var n=o.container.getBoundingClientRect();n.bottom>window.innerHeight&&n.top+i.offsetHeight>o.container.offsetHeight&&(o.container.classList.add("to-top"),o.container.getBoundingClientRect().top<0&&o.container.classList.remove("to-top")),t&&t!==o.container&&t.classList.remove("active"),t=o.container}})),window.addEventListener("click",(function(){t&&t.classList.remove("active")})),o.container.addEventListener("click",(function(e){e.stopPropagation(),e.preventDefault()})),o.content.addEventListener("click",(function(e){if(2===c)v.setValue(e.target.dpxValue)&&o.container.classList.remove("active");else{var t=d(),n=u();t.setDate(1),n.setDate(1),c||(t.setMonth(0),n.setMonth(0)),e.target.dpxValue>=t.getTime()&&e.target.dpxValue<=n.getTime()&&++c&&D(e.target.dpxValue)}})),o.prevTitle.addEventListener("click",(function(){D(this.dpxValue)})),o.nextTitle.addEventListener("click",(function(){D(this.dpxValue)})),o.title.addEventListener("click",(function(){c&&c--&&D(this.dpxValue)})),o.today&&o.today.addEventListener("click",(function(){!this.classList.contains("dpx-disabled")&&v.setValue(a())&&o.container.classList.remove("active")})),o.clear&&o.clear.addEventListener("click",(function(){v.setValue(null)&&o.container.classList.remove("active")})),!0},remove:function(){return l?(i.parentNode.removeChild(o.container),i.classList.remove("date-picker-x-input"),i.readOnly=l=!1,!0):console.error("DatePickerX, remove: Date picker doesn't init yet.")&&!1},setValue:function(e,t){if(!l)return console.error("DatePickerX, remove: Date picker doesn't init yet.")&&!1;if(null===e)s=null,i.value="";else{if(!(e instanceof Date)&&(e=new Date(e)),isNaN(e))return console.error("DatePickerX, setValue: Can't convert argument to date.")&&!1;if(!t&&(e.getTime()<d().getTime()||e.getTime()>u().getTime()))return console.error("DatePickerX, setValue: Date out of acceptable range.")&&!1;s=e.getTime(),i.value=p(e,r.format)}var n=document.createEvent("Event");return n.initEvent("change",!0,!0),i.dispatchEvent(n),g()&&D(),!0},getValue:function(e){return!l&&console.error("DatePickerX, getValue: Date picker doesn't init yet."),e?s:null===s?"":p(new Date(s),r.format)},getMinDate:function(){var e=r.minDate;return e instanceof HTMLInputElement&&(e=e.DatePickerX.getMinDate()),a(e)},getMaxDate:function(){var e=r.maxDate;return e instanceof HTMLInputElement&&(e=e.DatePickerX.getMaxDate()),a(e)}}}var r=[],o=[];Object.defineProperty(HTMLInputElement.prototype,"DatePickerX",{get:function(){var e=r.indexOf(this);return-1===e&&(e=r.push(this)-1,o.push(new i(this))),o[e]},set:function(){}}),window.DatePickerX={setDefaults:function(t){if("object"!=typeof t)return console.error("DatePickerX, setDefaults: Invalid option type.")&&!1;for(var n in t)typeof t[n]==typeof e[n]&&(Array.isArray(e[n])?t[n].length>=e[n].length&&(e[n]=t[n].slice(0,e[n].length)):e[n]=t[n]);return!0}}}();
+!function()
+{
+    'use strict';
+
+    var optionsDefault = {
+        mondayFirst      : true,
+        format           : 'yyyy/mm/dd',
+        minDate          : new Date(0, 0),
+        maxDate          : new Date(9999, 11, 31),
+        weekDayLabels    : ['Mo', 'Tu', 'We', 'Th', 'Fr', 'St', 'Su'],
+        shortMonthLabels : ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        singleMonthLabels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        todayButton      : true,
+        todayButtonLabel : 'Today',
+        clearButton      : true,
+        clearButtonLabel : 'Clear'
+    },
+        openedDPX = null;
+
+    /**
+     * Creates and returns new DOM element
+     *
+     * @param {String}        tag       Tag name
+     * @param {Array|String}  [classes] Array with CSS classes or single class
+     * @param {Element}       [parent]  New element will be appended in this element if it passed
+     * @param {String|Number} [html]    New element's InnerHTML
+     * @param {String|Number} [title]   Title attribute
+     * @returns {Element}
+     */
+    function createElement(tag, classes, parent, html, title)
+    {
+        classes = classes || [];
+        !Array.isArray(classes) && (classes = [classes]);
+
+        var el = document.createElement(tag);
+        for (var i = classes.length; i--; el.classList.add(classes[i]));
+
+        title && (el.title = title);
+        el.innerHTML = html || '';
+
+        parent instanceof Element && parent.appendChild(el);
+
+        return el;
+    }
+
+    /**
+     * Returns date with time 00:00:00.0000
+     *
+     * @param   {Date} [dt] Date object
+     * @returns {Date}
+     */
+    function clearDate(dt)
+    {
+        dt = dt || new Date;
+        return new Date(dt.getFullYear(), dt.getMonth(), dt.getDate());
+    }
+
+    function DPX(input)
+    {
+        var options  = {},
+            elements = {},
+            inited   = false,
+            value    = null,
+            mode     = 2; // 2 - days, 1 - months, 0 - years
+
+        /**
+         * Returns min date of date picker
+         * If min date relates to another date picker will be returned its value or its min date if value doesn't choose
+         *
+         * @returns {Date}
+         */
+        function getMinDate()
+        {
+            var value = options.minDate;
+
+            if (value instanceof HTMLInputElement) {
+                value = value.DatePickerX.getValue(true);
+                value = value === null ? options.minDate.DatePickerX.getMinDate() : new Date(value);
+                value.setDate(value.getDate() + 1);
+            }
+
+            return clearDate(value);
+        }
+
+        /**
+         * Returns max date of date picker
+         * If max date relates to another date picker will be returned his value or his max date if value doesn't choose
+         *
+         * @returns {Date}
+         */
+        function getMaxDate()
+        {
+            var value = options.maxDate;
+
+            if (value instanceof HTMLInputElement) {
+                value = value.DatePickerX.getValue(true);
+                value = value === null ? options.maxDate.DatePickerX.getMaxDate() : new Date(value);
+                value.setDate(value.getDate() - 1);
+            }
+
+            return clearDate(value);
+        }
+
+        /**
+         * Creates date picker's base elements
+         */
+        function createElements()
+        {
+            elements.container = createElement('div', 'date-picker-x');
+
+            var titleBox = createElement('div', 'dpx-title-box', elements.container);
+            elements.prevTitle = createElement('span', 'dpx-prev', titleBox, '&#x276e;');
+            elements.title = createElement('span', 'dpx-title', titleBox);
+            elements.nextTitle = createElement('span', 'dpx-next', titleBox, '&#x276f;');
+
+            elements.content = createElement('div', 'dpx-content-box', elements.container);
+
+            input.nextElementSibling
+                ? input.parentNode.insertBefore(elements.container, input.nextElementSibling)
+                : input.parentNode.appendChild(elements.container);
+
+            if (options.todayButton || options.clearButton) {
+                var btns = createElement('div', 'dpx-btns', elements.container);
+                options.todayButton && (elements.today = createElement('span', ['dpx-item', 'dpx-today'], btns, options.todayButtonLabel, options.todayButtonLabel));
+                options.clearButton && (elements.clear = createElement('span', ['dpx-item', 'dpx-clear'], btns, options.clearButtonLabel, options.clearButtonLabel));
+            }
+        }
+
+        /**
+         * Returns date according to passed format
+         *
+         * @param {Date}   dt     Date object
+         * @param {String} format Format string
+         *      d    - day of month
+         *      dd   - 2-digits day of month
+         *      D    - day of week
+         *      m    - month number
+         *      mm   - 2-digits month number
+         *      M    - short month name
+         *      MM   - full month name
+         *      yy   - 2-digits year number
+         *      yyyy - 4-digits year number
+         */
+        function getFormatedDate(dt, format)
+        {
+            var items = {
+                d   : dt.getDate(),
+                dd  : dt.getDate(),
+                D   : dt.getDay(),
+                m   : dt.getMonth() + 1,
+                mm  : dt.getMonth() + 1,
+                M   : dt.getMonth(),
+                MM  : dt.getMonth(),
+                yy  : dt.getFullYear().toString().substr(-2),
+                yyyy: dt.getFullYear()
+            };
+
+            items.dd < 10 && (items.dd = '0' + items.dd);
+            items.mm < 10 && (items.mm = '0' + items.mm);
+            items.D = options.weekDayLabels[items.D ? items.D - 1 : 6];
+            items.M = options.shortMonthLabels[items.M];
+            items.MM = options.singleMonthLabels[items.MM];
+
+            return format.replace(/(?:[dmM]{1,2}|D|yyyy|yy)/g, function(m)
+            {
+                return typeof items[m] !== 'undefined' ? items[m] : m;
+            });
+        }
+
+        /**
+         * Returns true if date picker is visible now
+         *
+         * @returns {Boolean}
+         */
+        function isActive()
+        {
+            return elements.container.classList.contains('active');
+        }
+
+        /**
+         * Attaches event listeners
+         *
+         * @param dpx
+         */
+        function addEvents(dpx)
+        {
+            input.addEventListener('click', function(e)
+            {
+                if (!isActive()) {
+                    e.stopPropagation();
+                    mode = 2;
+                    draw();
+                    elements.container.classList.add('active');
+                    elements.container.classList.remove('to-top');
+
+                    var bcr = elements.container.getBoundingClientRect();
+                    if (bcr.bottom > window.innerHeight && bcr.top + input.offsetHeight > elements.container.offsetHeight) {
+                        elements.container.classList.add('to-top');
+                        elements.container.getBoundingClientRect().top < 0 && elements.container.classList.remove('to-top');
+                    }
+
+                    openedDPX && openedDPX !== elements.container && openedDPX.classList.remove('active');
+                    openedDPX = elements.container;
+                }
+            });
+            window.addEventListener('click', function()
+            {
+                openedDPX && openedDPX.classList.remove('active');
+            });
+            elements.container.addEventListener('click', function(e)
+            {
+                e.stopPropagation();
+                e.preventDefault();
+            });
+            elements.content.addEventListener('click', function(e)
+            {
+                if (mode === 2) {
+                    dpx.setValue(e.target.dpxValue) && elements.container.classList.remove('active');
+                } else {
+                    var min = getMinDate(),
+                        max = getMaxDate();
+
+                    min.setDate(1);
+                    max.setDate(1);
+
+                    if (!mode) {
+                        min.setMonth(0);
+                        max.setMonth(0);
+                    }
+
+                    e.target.dpxValue >= min.getTime() && e.target.dpxValue <= max.getTime() && ++mode && draw(e.target.dpxValue);
+                }
+            });
+            elements.prevTitle.addEventListener('click', function()
+            {
+                draw(this.dpxValue);
+            });
+            elements.nextTitle.addEventListener('click', function()
+            {
+                draw(this.dpxValue);
+            });
+            elements.title.addEventListener('click', function()
+            {
+                mode && mode-- && draw(this.dpxValue);
+            });
+            elements.today && elements.today.addEventListener('click', function()
+            {
+                !this.classList.contains('dpx-disabled') && dpx.setValue(clearDate()) && elements.container.classList.remove('active');
+            });
+            elements.clear && elements.clear.addEventListener('click', function()
+            {
+                dpx.setValue(null) && elements.container.classList.remove('active');
+            });
+        }
+
+        /**
+         * Draws calendar according to current mode
+         *
+         * @param [dt] Date object
+         */
+        function draw(dt)
+        {
+            elements.content.innerHTML = '';
+
+            // init min date and max date
+            var dtMin   = getMinDate(),
+                dtMax   = getMaxDate(),
+                current = clearDate();
+
+            // today button
+            options.todayButton && elements.today.classList[current >= dtMin && current <= dtMax ? 'remove' : 'add']('dpx-disabled');
+
+            // set min and max dates according to current mode
+            if (mode < 2) {
+                dtMin.setDate(1);
+                dtMax.setDate(1);
+
+                if (!mode) {
+                    dtMin.setMonth(0);
+                    dtMax.setMonth(0);
+                }
+            }
+            dtMin = dtMin.getTime();
+            dtMax = dtMax.getTime();
+
+            // init date
+            dt = clearDate(new Date(dt || value || Date.now()));
+            if (dt.getTime() < dtMin) {
+                dt = new Date(dtMin);
+            } else if (dt.getTime() > dtMax) {
+                dt = new Date(dtMax);
+            }
+
+            var setMonth = dt.getMonth(),
+                setYear  = dt.getFullYear(),
+                zeroYear = Math.floor(setYear / 10) * 10;
+            dt = new Date(mode ? setYear : zeroYear, mode < 2 ? 0 : setMonth);
+
+            // set title
+            elements.title.innerHTML = mode
+                ? (mode === 2 ? options.singleMonthLabels[setMonth] + ' ' : '') + setYear
+                : (zeroYear + ' - ' + (zeroYear + 9));
+            elements.title.dpxValue = dt.getTime();
+            elements.title.title = mode === 2 ? setYear : (zeroYear + ' - ' + (zeroYear + 9));
+
+            // prev and next arrows
+            elements.prevTitle.classList[dt.getTime() <= dtMin ? 'add' : 'remove']('dpx-disabled');
+            mode === 2 ? dt.setMonth(setMonth - 1) : dt.setFullYear(mode ? setYear - 1 : zeroYear - 10);
+            elements.prevTitle.title = mode
+                ? (mode === 2 ? options.singleMonthLabels[dt.getMonth()] + ' ' : '') + dt.getFullYear()
+                : ((zeroYear - 10) + ' - ' + (zeroYear - 1));
+            elements.prevTitle.dpxValue = dt.getTime();
+
+            mode === 2 ? dt.setMonth(dt.getMonth() + 2) : dt.setFullYear(mode ? setYear + 1 : zeroYear + 20);
+            elements.nextTitle.classList[dt.getTime() > dtMax ? 'add' : 'remove']('dpx-disabled');
+            elements.nextTitle.title = mode
+                ? (mode === 2 ? options.singleMonthLabels[dt.getMonth()] + ' ' : '') + dt.getFullYear()
+                : ((zeroYear + 10) + ' - ' + (zeroYear + 19));
+            elements.nextTitle.dpxValue = dt.getTime();
+
+            mode === 2 ? dt.setMonth(dt.getMonth() - 1) : dt.setFullYear(mode ? setYear : zeroYear);
+
+            // day of week titles
+            if (mode === 2) {
+                var maxDay = options.weekDayLabels.length;
+                !options.mondayFirst && --maxDay && createElement('span', ['dpx-item', 'dpx-weekday', 'dpx-weekend'], elements.content, options.weekDayLabels[6]);
+                for (var day = 0; day < maxDay; ++day) {
+                    var classes = ['dpx-item', 'dpx-weekday'];
+                    day > 4 && classes.push('dpx-weekend');
+                    createElement('span', classes, elements.content, options.weekDayLabels[day])
+                }
+            }
+
+            // set starting date
+            if (mode === 2) {
+                var dayWeek = dt.getDay();
+                dt.setDate(options.mondayFirst ? -(dayWeek ? dayWeek - 2 : 5) : -dayWeek + 1);
+            } else {
+                mode ? dt.setMonth(dt.getMonth() - 2) : dt.setFullYear(zeroYear - 3);
+            }
+
+            // current and selected dates
+            var //current  = clearDate(),
+                selected = value;
+            if (mode < 2) {
+                if (selected !== null) {
+                    selected = new Date(selected);
+                    selected.setDate(1);
+                    !mode && selected.setMonth(0);
+                    selected = selected.getTime();
+                }
+
+                current.setDate(1);
+                !mode && current.setMonth(0);
+            }
+            current = current.getTime();
+
+            // draw calendar
+            elements.container.setAttribute('data-dpx-type', ['year', 'month', 'day'][mode]);
+            var getter = ['getFullYear', 'getMonth', 'getDate'][mode],
+                setter = ['setFullYear', 'setMonth', 'setDate'][mode],
+                i      = mode === 2 ? 42 : 16;
+            for (; i--; dt[setter](dt[getter]() + 1)) {
+                var classes = ['dpx-item'],
+                    title   = mode ? options.singleMonthLabels[dt.getMonth()] + ' ' : '';
+                mode === 2 && (title += dt.getDate() + ', ');
+                title += dt.getFullYear();
+
+                (mode ? (mode === 2 ? dt.getMonth() !== setMonth : dt.getFullYear() !== setYear) : (dt.getFullYear() < zeroYear || dt.getFullYear() > zeroYear + 9)) && classes.push('dpx-out');
+                mode === 2 && (dt.getDay() === 6 || dt.getDay() === 0) && classes.push('dpx-weekend');
+                dt.getTime() === current && classes.push('dpx-current');
+                dt.getTime() === value && classes.push('dpx-selected');
+                (dt.getTime() < dtMin || dt.getTime() > dtMax) && classes.push('dpx-disabled');
+
+                var content = mode ? (mode === 2 ? dt.getDate() : options.shortMonthLabels[dt.getMonth()]) : dt.getFullYear(),
+                    el = createElement('span', classes, elements.content, content, title);
+                el.dpxValue = dt.getTime();
+            }
+        }
+
+        /**
+         * Sets option
+         *
+         * @param   {String}  option Option name
+         * @param   {*}       value  Option value
+         */
+        function setOption(option, value)
+        {
+            if (typeof options[option] === 'undefined') {
+                return console.error('DatePickerX, setOption: Option doesn\'t exist.') && false;
+            }
+
+            if (option === 'minDate' || option === 'maxDate') {
+                if (!(value instanceof HTMLInputElement)) {
+                    !(value instanceof Date) && (value = new Date(value));
+
+                    if (isNaN(value)) {
+                        return console.error('DatePickerX, setOption: Invalid date value.') && false;
+                    }
+                }
+            } else if (typeof options[option] !== typeof value) {
+                return console.error('DatePickerX, setOption: Option has invalid type.') && false;
+            } else if (Array.isArray(options[option])) {
+                if (value.length < options[option].length) {
+                    return console.warn('DatePickerX, setOption: Invalid option length.') && false;
+                }
+
+                value = value.slice(0, options[option].length);
+            }
+
+            options[option] = value;
+        }
+
+        return {
+            /**
+             * Inits date picker
+             *
+             * @param   {Object}  initOptions
+             * @returns {Boolean}
+             */
+            init: function(initOptions)
+            {
+                initOptions = initOptions || {};
+
+                if (inited) {
+                    return console.error('DatePickerX, init: Date picker have already inited.') && false;
+                }
+                inited = true;
+
+                // set options
+                options = {};
+                for (var i in optionsDefault) {
+                    options[i] = optionsDefault[i];
+                }
+
+                if (typeof initOptions !== 'object') {
+                    console.error('DatePickerX, init: Initial options must be an object.');
+                } else {
+                    for (var i in initOptions) {
+                        setOption(i, initOptions[i]);
+                    }
+                }
+
+                // DPX init
+                input.parentNode.classList.add('date-picker-x-container');
+                input.classList.add('date-picker-x-input');
+                input.readOnly = true;
+                createElements();
+                addEvents(this);
+
+                return true;
+            },
+
+            /**
+             * Removes date picker
+             *
+             * @returns {Boolean}
+             */
+            remove: function()
+            {
+                if (!inited) {
+                    return console.error('DatePickerX, remove: Date picker doesn\'t init yet.') && false;
+                }
+
+                input.parentNode.removeChild(elements.container);
+                input.classList.remove('date-picker-x-input');
+                input.readOnly = inited = false;
+
+                return true;
+            },
+
+            /**
+             * Sets date picker value.
+             * If passed not Date object, method will try to convert it to date.
+             * If passed null, method will clear date.
+             *
+             * @param   {*}       dt                   Date object
+             * @param   {Boolean} [ignoreLimits=false] If passed true min and max limits will be ignored
+             * @returns {Boolean}
+             */
+            setValue: function(dt, ignoreLimits)
+            {
+                if (!inited) {
+                    return console.error('DatePickerX, remove: Date picker doesn\'t init yet.') && false;
+                }
+
+                if (dt === null) {
+                    value = null;
+                    input.value = '';
+                } else {
+                    !(dt instanceof Date) && (dt = new Date(dt));
+
+                    if (isNaN(dt)) {
+                        return console.error('DatePickerX, setValue: Can\'t convert argument to date.') && false;
+                    }
+
+                    if (!ignoreLimits && (dt.getTime() < getMinDate().getTime() || dt.getTime() > getMaxDate().getTime())) {
+                        return console.error('DatePickerX, setValue: Date out of acceptable range.') && false;
+                    }
+
+                    value = dt.getTime();
+                    input.value = getFormatedDate(dt, options.format);
+                }
+
+                var e = document.createEvent('Event');
+                e.initEvent('change', true, true);
+                input.dispatchEvent(e);
+
+                isActive() && draw();
+                return true;
+            },
+
+            /**
+             * Returns formatted date picker value or timestamp if passed true in first parameter.
+             * If value doesn't choosed yet returns empty string or null if passed true in first parameter.
+             *
+             * @param   {Boolean}       [timestamp]
+             * @returns {Number|String}
+             */
+            getValue: function(timestamp)
+            {
+                !inited && console.error('DatePickerX, getValue: Date picker doesn\'t init yet.');
+
+                return timestamp ? value : (value === null ? '' : getFormatedDate(new Date(value), options.format));
+            },
+
+            /**
+             * Returns min date of date picker.
+             * If min date relates to another date picker the date will be returned from it date picker.
+             *
+             * @returns {Date}
+             */
+            getMinDate: function()
+            {
+                var value = options.minDate;
+                value instanceof HTMLInputElement && (value = value.DatePickerX.getMinDate());
+
+                return clearDate(value);
+            },
+
+            /**
+             * Returns max date of date picker.
+             * If max date relates to another date picker the date will be returned from it date picker.
+             *
+             * @returns {Date}
+             */
+            getMaxDate: function()
+            {
+                var value = options.maxDate;
+                value instanceof HTMLInputElement && (value = value.DatePickerX.getMaxDate());
+
+                return clearDate(value);
+            }
+        };
+    }
+
+    var dpxElements = [], dpxObjects = [];
+    Object.defineProperty(HTMLInputElement.prototype, 'DatePickerX', {
+        get: function()
+        {
+            var index = dpxElements.indexOf(this);
+            if (index === -1) {
+                index = dpxElements.push(this) - 1;
+                dpxObjects.push(new DPX(this));
+            }
+
+            return dpxObjects[index];
+        },
+        set: function() {} 
+    });
+
+    window.DatePickerX = {
+        /**
+         * Sets default options for all date pickers
+         *
+         * @param   {Object}  options Options array
+         * @returns {Boolean}
+         */
+        setDefaults: function(options)
+        {
+            if (typeof options !== 'object') {
+                return console.error('DatePickerX, setDefaults: Invalid option type.') && false;
+            }
+
+            for (var i in options) {
+                if (typeof options[i] === typeof optionsDefault[i]) {
+                    if (!Array.isArray(optionsDefault[i])) {
+                        optionsDefault[i] = options[i];
+                    } else if (options[i].length >= optionsDefault[i].length) {
+                        optionsDefault[i] = options[i].slice(0, optionsDefault[i].length);
+                    }
+                }
+            }
+
+            return true;
+        }
+    };
+}();

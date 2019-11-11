@@ -1,1 +1,35 @@
-const toaster=document.getElementById("toaster");function addToast(t,e,s){const o=document.createElement("div");o.className="toast__hd",o.textContent=e;const a=document.createElement("div");a.className="toast__body",a.textContent=s;const n=document.createElement("div");n.classList.add("toast"),n.classList.add("__"+t),n.appendChild(o),n.appendChild(a),toaster.appendChild(n),n.addEventListener("transitionend",(function(t){"transform"===t.propertyName&&(n.classList.contains("__show-toast")?setTimeout((function(){n.classList.remove("__show-toast")}),5e3):toaster.removeChild(n))}),!1),setTimeout(()=>n.classList.add("__show-toast"),100)}
+const toaster = document.getElementById('toaster')
+
+function addToast (type, header, message) {
+
+  const toastHd = document.createElement('div')
+  toastHd.className = 'toast__hd'
+  toastHd.textContent = header
+
+  const toastBody = document.createElement('div')
+  toastBody.className = 'toast__body'
+  toastBody.textContent = message
+
+  const toast = document.createElement('div')
+  toast.classList.add('toast')
+  toast.classList.add('__' + type)
+
+  toast.appendChild(toastHd)
+  toast.appendChild(toastBody)
+
+  toaster.appendChild(toast)
+
+  toast.addEventListener('transitionend', function (event) {
+    if (event.propertyName !== 'transform') return
+
+    if (toast.classList.contains('__show-toast')) {
+      setTimeout(function () {
+        toast.classList.remove('__show-toast')
+      }, 5000)
+    } else {
+      toaster.removeChild(toast)
+    }
+  }, false)
+
+  setTimeout(() => toast.classList.add('__show-toast'), 100)
+}

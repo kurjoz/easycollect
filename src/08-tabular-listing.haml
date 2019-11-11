@@ -1,0 +1,32 @@
+@@include('./components/head/_head.html')
+
+  %body
+    @@include('./components/header/_header__auth.html')
+    .container-fluid
+      .row
+        .col-md-2.offset-md-2
+          @@include('./components/sidebar-nav/_sidebar-nav.html')
+        .col-md-4
+          %h1 Loaded Files
+          %table.data-table
+            %thead
+              %tr
+                %th
+                  .checkbox
+                    %input.checkbox__input#prop-1{type: "checkbox"}
+                    %label.checkbox__lbl{for: "prop-1"}
+                %th
+                  %a.btn.btn-secondary.btn-ico-xs
+                    %i.icon.icon__check.__icon-xs
+                  %a.btn.btn-secondary.btn-ico-xs
+                    %i.icon.icon__ban.__icon-xs
+                  %a.btn.btn-secondary.btn-ico-xs
+                    %i.icon.icon__search.__icon-xs
+            %tbody
+              %tr
+                %td
+
+
+    @@include('./components/footer/_footer.html')
+    @@include('./components/toaster/_toaster-container.html')
+    @@include('./components/scripts/_scripts.html')
