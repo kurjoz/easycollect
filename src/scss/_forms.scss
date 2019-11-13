@@ -4,6 +4,7 @@
 
 .input-grp {
   margin: 0 0 18px 0;
+  @extend %clearfix;
 }
 .input-grp__inline {
   display: flex;
@@ -15,8 +16,9 @@
   }
 }
 .input-grp__link {
-  font-size: 14px;
   line-height: 16px;
+  display: inline-block;
+  float: left;
   > .icon {
     margin-right: 4px;
   }
@@ -138,7 +140,8 @@
   }
 }
 
-.control-info {
+.control-info,
+.feedback-message {
   margin-top: 6px;
   display: inline-block;
   font-weight: 500;
@@ -146,15 +149,6 @@
   line-height: 16px;
   color: #A5A6AD;
 
-  &.__state-error {
-    color: $red;
-  }
-}
-.feedback-message {
-  margin-top: 8px;
-  color: $red;
-  font-size: 14px;
-  font-weight: 500;
   &.__state-error {
     color: $red;
   }

@@ -2522,6 +2522,11 @@ html {
   .ml-xl-auto, .mx-xl-auto {
     margin-left: auto !important; } }
 
+.input-grp:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 body {
   padding-top: 96px;
   padding-bottom: 160px; }
@@ -2770,8 +2775,9 @@ a:hover {
   margin-left: 0; }
 
 .input-grp__link {
-  font-size: 14px;
-  line-height: 16px; }
+  line-height: 16px;
+  display: inline-block;
+  float: left; }
 
 .input-grp__link > .icon {
   margin-right: 4px; }
@@ -2887,7 +2893,7 @@ a:hover {
   color: transparent;
   text-shadow: 0 0 0 #4a4a4b; }
 
-.control-info {
+.control-info, .feedback-message {
   margin-top: 6px;
   display: inline-block;
   font-weight: 500;
@@ -2895,16 +2901,7 @@ a:hover {
   line-height: 16px;
   color: #a5a6ad; }
 
-.control-info.__state-error {
-  color: #e21d1d; }
-
-.feedback-message {
-  margin-top: 8px;
-  color: #e21d1d;
-  font-size: 14px;
-  font-weight: 500; }
-
-.feedback-message.__state-error {
+.control-info.__state-error, .feedback-message.__state-error {
   color: #e21d1d; }
 
 button {
