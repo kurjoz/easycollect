@@ -45,6 +45,7 @@ button {
     //@include box-shadow($btn-active-box-shadow);
 
     &:focus {
+      outline: 0;
       //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
