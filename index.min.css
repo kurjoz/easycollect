@@ -2545,7 +2545,8 @@ body {
   min-height: 100%;
   background: #f9f9fb;
   font-family: Roboto,sans-serif;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 14px; }
 
 body, h1, h2, h3, h4, h5, h6 {
   color: #4a4a4b; }
@@ -2927,7 +2928,7 @@ button {
   line-height: 19px;
   text-align: center; }
 
-.btn.focus, .btn:focus {
+.btn.focus, .btn:focus, .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus {
   outline: 0; }
 
 .btn-primary {
