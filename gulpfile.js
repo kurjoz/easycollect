@@ -24,6 +24,7 @@ const ghPages = require('gulp-gh-pages');
 const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const flattern = require('gulp-flatten');
+const sourcemaps = require('gulp-sourcemaps');
 
 // BrowserSync
 function browserSync(done) {
@@ -49,9 +50,12 @@ function css() {
     //include normalize scss from node module;
     .pipe(sass({includePaths: require('node-normalize-scss').includePaths}))
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write(''))
     .pipe(gulp.dest("./dist"))
     .pipe(browsersync.stream());
 }

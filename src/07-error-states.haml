@@ -10,11 +10,13 @@
             .input-grp
               %label.input-grp__lbl Required Email
               %input.input-control.__text.__state-error{type: "email", name:"email", placeholder: "Email"}
-              .feedback-message *Falsche Email, Password must be at least 8 characters long and have at least one of the following: uppercase, lowercase, numbers
+              %small.control-info.__state-error
+                *Falsche Email, Password must be at least 8 characters long and have at least one of the following: uppercase, lowercase, numbers
             .input-grp
               %label.input-grp__lbl Required Password
               %input.input-control.__password.__state-error{type: "password", name:"password", placeholder: "Password"}
-              .feedback-message *It should be 8 symbol password and contain at least 1 number
+              %small.control-info.__state-error
+                *It should be 8 symbol password and contain at least 1 number
             .input-grp.__submit
               %button.btn.btn-primary{for: "group-2", type: "submit"} Registrieren
     @@include('./components/footer/_footer.html')

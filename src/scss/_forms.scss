@@ -81,12 +81,6 @@
     // Control States:
     &.__state-error {
       border-color: $red;
-      ~ .feedback-message {
-        margin-top: 8px;
-        color: $red;
-        font-size: 14px;
-        font-weight: 500;
-      }
     }
 }
 
@@ -152,4 +146,16 @@
   line-height: 16px;
   color: #A5A6AD;
 
+  &.__state-error {
+    color: $red;
+  }
+}
+.feedback-message {
+  margin-top: 8px;
+  color: $red;
+  font-size: 14px;
+  font-weight: 500;
+  &.__state-error {
+    color: $red;
+  }
 }
