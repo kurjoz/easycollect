@@ -17,6 +17,7 @@ button {
   text-decoration: none;
   border-radius: 4px;
   white-space: nowrap;
+  background-color: #fefefe;
 
   font-weight: bold;
   font-size: 16px;
@@ -30,22 +31,29 @@ button {
   &:focus,
   &.focus {
     outline: 0;
+    box-shadow: none;
     //box-shadow: $btn-focus-box-shadow;
   }
 
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
+    opacity: .7;
+    outline: 0;
+    box-shadow: none;
     //opacity: $btn-disabled-opacity;
     //@include box-shadow(none);
   }
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
+    outline: 0;
+    box-shadow: none;
     //@include box-shadow($btn-active-box-shadow);
 
     &:focus {
       outline: 0;
+      box-shadow: none;
       //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
@@ -55,10 +63,13 @@ button {
   background-color: $green;
   &:hover,
   &.hover {
+    outline: 0;
+    box-shadow: none;
     background-color: #2BA04B;
   }
   &:focus,
   &.focus {
+    box-shadow: none;
     outline: 0;
     background-color: #51CE73;
     //box-shadow: $btn-focus-box-shadow;
@@ -67,14 +78,22 @@ button {
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
+    outline: 0;
+    box-shadow: none;
     background-color: #B1C3B6;
   }
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
+    box-shadow: none;
+    outline: 0;
+    background-color: #51CE73;
     //@include box-shadow($btn-active-box-shadow);
 
     &:focus {
+      box-shadow: none;
+      outline: 0;
+      background-color: #51CE73;
       //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
@@ -85,11 +104,14 @@ button {
   background-color: $red;
   &:hover,
   &.hover {
+    outline: 0;
+    box-shadow: none;
     background-color: darken($red, 10%);
   }
   &:focus,
   &.focus {
     outline: 0;
+    box-shadow: none;
     background-color: lighten($red, 10%);
     //box-shadow: $btn-focus-box-shadow;
   }
@@ -97,14 +119,22 @@ button {
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
+    outline: 0;
+    box-shadow: none;
     background-color: #B1C3B6;
   }
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
+    outline: 0;
+    box-shadow: none;
+    background-color: lighten($red, 10%);
     //@include box-shadow($btn-active-box-shadow);
 
     &:focus {
+      outline: 0;
+      box-shadow: none;
+      background-color: lighten($red, 10%);
       //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
@@ -115,11 +145,14 @@ button {
   background-color: $grey-outlines;
   &:hover,
   &.hover {
+    outline: 0;
+    box-shadow: none;
     background-color: darken($grey-outlines, 10%);
   }
   &:focus,
   &.focus {
     outline: 0;
+    box-shadow: none;
     background-color: lighten($grey-outlines, 10%);
     //box-shadow: $btn-focus-box-shadow;
   }
@@ -127,14 +160,21 @@ button {
   // Disabled comes first so active can properly restyle
   &.disabled,
   &:disabled {
+    outline: 0;
+    box-shadow: none;
     background-color: #B1C3B6;
   }
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
+    outline: 0;
+    box-shadow: none;
     //@include box-shadow($btn-active-box-shadow);
 
     &:focus {
+      outline: 0;
+      box-shadow: none;
+      background-color: #B1C3B6;
       //@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
