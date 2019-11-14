@@ -2534,6 +2534,9 @@ body {
 .container-fluid {
   max-width: 1440px; }
 
+.hidden {
+  display: none !important; }
+
 .box-panel {
   margin: 0 0 24px;
   padding: 16px;
