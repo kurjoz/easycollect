@@ -2923,54 +2923,99 @@ button {
   text-decoration: none;
   border-radius: 4px;
   white-space: nowrap;
+  background-color: #fefefe;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   text-align: center; }
 
-.btn.focus, .btn:focus, .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus {
-  outline: 0; }
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: none; }
+
+.btn.disabled, .btn:disabled {
+  opacity: .7;
+  outline: 0;
+  box-shadow: none; }
+
+.btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled):active:focus {
+  outline: 0;
+  box-shadow: none; }
 
 .btn-primary {
   color: #fff;
   background-color: #35ba59; }
 
 .btn-primary.hover, .btn-primary:hover {
+  outline: 0;
+  box-shadow: none;
   background-color: #2ba04b; }
 
 .btn-primary.focus, .btn-primary:focus {
+  box-shadow: none;
   outline: 0;
   background-color: #51ce73; }
 
 .btn-primary.disabled, .btn-primary:disabled {
+  outline: 0;
+  box-shadow: none;
   background-color: #b1c3b6; }
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+  outline: 0;
+  background-color: #51ce73; }
 
 .btn-danger {
   color: #fff;
   background-color: #e21d1d; }
 
 .btn-danger.hover, .btn-danger:hover {
+  outline: 0;
+  box-shadow: none;
   background-color: #b51717; }
 
 .btn-danger.focus, .btn-danger:focus {
   outline: 0;
+  box-shadow: none;
   background-color: #e84a4a; }
 
 .btn-danger.disabled, .btn-danger:disabled {
+  outline: 0;
+  box-shadow: none;
   background-color: #b1c3b6; }
+
+.btn-danger:not(:disabled):not(.disabled).active, .btn-danger:not(:disabled):not(.disabled).active:focus, .btn-danger:not(:disabled):not(.disabled):active, .btn-danger:not(:disabled):not(.disabled):active:focus {
+  outline: 0;
+  box-shadow: none;
+  background-color: #e84a4a; }
 
 .btn-secondary {
   color: #fff;
   background-color: #a5a6ad; }
 
 .btn-secondary.hover, .btn-secondary:hover {
+  outline: 0;
+  box-shadow: none;
   background-color: #8a8c95; }
 
 .btn-secondary.focus, .btn-secondary:focus {
   outline: 0;
+  box-shadow: none;
   background-color: #c0c0c5; }
 
 .btn-secondary.disabled, .btn-secondary:disabled {
+  outline: 0;
+  box-shadow: none;
+  background-color: #b1c3b6; }
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active {
+  outline: 0;
+  box-shadow: none; }
+
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus {
+  outline: 0;
+  box-shadow: none;
   background-color: #b1c3b6; }
 
 .btn-ico {
