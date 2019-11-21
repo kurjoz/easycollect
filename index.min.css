@@ -3285,21 +3285,26 @@ button {
 .icon.__icon-xs.icon__search {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.738 5.445a3 3 0 11.707-.707l2.409 2.409a.5.5 0 11-.708.707L4.738 5.445zM5 3a2 2 0 11-4 0 2 2 0 014 0z' fill='%23fff'/%3E%3C/svg%3E"); }
 
+.sidebar-nav {
+  list-style-type: none; }
+
 .sidebar-nav__item {
   margin-bottom: 16px;
   font-size: 15px;
   line-height: 18px; }
 
-.sidebar-nav__item.__active .sidebar-nav__link {
-  color: #000;
-  text-decoration: underline; }
-
-.sidebar-nav__link {
+.sidebar-nav__item .sidebar-nav__link {
   color: #4a4a4b;
   text-decoration: none; }
 
-.sidebar-nav__link:hover {
-  text-decoration: underline; }
+.sidebar-nav__item .sidebar-nav__link:hover {
+  color: #000;
+  text-decoration: none; }
+
+.sidebar-nav__item.__active .sidebar-nav__link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 700; }
 
 .date-picker-x-container {
   position: relative; }
