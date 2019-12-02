@@ -2547,7 +2547,7 @@ body {
   display: flex; }
 
 .sidebar-content-wrapper .sidebar-left {
-  padding-left: 16px;
+  padding-right: 16px;
   width: 300px; }
 
 .sidebar-content-wrapper .content-wrapper {
