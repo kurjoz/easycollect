@@ -2611,11 +2611,12 @@ p {
   font-size: 14px;
   line-height: 16px; }
 
-a, a:hover {
+a {
   color: #35ba59; }
 
-a:hover {
-  text-decoration: underline; }
+a:focus, a:hover {
+  text-decoration: underline;
+  color: #35ba59; }
 
 .__content-spaced {
   margin-bottom: 38px; }
