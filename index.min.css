@@ -2527,8 +2527,15 @@ html {
   display: table;
   clear: both; }
 
+html {
+  min-height: 100%; }
+
+body, html {
+  height: 100%; }
+
 body {
-  padding: 0 0 50px; }
+  padding: 0 0 50px;
+  position: relative; }
 
 .container-fluid {
   max-width: 1440px; }
@@ -3686,7 +3693,7 @@ button {
 .footer {
   padding: 12px 0 8px;
   background-color: #35ba59;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%; }
 
