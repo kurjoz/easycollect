@@ -232,36 +232,6 @@
                   .toast__body
                     The system could not find a user with the following email and password combination
           .box-panel
-            .input-grp.input-grp__submit
-              %button.btn.btn-primary{onclick: "addToast ('success', 'Success', 'Toaster Error message');"}
-                Show Success
-              %button.btn.btn-danger{onclick: "addToast ('danger', 'Success', 'Toaster Error message');"}
-                Show Error
-              %button.btn.btn-secondary{onclick: "addToast ('default', 'Success', 'Toaster Success message');"}
-                Show Neutral
-            .snippet
-              .code-lbl
-              %code.code-snippet
-                  To launch a toaster use JS function:
-                  %br
-                  %span.code-snippet__inj
-                    addToast (type, header, message)
-                  %br
-                  Success message:
-                  %br
-                  %span.code-snippet__inj
-                    addToast ('success', 'Success', 'Toaster Success message')
-                  %br
-                  Error message:
-                  %br
-                  %span.code-snippet__inj
-                    addToast ('danger', 'Error', 'Toaster Error message')
-                  %br
-                  Neutral message:
-                  %br
-                  %span.code-snippet__inj
-                    addToast ('default', 'Default Header', 'Toaster Error message')
-          .box-panel
             @@include('./components/file-upload/_file-upload.html')
 
     @@include('./components/footer/_footer.html')
