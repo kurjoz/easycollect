@@ -2528,13 +2528,12 @@ html {
   clear: both; }
 
 html {
-  min-height: 100%; }
-
-body, html {
+  min-height: 100%;
   height: 100%; }
 
 body {
   padding: 0 0 50px;
+  height: auto;
   position: relative; }
 
 .container-fluid {
