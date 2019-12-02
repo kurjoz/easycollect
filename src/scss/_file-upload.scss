@@ -27,12 +27,12 @@
 }
 .file-upload__browse {
   color: $primary;
-  text-decoration: underline;
+  //text-decoration: underline;
   font-weight: 500;
   cursor: pointer;
 
   &:hover{
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
 .file-upload__rule {
