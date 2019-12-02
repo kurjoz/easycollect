@@ -71,7 +71,7 @@ p {
 }
 a {
   color: $green;
-  &:hover {
+  &:hover, &:focus {
     text-decoration: underline;
     color: $green;
   }
