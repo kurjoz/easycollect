@@ -2615,7 +2615,7 @@ a, a:hover {
   color: #35ba59; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 .__content-spaced {
   margin-bottom: 38px; }
@@ -3535,12 +3535,11 @@ button {
 
 .file-upload__browse {
   color: #35ba59;
-  text-decoration: underline;
   font-weight: 500;
   cursor: pointer; }
 
 .file-upload__browse:hover {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 .file-upload__rule {
   margin-bottom: 8px;
