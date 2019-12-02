@@ -1,9 +1,9 @@
 @@include('./components/head/_head.html')
   %body
     @@include('./components/header/_header__auth.html')
-    .container-fluid
+    .container
       .row.justify-content-center
-        .col-md-8
+        .col-md-12
           %h2 Pages
           .box-panel
             %section.guideline-section
@@ -198,6 +198,9 @@
                     .toggle
                       %input.toggle__input#toggler-1{type: "checkbox"}
                       %label.toggle__lbl{for: "toggler-1"} Toggler
+                  .input-grp
+                    .error-label
+                      Independent error label
                   .input-grp.input-grp__submit
                     %button.btn.btn-primary{for: "group-2"} Submit
                     %a.btn.btn-primary{for: "group-2", href: "#"} Button Link
