@@ -2,87 +2,88 @@
 
   %body
     @@include('./components/header/_header__auth.html')
-    .container-fluid
-      .row
-        .col-md-2.offset-md-2
+    .container
+      .sidebar-content-wrapper
+        .sidebar-left
           @@include('./components/sidebar-nav/_sidebar-nav.html')
-        .col-md-4
-          %h1 Page Title
-          @@include('./components/radio-cards/_radio-cards.html')
-          .box-panel
-            %form
-              #drop-area.file-upload
-                .file-upload__container
-                  %input{type: "file", id: "fileElem", multiple: true, accept: "*/*", onchange: "handleFiles(this.files)"}
-                  %p.file-upload__lead.__show-default
-                    Drag file here, or
-                    &nbsp;
-                    %label.file-upload__browse{for: "fileElem"}Browse
-                    &nbsp;
-                    File Rules:
-                  %p.file-upload__lead.__show-in-progress
-                    Uploading. File Rules:
-                  %p.file-upload__lead.__show-in-error
-                    File error
-                  %p.file-upload__rule This File Upload leads to my Cloudinary acc, for test only
-                  %p.file-upload__rule The file must not be bigger than lorem ipsum dolor sit amet
-                  .file-upload__template
-                    %a{href: "#"} Download Template
-                  %i.file-upload__icon
-              %progress#progress-bar{max: "100", value: "0"}
-              #gallery
+        .content-wrapper
+          .container-fluid
+            .row
+              .col-lg-9.col-md-12
+                %h1 Page Title
+                @@include('./components/radio-cards/_radio-cards.html')
+                .box-panel
+                  %form
+                    #drop-area.file-upload
+                      .file-upload__container
+                        %input{type: "file", id: "fileElem", multiple: true, accept: "*/*", onchange: "handleFiles(this.files)"}
+                        %p.file-upload__lead.__show-default
+                          Drag file here, or
+                          &nbsp;
+                          %label.file-upload__browse{for: "fileElem"}Browse
+                          &nbsp;
+                          File Rules:
+                        %p.file-upload__lead.__show-in-progress
+                          Uploading. File Rules:
+                        %p.file-upload__lead.__show-in-error
+                          File error
+                        %p.file-upload__rule This File Upload leads to my Cloudinary acc, for test only
+                        %p.file-upload__rule The file must not be bigger than lorem ipsum dolor sit amet
+                        .file-upload__template
+                          %a{href: "#"} Download Template
+                        %i.file-upload__icon
+                    %progress#progress-bar{max: "100", value: "0"}
+                    #gallery
 
-              %h3 Email list
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .
-              .input-grp
-                %label.input-grp__lbl Saved mails
-                @@include('./components/contact-list/_contact-list.html')
-                .input-grp__inline
-                  %input.input-control.__text{type: "text", placeholder: "Your e-mail"}
-                  %button.btn.btn-secondary.btn-ico
-                    %i.icon.icon__bin-light
-                  %button.btn.btn-primary Add mail
+                    %h3 Email list
+                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .
+                    .input-grp
+                      %label.input-grp__lbl Saved mails
+                      @@include('./components/contact-list/_contact-list.html')
+                      .input-grp__inline
+                        %input.input-control.__text{type: "text", placeholder: "Your e-mail"}
+                        %button.btn.btn-secondary.btn-ico
+                          %i.icon.icon__bin-light
+                        %button.btn.btn-primary Add mail
 
-              .input-grp
-                .row.justify-content-between
-                  .col-md-5
-                    %label.input-grp__lbl Minimum amount of money
-                    %input.input-control.__text{type: "text", placeholder: ""}
-                    %small.control-info
-                      *information
-                  .col-md-5
-                    %label.input-grp__lbl Maximum amount of money
-                    %input.input-control.__text{type: "text", placeholder: ""}
-                    %small.control-info
-                      *information
-              %h3 Date Time period
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .
-              .input-grp
-                .row.justify-content-between
-                  .col-md-5
-                    %label.input-grp__lbl Start date
-                    %input.input-control.__date{name:"picker-start", type: "text", placeholder: "mm/dd/yyyy"}
-                    %small.control-info
-                      *information
-                  .col-md-5
-                    %label.input-grp__lbl End date
-                    %input.input-control.__date{name:"picker-end", type: "text", placeholder: "mm/dd/yyyy"}
-                    %small.control-info
-                      *information
+                    .input-grp
+                      .row.justify-content-between
+                        .col-md-6
+                          %label.input-grp__lbl Minimum amount of money
+                          %input.input-control.__text{type: "text", placeholder: ""}
+                          %small.control-info
+                            *information
+                        .col-md-6
+                          %label.input-grp__lbl Maximum amount of money
+                          %input.input-control.__text{type: "text", placeholder: ""}
+                          %small.control-info
+                            *information
+                    %h3 Date Time period
+                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .
+                    .input-grp
+                      .row.justify-content-between
+                        .col-md-6
+                          %label.input-grp__lbl Start date
+                          %input.input-control.__date{name:"picker-start", type: "text", placeholder: "mm/dd/yyyy"}
+                          %small.control-info
+                            *information
+                        .col-md-6
+                          %label.input-grp__lbl End date
+                          %input.input-control.__date{name:"picker-end", type: "text", placeholder: "mm/dd/yyyy"}
+                          %small.control-info
+                            *information
 
-              %h3 Select Menu
-              %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .
-              .input-grp
-                .row.justify-content-start
-                  .col-md-5
-                    %label.input-grp__lbl Select
-                    %select.select-control{}
-                      %option Choose..
-                      %option Option 1
-                      %option Option 2
-              .input-grp.__submit
-                %button.btn.btn-primary Upload CSV
-
+                    %h3 Select Menu
+                    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .
+                    .input-grp
+                      .row.justify-content-start
+                        .col-md-5
+                          %label.input-grp__lbl Select
+                          %select.select-control{}
+                            %option Choose..
+                            %option Option 1
+                            %option Option 2
+                    .input-grp.__submit
+                      %button.btn.btn-primary Upload CSV
     @@include('./components/footer/_footer.html')
-    @@include('./components/toaster/_toaster-container.html')
     @@include('./components/scripts/_scripts.html')

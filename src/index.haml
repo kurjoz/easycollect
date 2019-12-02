@@ -2,238 +2,241 @@
   %body
     @@include('./components/header/_header__auth.html')
     .container
-      .row.justify-content-center
-        .col-md-12
-          %h2 Pages
-          .box-panel
-            %section.guideline-section
-              %h2 Pages. Part 1
-              .row
-                .col-md-6
-                  %ul.sitemap
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "01-registration.html"}
-                        01. Registration
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "02-login.html"}
-                        02. Login
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "03-password-recovery-email.html"}
-                        03. Forgot Password
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "04-password-recovery.html"}
-                        04. Reset Password
-                .col-md-6
-                  %ul.sitemap
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "05-start.html"}
-                        05. Blank Page
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "06-upload-1.html"}
-                        06. Upload Page
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "07-error-states.html"}
-                        07. Form Errors
-                    %li.sitemap__item
-                      %a.sitemap__link{href: "#"}
-                        08. Tabular Listing
-          %h2 Styleguide
-          .box-panel
-            %section.guideline-section
-              %h2 Typography elements
-              .guideline-section__elmnts
-                %h1 Header level 1
-                %h2 Header level 2
-                %h3 Header level 3
-                %h4 Header level 4
-                %h5 Header level 5
-                %h6 Header level 6
-                %p Body text: The quick brown fox jumps over the lazy dog
-                %p
-                  %a{href: "#"} Link
-          %section.guideline-section
-            %h2 Colors to add
-            .guideline-section__elmnts
-              .row
-                .col-md-3
-                  .color-thumb.__color-thumb-primary
-                    .color-thumb__prev
-                    .color-thumb__name Primary / Success
-                    .color-thumb__color '#35BA59'
-                    .color-thumb__desc Primary brand color
-                .col-md-3
-                  .color-thumb.__color-thumb-primary-light
-                    .color-thumb__prev
-                    .color-thumb__name Primary Light
-                    .color-thumb__color '#51CE73'
-                    .color-thumb__desc Primary brand color
-                .col-md-3
-                  .color-thumb.__color-thumb-error
-                    .color-thumb__prev
-                    .color-thumb__name Red
-                    .color-thumb__color '#E21D1D'
-                    .color-thumb__desc Errors & Warnings
-                .col-md-3
-                  .color-thumb.__color-thumb-black
-                    .color-thumb__prev
-                    .color-thumb__name Black
-                    .color-thumb__color '#000000'
-                    .color-thumb__desc Form labels, inputs
-                .col-md-3
-                  .color-thumb.__color-thumb-grey
-                    .color-thumb__prev
-                    .color-thumb__name Grey
-                    .color-thumb__color '#4A4A4B'
-                    .color-thumb__desc Default text color
-                .col-md-3
-                  .color-thumb.__color-thumb-grey-light
-                    .color-thumb__prev
-                    .color-thumb__name Light Grey
-                    .color-thumb__color '#F3F4F7'
-                    .color-thumb__desc Shadows and outlines
-                .col-md-3
-                  .color-thumb.__color-thumb-white
-                    .color-thumb__prev
-                    .color-thumb__name White
-                    .color-thumb__color '#FFFFFF'
-                    .color-thumb__desc Whites. Panels & inputs bg
-
-          %section.guideline-section
-            .box-panel
-              %h2 Icons
-              .guideline-section__elmnts
-                @@include('./components/icons/_icon.html')
-
-          / Form Controls;
-          %section.guideline-section
-            .box-panel
-              %h2 Forms
-              .guideline-section__elmnts
-                %form.form{method: "GET"}
-                  / Text Inputs;
-                  .input-grp
-                    %label.input-grp__lbl Input Text
-                    %input.input-control.__text{type: "text", placeholder: "Input text"}
-                  .input-grp
-                    %label.input-grp__lbl Input Password
-                    %input.input-control{type: "password", placeholder: "Input Password"}
-                    %small.control-info
-                      *Password Instructions
-                  .input-grp
-                    %label.input-grp__lbl Input Password
-                    %input.input-control.__text.__state-error{type: "password", placeholder: "Input Password"}
-                    %small.control-info.__state-error
-                      *It should be 8 symbol password and contain at least 1 number
-                  .input-grp
-                    %label.input-grp__lbl Select
-                    %select.select-control{}
-                      %option Choose..
-                      %option Option 1
-                      %option Option 2
-                  .input-grp
-                    .row
-                      .col-md-4
-                        %label.input-grp__lbl Multiple inputs in one row
-                        %input.input-control.__text{type: "text", placeholder: "Input Multiple", disabled: "true"}
-                      .col-md-4
-                        %label.input-grp__lbl Multiple inputs in one row
-                        %input.input-control.__text{type: "text", placeholder: "Input Multiple"}
-                      .col-md-4
-                        %label.input-grp__lbl Multiple inputs in one row
-                        %input.input-control.__text{type: "text", placeholder: "Input Multiple"}
-                  / Checkboxes;
-                  / 1. Checkbox Group. Rows;
-                  .input-grp
-                    %label.input-grp__lbl Checkbox Group. Rows
-                    .checkbox
-                      %input.checkbox__input#prop-1{type: "checkbox"}
-                      %label.checkbox__lbl{for: "prop-1"} Checkbox Row #1
-                    .checkbox
-                      %input.checkbox__input#prop-2{type: "checkbox"}
-                      %label.checkbox__lbl{for: "prop-2"} Checkbox Row #2
-                  / 2. Checkbox Group. Columns;
-                  .input-grp
-                    %label.input-grp__lbl Checkbox Group. Columns.
-                    .row
-                      .col-md-4
-                        .checkbox
-                          %input.checkbox__input#prop-3{type: "checkbox"}
-                          %label.checkbox__lbl{for: "prop-3"} Checkbox Col #1
-                      .col-md-4
-                        .checkbox
-                          %input.checkbox__input#prop-4{type: "checkbox"}
-                          %label.checkbox__lbl{for: "prop-4"} Checkbox Col #2
-                      .col-md-4
-                        .checkbox
-                          %input.checkbox__input#prop-5{type: "checkbox"}
-                          %label.checkbox__lbl{for: "prop-5"} Checkbox Col #3
-                  / Radiobuttons
-                  / 1. Radio Group. Rows;
-                  .input-grp
-                    %label.input-grp__lbl Radio Group. Rows
-                    .radio
-                      %input.radio__input#radio-1{type: "radio", name: "group-1"}
-                      %label.radio__lbl{for: "radio-1"} Radio Row #1
-                    .radio
-                      %input.radio__input#radio-2{type: "radio", name: "group-1"}
-                      %label.radio__lbl{for: "radio-2"} Radio Row #2
-                  / 2. Checkbox Group. Columns;
-                  .input-grp
-                    %label.input-grp__lbl Radio. Columns.
-                    .row
-                      .col-md-4
-                        .radio
-                          %input.radio__input#radio-3{type: "radio", name: "group-2"}
-                          %label.radio__lbl{for: "radio-3"} Radio Col #1
-                      .col-md-4
-                        .radio
-                          %input.radio__input#radio-4{type: "radio", name: "group-2"}
-                          %label.radio__lbl{for: "radio-4"} Checkbox Col #2
-                      .col-md-4
-                        .radio
-                          %input.radio__input#radio-5{type: "radio", name: "group-2"}
-                          %label.radio__lbl{for: "radio-5"} Checkbox Col #3
-                  / 3. Togglers
-                  .input-grp
-                    .toggle
-                      %input.toggle__input#toggler-1{type: "checkbox"}
-                      %label.toggle__lbl{for: "toggler-1"} Toggler
-                  .input-grp
-                    .error-label
-                      Independent error label
-                  .input-grp.input-grp__submit
-                    %button.btn.btn-primary{for: "group-2"} Submit
-                    %a.btn.btn-primary{for: "group-2", href: "#"} Button Link
-
-
-          %section.guideline-section
-            %h2 Cards Radiobuttons
-            @@include('./components/radio-cards/_radio-cards.html')
-
-          %section.guideline-section
-            %h2 Error / Success Toasters
+      .sidebar-content-wrapper
+        .sidebar-left
+          @@include('./components/sidebar-nav/_sidebar-nav.html')
+        .content-wrapper
+          .container-fluid
             .row
-              .col-md-4
-                .toast.__toast-showcase
-                  .toast__hd
-                    Neutral Message
-                  .toast__body
-                    This is system's regular message. Nothing special, just saying some information.
-              .col-md-4
-                .toast.__success.__toast-showcase
-                  .toast__hd
-                    Success
-                  .toast__body
-                    Showing after succesfull operation and informing usre about it's result. Showing right top
-              .col-md-4
-                .toast.__danger.__toast-showcase
-                  .toast__hd
-                    Error
-                  .toast__body
-                    The system could not find a user with the following email and password combination
-          .box-panel
-            @@include('./components/file-upload/_file-upload.html')
+              .col-lg-9.col-md-12
+                %h2 Pages
+                .box-panel
+                  %section.guideline-section
+                    %h2 Pages. Part 1
+                    .row
+                      .col-md-6
+                        %ul.sitemap
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "01-registration.html"}
+                              01. Registration
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "02-login.html"}
+                              02. Login
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "03-password-recovery-email.html"}
+                              03. Forgot Password
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "04-password-recovery.html"}
+                              04. Reset Password
+                      .col-md-6
+                        %ul.sitemap
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "05-start.html"}
+                              05. Blank Page
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "06-upload-1.html"}
+                              06. Upload Page
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "07-error-states.html"}
+                              07. Form Errors
+                          %li.sitemap__item
+                            %a.sitemap__link{href: "#"}
+                              08. Tabular Listing
+                %h2 Styleguide
+                .box-panel
+                  %section.guideline-section
+                    %h2 Typography elements
+                    .guideline-section__elmnts
+                      %h1 Header level 1
+                      %h2 Header level 2
+                      %h3 Header level 3
+                      %h4 Header level 4
+                      %h5 Header level 5
+                      %h6 Header level 6
+                      %p Body text: The quick brown fox jumps over the lazy dog
+                      %p
+                        %a{href: "#"} Link
+                %section.guideline-section
+                  %h2 Colors to add
+                  .guideline-section__elmnts
+                    .row
+                      .col-md-6
+                        .color-thumb.__color-thumb-primary
+                          .color-thumb__prev
+                          .color-thumb__name Primary / Success
+                          .color-thumb__color '#35BA59'
+                          .color-thumb__desc Primary brand color
+                      .col-md-6
+                        .color-thumb.__color-thumb-primary-light
+                          .color-thumb__prev
+                          .color-thumb__name Primary Light
+                          .color-thumb__color '#51CE73'
+                          .color-thumb__desc Primary brand color
+                      .col-md-6
+                        .color-thumb.__color-thumb-error
+                          .color-thumb__prev
+                          .color-thumb__name Red
+                          .color-thumb__color '#E21D1D'
+                          .color-thumb__desc Errors & Warnings
+                      .col-md-6
+                        .color-thumb.__color-thumb-black
+                          .color-thumb__prev
+                          .color-thumb__name Black
+                          .color-thumb__color '#000000'
+                          .color-thumb__desc Form labels, inputs
+                      .col-md-6
+                        .color-thumb.__color-thumb-grey
+                          .color-thumb__prev
+                          .color-thumb__name Grey
+                          .color-thumb__color '#4A4A4B'
+                          .color-thumb__desc Default text color
+                      .col-md-6
+                        .color-thumb.__color-thumb-grey-light
+                          .color-thumb__prev
+                          .color-thumb__name Light Grey
+                          .color-thumb__color '#F3F4F7'
+                          .color-thumb__desc Shadows and outlines
+                      .col-md-6
+                        .color-thumb.__color-thumb-white
+                          .color-thumb__prev
+                          .color-thumb__name White
+                          .color-thumb__color '#FFFFFF'
+                          .color-thumb__desc Whites. Panels & inputs bg
 
+                %section.guideline-section
+                  .box-panel
+                    %h2 Icons
+                    .guideline-section__elmnts
+                      @@include('./components/icons/_icon.html')
+
+                / Form Controls;
+                %section.guideline-section
+                  .box-panel
+                    %h2 Forms
+                    .guideline-section__elmnts
+                      %form.form{method: "GET"}
+                        / Text Inputs;
+                        .input-grp
+                          %label.input-grp__lbl Input Text
+                          %input.input-control.__text{type: "text", placeholder: "Input text"}
+                        .input-grp
+                          %label.input-grp__lbl Input Password
+                          %input.input-control{type: "password", placeholder: "Input Password"}
+                          %small.control-info
+                            *Password Instructions
+                        .input-grp
+                          %label.input-grp__lbl Input Password
+                          %input.input-control.__text.__state-error{type: "password", placeholder: "Input Password"}
+                          %small.control-info.__state-error
+                            *It should be 8 symbol password and contain at least 1 number
+                        .input-grp
+                          %label.input-grp__lbl Select
+                          %select.select-control{}
+                            %option Choose..
+                            %option Option 1
+                            %option Option 2
+                        .input-grp
+                          .row
+                            .col-md-4
+                              %label.input-grp__lbl Multiple inputs in one row
+                              %input.input-control.__text{type: "text", placeholder: "Input Multiple", disabled: "true"}
+                            .col-md-4
+                              %label.input-grp__lbl Multiple inputs in one row
+                              %input.input-control.__text{type: "text", placeholder: "Input Multiple"}
+                            .col-md-4
+                              %label.input-grp__lbl Multiple inputs in one row
+                              %input.input-control.__text{type: "text", placeholder: "Input Multiple"}
+                        / Checkboxes;
+                        / 1. Checkbox Group. Rows;
+                        .input-grp
+                          %label.input-grp__lbl Checkbox Group. Rows
+                          .checkbox
+                            %input.checkbox__input#prop-1{type: "checkbox"}
+                            %label.checkbox__lbl{for: "prop-1"} Checkbox Row #1
+                          .checkbox
+                            %input.checkbox__input#prop-2{type: "checkbox"}
+                            %label.checkbox__lbl{for: "prop-2"} Checkbox Row #2
+                        / 2. Checkbox Group. Columns;
+                        .input-grp
+                          %label.input-grp__lbl Checkbox Group. Columns.
+                          .row
+                            .col-md-4
+                              .checkbox
+                                %input.checkbox__input#prop-3{type: "checkbox"}
+                                %label.checkbox__lbl{for: "prop-3"} Checkbox Col #1
+                            .col-md-4
+                              .checkbox
+                                %input.checkbox__input#prop-4{type: "checkbox"}
+                                %label.checkbox__lbl{for: "prop-4"} Checkbox Col #2
+                            .col-md-4
+                              .checkbox
+                                %input.checkbox__input#prop-5{type: "checkbox"}
+                                %label.checkbox__lbl{for: "prop-5"} Checkbox Col #3
+                        / Radiobuttons
+                        / 1. Radio Group. Rows;
+                        .input-grp
+                          %label.input-grp__lbl Radio Group. Rows
+                          .radio
+                            %input.radio__input#radio-1{type: "radio", name: "group-1"}
+                            %label.radio__lbl{for: "radio-1"} Radio Row #1
+                          .radio
+                            %input.radio__input#radio-2{type: "radio", name: "group-1"}
+                            %label.radio__lbl{for: "radio-2"} Radio Row #2
+                        / 2. Checkbox Group. Columns;
+                        .input-grp
+                          %label.input-grp__lbl Radio. Columns.
+                          .row
+                            .col-md-4
+                              .radio
+                                %input.radio__input#radio-3{type: "radio", name: "group-2"}
+                                %label.radio__lbl{for: "radio-3"} Radio Col #1
+                            .col-md-4
+                              .radio
+                                %input.radio__input#radio-4{type: "radio", name: "group-2"}
+                                %label.radio__lbl{for: "radio-4"} Checkbox Col #2
+                            .col-md-4
+                              .radio
+                                %input.radio__input#radio-5{type: "radio", name: "group-2"}
+                                %label.radio__lbl{for: "radio-5"} Checkbox Col #3
+                        / 3. Togglers
+                        .input-grp
+                          .toggle
+                            %input.toggle__input#toggler-1{type: "checkbox"}
+                            %label.toggle__lbl{for: "toggler-1"} Toggler
+                        .input-grp
+                          .error-label
+                            Independent error label
+                        .input-grp.input-grp__submit
+                          %button.btn.btn-primary{for: "group-2"} Submit
+                          %a.btn.btn-primary{for: "group-2", href: "#"} Button Link
+
+
+                %section.guideline-section
+                  %h2 Cards Radiobuttons
+                  @@include('./components/radio-cards/_radio-cards.html')
+
+                %section.guideline-section
+                  %h2 Error / Success Toasters
+                  .row
+                    .col-md-4
+                      .toast.__toast-showcase
+                        .toast__hd
+                          Neutral Message
+                        .toast__body
+                          This is system's regular message. Nothing special, just saying some information.
+                    .col-md-4
+                      .toast.__success.__toast-showcase
+                        .toast__hd
+                          Success
+                        .toast__body
+                          Showing after succesfull operation and informing usre about it's result. Showing right top
+                    .col-md-4
+                      .toast.__danger.__toast-showcase
+                        .toast__hd
+                          Error
+                        .toast__body
+                          The system could not find a user with the following email and password combination
+                .box-panel
+                  @@include('./components/file-upload/_file-upload.html')
     @@include('./components/footer/_footer.html')
-    @@include('./components/toaster/_toaster-container.html')
     @@include('./components/scripts/_scripts.html')

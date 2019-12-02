@@ -6,6 +6,11 @@
   position: relative;
   min-height: 18px;
 }
+
+.radio label {
+  padding-left: 0;
+  line-height: 20px;
+}
 .radio__lbl {
   position: relative;
   display: inline-block;

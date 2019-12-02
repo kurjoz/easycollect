@@ -7,6 +7,10 @@
   position: relative;
   min-height: 18px;
 }
+.checkbox label {
+  padding-left: 0;
+  line-height: 20px;
+}
 .checkbox__lbl {
   position: relative;
   display: inline-block;

@@ -11,9 +11,9 @@
 
 <body>
   <div class="header">
-    <div class="container-fluid">
+    <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="logo">
             <a href="/" class="logo-link">Easy-collect</a>
           </div>
@@ -33,188 +33,191 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2 offset-md-2">
+  <div class="container">
+    <div class="sidebar-content-wrapper">
+      <div class="sidebar-left">
         <ul class="sidebar-nav">
           <li class="sidebar-nav__item __active">
-            <a href="#" class="sidebar-nav__link">Option settings 1</a>
+            <a href="index.html" class="sidebar-nav__link">0. Styleguide</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 2</a>
+            <a href="01-registration.html" class="sidebar-nav__link">01. Registration</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 3</a>
+            <a href="02-login.html" class="sidebar-nav__link">02. Login</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 4</a>
+            <a href="03-password-recovery-email.html" class="sidebar-nav__link">03. Forgot Password</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 5</a>
+            <a href="04-password-recovery.html" class="sidebar-nav__link">04. Reset Password</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 7</a>
+            <a href="05-start.html" class="sidebar-nav__link">05. Blank Page</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 8</a>
+            <a href="06-upload-1.html" class="sidebar-nav__link">06. Upload Page</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 9</a>
+            <a href="07-error-states.html" class="sidebar-nav__link">07. Form Errors</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 10</a>
+            <a href="#" class="sidebar-nav__link">08. Tabular Listing</a>
           </li>
           <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 11</a>
-          </li>
-          <li class="sidebar-nav__item">
-            <a href="#" class="sidebar-nav__link">Option settings 11</a>
+            <a href="#" class="sidebar-nav__link">Transaktionen hinzufüge.</a>
           </li>
         </ul>
       </div>
-      <div class="col-md-4">
-        <h1>Page Title</h1>
-        <div class="radio-cards">
-          <div class="radio-card">
-            <input type="radio" name="radio-cards" class="radio-card__input" id="radio-card-1" />
-            <label for="radio-card-1" class="radio-card__content">
-              <div class="radio-card__icons">
-                <i class="icon icon__doc-csv"></i>
+      <div class="content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-9 col-md-12">
+              <h1>Page Title</h1>
+              <div class="radio-cards">
+                <div class="radio-card">
+                  <input type="radio" name="radio-cards" class="radio-card__input" id="radio-card-1" />
+                  <label for="radio-card-1" class="radio-card__content">
+                    <div class="radio-card__icons">
+                      <i class="icon icon__doc-csv"></i>
+                    </div>
+                    <div class="radio-card__hd">Upload CSV</div>
+                    <div class="radio-card__desc">
+                      <div class="radio-card__desc-lbl">Description</div>
+                      <div class="radio-card__desc-txt">Here will be short text description about function</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="radio-card">
+                  <input type="radio" name="radio-cards" class="radio-card__input" id="radio-card-2" />
+                  <label for="radio-card-2" class="radio-card__content">
+                    <div class="radio-card__icons">
+                      <i class="icon icon__service-stripe"></i>
+                      <i class="icon icon__service-paypal"></i>
+                    </div>
+                    <div class="radio-card__hd">Upload CSV</div>
+                    <div class="radio-card__desc">
+                      <div class="radio-card__desc-lbl">Description</div>
+                      <div class="radio-card__desc-txt">Here will be short text description about function</div>
+                    </div>
+                  </label>
+                </div>
               </div>
-              <div class="radio-card__hd">Upload CSV</div>
-              <div class="radio-card__desc">
-                <div class="radio-card__desc-lbl">Description</div>
-                <div class="radio-card__desc-txt">Here will be short text description about function</div>
+              <div class="box-panel">
+                <form>
+                  <div class="file-upload" id="drop-area">
+                    <div class="file-upload__container">
+                      <input type="file" id="fileElem" multiple="multiple" accept="*/*" onchange="handleFiles(this.files)" />
+                      <p class="file-upload__lead __show-default">Drag file here, or&nbsp;<label for="fileElem" class="file-upload__browse">Browse</label>&nbsp;File Rules:</p>
+                      <p class="file-upload__lead __show-in-progress">Uploading. File Rules:</p>
+                      <p class="file-upload__lead __show-in-error">File error</p>
+                      <p class="file-upload__rule">This File Upload leads to my Cloudinary acc, for test only</p>
+                      <p class="file-upload__rule">The file must not be bigger than lorem ipsum dolor sit amet</p>
+                      <div class="file-upload__template">
+                        <a href="#">Download Template</a>
+                      </div>
+                      <i class="file-upload__icon"></i>
+                    </div>
+                  </div>
+                  <progress max="100" value="0" id="progress-bar"></progress>
+                  <div id="gallery"></div>
+                  <h3>Email list</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .</p>
+                  <div class="input-grp">
+                    <label class="input-grp__lbl">Saved mails</label>
+                    <ul class="contact-list">
+                      <li class="contact-list__item">
+                        <div class="contact-list__contact">
+                          <div class="contact-list__contact-name">Name&nbsp;•&nbsp;your@mail.com</div>
+                        </div>
+                        <button class="btn btn-secondary btn-ico">
+                          <i class="icon icon__bin-light"></i>
+                        </button>
+                      </li>
+                      <li class="contact-list__item">
+                        <div class="contact-list__contact">
+                          <div class="contact-list__contact-name">David Superlongname Martinez&nbsp;•&nbsp;your@mail.com</div>
+                        </div>
+                        <button class="btn btn-secondary btn-ico">
+                          <i class="icon icon__bin-light"></i>
+                        </button>
+                      <li class="contact-list__item">
+                        <div class="contact-list__contact">
+                          <div class="contact-list__contact-name">Name&nbsp;•&nbsp;your@mail.com</div>
+                        </div>
+                        <button class="btn btn-secondary btn-ico">
+                          <i class="icon icon__bin-light"></i>
+                        </button>
+                      </li>
+                      <li class="contact-list__item">
+                        <div class="contact-list__contact">
+                          <div class="contact-list__contact-name">David Superlongname Martinez&nbsp;•&nbsp;your@mail.com</div>
+                        </div>
+                        <button class="btn btn-secondary btn-ico">
+                          <i class="icon icon__bin-light"></i>
+                        </button>
+                      </li>
+                      </li>
+                    </ul>
+                    <div class="input-grp__inline">
+                      <input type="text" placeholder="Your e-mail" class="input-control __text" />
+                      <button class="btn btn-secondary btn-ico">
+                        <i class="icon icon__bin-light"></i>
+                      </button>
+                      <button class="btn btn-primary">Add mail</button>
+                    </div>
+                  </div>
+                  <div class="input-grp">
+                    <div class="row justify-content-between">
+                      <div class="col-md-6">
+                        <label class="input-grp__lbl">Minimum amount of money</label>
+                        <input type="text" class="input-control __text" />
+                        <small class="control-info">*information</small>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="input-grp__lbl">Maximum amount of money</label>
+                        <input type="text" class="input-control __text" />
+                        <small class="control-info">*information</small>
+                      </div>
+                    </div>
+                  </div>
+                  <h3>Date Time period</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .</p>
+                  <div class="input-grp">
+                    <div class="row justify-content-between">
+                      <div class="col-md-6">
+                        <label class="input-grp__lbl">Start date</label>
+                        <input name="picker-start" type="text" placeholder="mm/dd/yyyy" class="input-control __date" />
+                        <small class="control-info">*information</small>
+                      </div>
+                      <div class="col-md-6">
+                        <label class="input-grp__lbl">End date</label>
+                        <input name="picker-end" type="text" placeholder="mm/dd/yyyy" class="input-control __date" />
+                        <small class="control-info">*information</small>
+                      </div>
+                    </div>
+                  </div>
+                  <h3>Select Menu</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .</p>
+                  <div class="input-grp">
+                    <div class="row justify-content-start">
+                      <div class="col-md-5">
+                        <label class="input-grp__lbl">Select</label>
+                        <select class="select-control">
+                          <option>Choose..</option>
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-grp __submit">
+                    <button class="btn btn-primary">Upload CSV</button>
+                  </div>
+                </form>
               </div>
-            </label>
+            </div>
           </div>
-          <div class="radio-card">
-            <input type="radio" name="radio-cards" class="radio-card__input" id="radio-card-2" />
-            <label for="radio-card-2" class="radio-card__content">
-              <div class="radio-card__icons">
-                <i class="icon icon__service-stripe"></i>
-                <i class="icon icon__service-paypal"></i>
-              </div>
-              <div class="radio-card__hd">Upload CSV</div>
-              <div class="radio-card__desc">
-                <div class="radio-card__desc-lbl">Description</div>
-                <div class="radio-card__desc-txt">Here will be short text description about function</div>
-              </div>
-            </label>
-          </div>
-        </div>
-        <div class="box-panel">
-          <form>
-            <div class="file-upload" id="drop-area">
-              <div class="file-upload__container">
-                <input type="file" id="fileElem" multiple="multiple" accept="*/*" onchange="handleFiles(this.files)" />
-                <p class="file-upload__lead __show-default">Drag file here, or&nbsp;<label for="fileElem" class="file-upload__browse">Browse</label>&nbsp;File Rules:</p>
-                <p class="file-upload__lead __show-in-progress">Uploading. File Rules:</p>
-                <p class="file-upload__lead __show-in-error">File error</p>
-                <p class="file-upload__rule">This File Upload leads to my Cloudinary acc, for test only</p>
-                <p class="file-upload__rule">The file must not be bigger than lorem ipsum dolor sit amet</p>
-                <div class="file-upload__template">
-                  <a href="#">Download Template</a>
-                </div>
-                <i class="file-upload__icon"></i>
-              </div>
-            </div>
-            <progress max="100" value="0" id="progress-bar"></progress>
-            <div id="gallery"></div>
-            <h3>Email list</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .</p>
-            <div class="input-grp">
-              <label class="input-grp__lbl">Saved mails</label>
-              <ul class="contact-list">
-                <li class="contact-list__item">
-                  <div class="contact-list__contact">
-                    <div class="contact-list__contact-name">Name&nbsp;•&nbsp;your@mail.com</div>
-                  </div>
-                  <button class="btn btn-secondary btn-ico">
-                    <i class="icon icon__bin-light"></i>
-                  </button>
-                </li>
-                <li class="contact-list__item">
-                  <div class="contact-list__contact">
-                    <div class="contact-list__contact-name">David Superlongname Martinez&nbsp;•&nbsp;your@mail.com</div>
-                  </div>
-                  <button class="btn btn-secondary btn-ico">
-                    <i class="icon icon__bin-light"></i>
-                  </button>
-                <li class="contact-list__item">
-                  <div class="contact-list__contact">
-                    <div class="contact-list__contact-name">Name&nbsp;•&nbsp;your@mail.com</div>
-                  </div>
-                  <button class="btn btn-secondary btn-ico">
-                    <i class="icon icon__bin-light"></i>
-                  </button>
-                </li>
-                <li class="contact-list__item">
-                  <div class="contact-list__contact">
-                    <div class="contact-list__contact-name">David Superlongname Martinez&nbsp;•&nbsp;your@mail.com</div>
-                  </div>
-                  <button class="btn btn-secondary btn-ico">
-                    <i class="icon icon__bin-light"></i>
-                  </button>
-                </li>
-                </li>
-              </ul>
-              <div class="input-grp__inline">
-                <input type="text" placeholder="Your e-mail" class="input-control __text" />
-                <button class="btn btn-secondary btn-ico">
-                  <i class="icon icon__bin-light"></i>
-                </button>
-                <button class="btn btn-primary">Add mail</button>
-              </div>
-            </div>
-            <div class="input-grp">
-              <div class="row justify-content-between">
-                <div class="col-md-5">
-                  <label class="input-grp__lbl">Minimum amount of money</label>
-                  <input type="text" class="input-control __text" />
-                  <small class="control-info">*information</small>
-                </div>
-                <div class="col-md-5">
-                  <label class="input-grp__lbl">Maximum amount of money</label>
-                  <input type="text" class="input-control __text" />
-                  <small class="control-info">*information</small>
-                </div>
-              </div>
-            </div>
-            <h3>Date Time period</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .</p>
-            <div class="input-grp">
-              <div class="row justify-content-between">
-                <div class="col-md-5">
-                  <label class="input-grp__lbl">Start date</label>
-                  <input name="picker-start" type="text" placeholder="mm/dd/yyyy" class="input-control __date" />
-                  <small class="control-info">*information</small>
-                </div>
-                <div class="col-md-5">
-                  <label class="input-grp__lbl">End date</label>
-                  <input name="picker-end" type="text" placeholder="mm/dd/yyyy" class="input-control __date" />
-                  <small class="control-info">*information</small>
-                </div>
-              </div>
-            </div>
-            <h3>Select Menu</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolore magna .</p>
-            <div class="input-grp">
-              <div class="row justify-content-start">
-                <div class="col-md-5">
-                  <label class="input-grp__lbl">Select</label>
-                  <select class="select-control">
-                    <option>Choose..</option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="input-grp __submit">
-              <button class="btn btn-primary">Upload CSV</button>
-            </div>
-          </form>
         </div>
       </div>
     </div>
@@ -237,11 +240,6 @@
           <div class="copyright">Copyright © 2019 All Rights Reserved</div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="toaster-container">
-    <div class="toaster-container__limiter">
-      <div class="toaster" id="toaster"></div>
     </div>
   </div>
   <script type="text/javascript" src="js/index.js"></script>

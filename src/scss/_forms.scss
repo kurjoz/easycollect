@@ -19,6 +19,7 @@
   line-height: 16px;
   display: inline-block;
   float: left;
+  font-weight: 500;
   > .icon {
     margin-right: 4px;
   }
@@ -38,14 +39,14 @@
 }
 
 .input-grp__lbl {
-  margin-bottom: 13px;
+  margin-bottom: 6px;
   display: inline-block;
   font-family: $font-family;
   color: $controls-color;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.5;
 
 }
 .input-control {

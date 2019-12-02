@@ -47,20 +47,20 @@
   border-bottom: 1px solid $primary;
   font-weight: bold;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.25;
 }
 .radio-card__desc {}
 .radio-card__desc-lbl {
   margin: 0 0 6px;
   font-weight: normal;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 13px;
+  line-height: 16px;
 }
 .radio-card__desc-txt {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.25;
 }
 
 .radio-card__input:checked ~ .radio-card__content{
