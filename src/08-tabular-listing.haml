@@ -10,7 +10,15 @@
             .row
               .col-md-12
                 .box-panel
-                  %h1 Transactions Listing
+                  .table-widget__hd
+                    %h1.table-widget__txt Transactions Listing
+                    .table-widget__actions
+                      %select.select-control.__table_dd{}
+                        %option Status: All
+                        %option Status: Success
+                        %option Status: Error
+                        %option Status: Ignore
+                      %input.input-control.__table_filter{type: "text", placeholder: "Filter..."}
                   %table.table
                     %tr.table-row
                       %th.table-cell-hd.__context_type_checkbox_x1
@@ -77,7 +85,7 @@
                       %td{colspan: "8"}
                         .item-form
                           %form.form-tabular
-                            .container-fluid
+                            .row
                               .col-md-6
                                 %h4 Form Column 1
                                 .input-grp
@@ -147,6 +155,19 @@
                     @@include('./components/data-table/_data-table_row.html')
                     @@include('./components/data-table/_data-table_row.html')
                     @@include('./components/data-table/_data-table_row.html')
+                    %tr.tr-separator
+                      %td{colspan: "8"}
+                        %i.icon
+                          %img{src:"assets/icons/icon-doc-generic.svg"}
+                        %span.tr-separator__lbl
+                          Next_File_1.csv
                     @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                  @@include('./components/paginator/_paginator.html')
     @@include('./components/footer/_footer.html')
     @@include('./components/scripts/_scripts.html')

@@ -1,0 +1,25 @@
+.paginator {
+  text-align: center;
+  display: block;
+  .paginator__item {
+    padding: 4px 4px;
+    display: inline-block;
+    color: $grey;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+    &.__active {
+      font-weight: 500;
+      color: $primary;
+      text-decoration: none;
+    }
+    &.__prev,
+    &.__next {
+      .icon {
+        top: 2px;
+        position: relative;
+      }
+    }
+  }
+}

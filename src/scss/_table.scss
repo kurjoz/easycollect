@@ -1,6 +1,25 @@
+.table, table{
+  tbody > tr> th,
+  tbody > tr> td {
+    margin: 0;
+    padding: 16px 8px;
+    border-color: $grey-borders;
+
+    &:first-child {
+      padding-left: 16px;
+    }
+    &:last-child {
+      padding-right: 16px;
+    }
+  }
+  tbody > .tr-details > td,
+  tbody > .tr-details > td:first-child,
+  tbody > .tr-details > td:last-child
+   { padding: 0 0 16px 0; }
+}
+
 .table {
   font-size: 14px;
-
   .table-cell-hd{
     vertical-align: middle;
     font-weight: 500;
@@ -8,9 +27,16 @@
   }
   .table-cell {
     vertical-align: middle;
+    border-color: $grey-borders;
   }
 }
-
+.tr-expanded {
+    > td {
+      position: relative;
+      z-index: 3;
+      background-color: $grey-borders;
+    }
+}
 .table-row__actions {
   display: flex;
   .btn {
@@ -27,16 +53,47 @@
     min-width: 80px;
   }
 }
+.tr-separator {
+  background-color: $grey-borders;
+  color: $grey-basic;
+  font-weight: 500;
+  .tr-separator__lbl {
+    margin-left: 8px;
+    position: relative;
+    top: 2px;
+  }
+}
 //Modifications:
   //1. Sizes
 .table-cell-hd,
 .table-cell {
-
   &.__context_type_checkbox_x1 {
     width: 18px;
       .checkbox {}
   }
   &.__context_type_buttons_x3 {
     max-width: 96px;
+  }
+}
+
+.table-widget__hd {
+  display: flex;
+  .table-widget__txt {flex-grow: 1;}
+  .table-widget__actions {
+    display: flex;
+    .select-control.__table_dd {
+      margin-right: 16px;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 24px;
+      background-color: #fff;
+      font-size: 14px;
+      height: 32px;
+    }
+    .input-control.__table_filter {
+      padding: 4px 8px;
+      font-size: 14px;
+      height: 32px;
+    }
   }
 }
