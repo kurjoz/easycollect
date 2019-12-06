@@ -1,32 +1,152 @@
 @@include('./components/head/_head.html')
-
   %body
     @@include('./components/header/_header__auth.html')
-    .container-fluid
-      .row
-        .col-md-2.offset-md-2
+    .container
+      .sidebar-content-wrapper
+        .sidebar-left
           @@include('./components/sidebar-nav/_sidebar-nav.html')
-        .col-md-4
-          %h1 Loaded Files
-          %table.data-table
-            %thead
-              %tr
-                %th
-                  .checkbox
-                    %input.checkbox__input#prop-1{type: "checkbox"}
-                    %label.checkbox__lbl{for: "prop-1"}
-                %th
-                  %a.btn.btn-secondary.btn-ico-xs
-                    %i.icon.icon__check.__icon-xs
-                  %a.btn.btn-secondary.btn-ico-xs
-                    %i.icon.icon__ban.__icon-xs
-                  %a.btn.btn-secondary.btn-ico-xs
-                    %i.icon.icon__search.__icon-xs
-            %tbody
-              %tr
-                %td
+        .content-wrapper
+          .container-fluid
+            .row
+              .col-md-12
+                .box-panel
+                  %h1 Transactions Listing
+                  %table.table
+                    %tr.table-row
+                      %th.table-cell-hd.__context_type_checkbox_x1
+                        .checkbox.__context_no_lbl.__context_boxed
+                          %input.checkbox__input#prop-1{type: "checkbox"}
+                          %label.checkbox__lbl{for: "prop-1"}
+                      //Comment
+                      %th.table-cell-hd.__context_type_buttons_x3
+                        @@include('./components/data-table/_data-table_row_actions.html')
+                      %th.table-cell-hd
+                        ID
+                      %th.table-cell-hd
+                        Status
+                      %th.table-cell-hd
+                        Name
+                      %th.table-cell-hd
+                        Date
+                      %th.table-cell-hd
+                        Cost
+                      %th.table-cell-hd
+                        Details
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    %tr.tr
+                      %td.table-cell
+                        .checkbox.__context_no_lbl.__context_boxed
+                          %input.checkbox__input#prop-1{type: "checkbox"}
+                          %label.checkbox__lbl{for: "prop-1"}
+                      %td.table-cell
+                        @@include('./components/data-table/_data-table_row_actions_act.html')
+                      %td.table-cell
+                        \#001
+                      %td.table-cell
+                        %span.alert-label.__context_state_error Error
+                      %td.table-cell
+                        Swift Transaction
+                      %td.table-cell
+                        15/11/2019
+                      %td.table-cell
+                        $1250
+                      %td.table-cell
+                        Private substantially Fitch bull
+                    %tr.tr-expanded
+                      %td.table-cell
+                        .checkbox.__context_no_lbl.__context_boxed
+                          %input.checkbox__input#prop-1{type: "checkbox"}
+                          %label.checkbox__lbl{for: "prop-1"}
+                      %td.table-cell
+                        @@include('./components/data-table/_data-table_row_actions_act.html')
+                      %td.table-cell
+                        \#001
+                      %td.table-cell
+                        %span.alert-label.__context_state_error Error
+                      %td.table-cell
+                        Swift Transaction
+                      %td.table-cell{colspan: "3"}
+                        .table-row__actions_expanded
+                          %button.btn.btn-sm.btn-secondary Cancel
+                          %button.btn.btn-sm.btn-primary Save
 
-
+                    %tr.tr-details
+                      %td{colspan: "8"}
+                        .item-form
+                          %form.form-tabular
+                            .container-fluid
+                              .col-md-6
+                                %h4 Form Column 1
+                                .input-grp
+                                  %label.input-grp__lbl Field 100% width
+                                  %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                  %small.control-info *Field Descriptions
+                                .row
+                                  .col-md-6
+                                    .input-grp
+                                      %label.input-grp__lbl Field 50% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                  .col-md-6
+                                    .input-grp
+                                      %label.input-grp__lbl Field 50% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                .row
+                                  .col-md-4
+                                    .input-grp
+                                      %label.input-grp__lbl Field 33% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                  .col-md-4
+                                    .input-grp
+                                      %label.input-grp__lbl Field 33% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                  .col-md-4
+                                    .input-grp
+                                      %label.input-grp__lbl Field 33% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                              .col-md-6
+                                %h4 Form Column 1
+                                .input-grp
+                                  %label.input-grp__lbl Field 100% width
+                                  %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                  %small.control-info *Field Descriptions
+                                .row
+                                  .col-md-6
+                                    .input-grp
+                                      %label.input-grp__lbl Field 50% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                  .col-md-6
+                                    .input-grp
+                                      %label.input-grp__lbl Field 50% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                .row
+                                  .col-md-4
+                                    .input-grp
+                                      %label.input-grp__lbl Field 33% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                  .col-md-4
+                                    .input-grp
+                                      %label.input-grp__lbl Field 33% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                                  .col-md-4
+                                    .input-grp
+                                      %label.input-grp__lbl Field 33% width
+                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
+                                      %small.control-info *Field Descriptions
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row.html')
     @@include('./components/footer/_footer.html')
-    @@include('./components/toaster/_toaster-container.html')
     @@include('./components/scripts/_scripts.html')

@@ -1,0 +1,29 @@
+// Independent Error Label;
+.error-label {
+  font-weight: 500;
+  color: $red;
+}
+
+.alert-label{
+  font-weight: 400;
+    &.__context_weight_medium {
+      font-weight: 500;
+    }
+    &.__context_state_success{
+      color: $color-status-success;
+    }
+    &.__context_state_error{
+      color: $color-status-error;
+    }
+    &.__context_state_ignore{
+      color: $color-status-ignore;
+    }
+
+}
+.label-success {
+
+}
+
+.label-success {
+
+}

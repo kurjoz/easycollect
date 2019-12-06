@@ -154,3 +154,18 @@
     color: $red;
   }
 }
+
+.form-tabular {
+  .input-control {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: $white;
+  }
+  .input-grp__lbl {
+    font-size: 12px;
+  }
+  .control-info,
+  .feedback-message {
+    font-size: 12px;
+  }
+}

@@ -49,3 +49,26 @@
 .checkbox .checkbox__input:checked + .checkbox__lbl::after {
   opacity: 1;
 }
+
+// Modifications:
+.checkbox {
+  &.__context_no_lbl{
+    margin-bottom: 0;
+    //border: 1px solid red;
+  }
+  &.__context_boxed{
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    line-height: 18px;
+    padding: 0 0 0 18px;
+    .checkbox__lbl {
+      &::before {
+        left: -18px;
+      }
+      &::after {
+        left: -14px;
+      }
+    }
+  }
+  }

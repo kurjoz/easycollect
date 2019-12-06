@@ -1,0 +1,15 @@
+@@include('./components/head/_head.html')
+
+  %body
+    @@include('./components/header/_header__auth.html')
+    .container
+      .sidebar-content-wrapper
+        .sidebar-left
+          @@include('./components/sidebar-nav/_sidebar-nav.html')
+        .content-wrapper
+          .container-fluid
+            .row
+              .col-lg-9.col-md-12
+                Content
+    @@include('./components/footer/_footer.html')
+    @@include('./components/scripts/_scripts.html')

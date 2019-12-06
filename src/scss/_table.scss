@@ -1,0 +1,42 @@
+.table {
+  font-size: 14px;
+
+  .table-cell-hd{
+    vertical-align: middle;
+    font-weight: 500;
+    color: $black;
+  }
+  .table-cell {
+    vertical-align: middle;
+  }
+}
+
+.table-row__actions {
+  display: flex;
+  .btn {
+    margin-left: 8px;
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+}
+.table-row__actions_expanded {
+  text-align: right;
+  .btn {
+    margin-left: 6px;
+    min-width: 80px;
+  }
+}
+//Modifications:
+  //1. Sizes
+.table-cell-hd,
+.table-cell {
+
+  &.__context_type_checkbox_x1 {
+    width: 18px;
+      .checkbox {}
+  }
+  &.__context_type_buttons_x3 {
+    max-width: 96px;
+  }
+}

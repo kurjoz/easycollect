@@ -81,6 +81,9 @@ button {
     outline: 0;
     box-shadow: none;
     background-color: #B1C3B6;
+    &:hover, &:focus, &:active {
+      background-color: #B1C3B6;
+    }
   }
 
   &:not(:disabled):not(.disabled):active,
@@ -145,12 +148,14 @@ button {
   background-color: $grey-outlines;
   &:hover,
   &.hover {
+    color: $white;
     outline: 0;
     box-shadow: none;
     background-color: darken($grey-outlines, 10%);
   }
   &:focus,
   &.focus {
+    color: $white;
     outline: 0;
     box-shadow: none;
     background-color: lighten($grey-outlines, 10%);
@@ -183,12 +188,44 @@ button {
   padding-right: 8px;
   padding-left: 8px;
 }
-.btn-ico-xs {
-  padding: 0;
-  margin: 0;
-  height: 18px;
-  width: 18px;
+//Tables:
+.btn-tabular-primary {
+  border: 1px solid $primary;
+  .icon svg {
+    fill: $primary;
+  }
+  &.__active {
+    border: none;
+    background-color: $primary;
+    .icon svg {
+      fill: $white;
+    }
+  }
 }
 
+.btn-tabular-secondary {
+  border: 1px solid $grey-dimmed;
+  .icon svg {
+    fill: $grey-dimmed;
+  }
 
+  &.__active {
+    border: none;
+    background-color: $grey-dimmed;
+    .icon svg {
+      fill: $white;
+    }
+  }
+}
 // Button Sizes:
+.btn-sm {
+  padding: 8px;
+  font-size: 12px;
+  line-height: 16px;
+}
+.btn-xs {
+  padding: 4px 0;
+  margin: 0;
+  height: 24px;
+  width: 24px;
+}
