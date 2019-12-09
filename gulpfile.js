@@ -48,8 +48,6 @@ function browserSyncReload(done) {
 function css() {
   return gulp
     .src("./src/scss/index.scss")
-    //include normalize scss from node module;
-    .pipe(sass({includePaths: require('node-normalize-scss').includePaths}))
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "expanded" }))

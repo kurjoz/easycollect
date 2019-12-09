@@ -13,8 +13,7 @@
     "gulp-file-include": "^2.1.1",
     "gulp-format-html": "^1.2.3",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-uglify-es": "^2.0.0",
-    "node-normalize-scss": "^8.0.1"
+    "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
     "autoprefixer": "^9.7.1",
@@ -37,7 +36,6 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "meyer-reset-scss": "^2.0.4",
     "webpack": "^4.41.2",
     "webpack-stream": "^5.2.1"
   }

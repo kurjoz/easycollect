@@ -1,4 +1,4 @@
-@import "./node_modules/meyer-reset-scss/_reset-src.scss";
+@import "reset";
 @import "normalize";
 @import "variables";
 @import "./node_modules/bootstrap/scss/bootstrap-grid";
@@ -11,9 +11,6 @@
 
 //Helpers:
 @import "helpers";
-
-//elements:
-
 
 //components:
 @import "logo";
