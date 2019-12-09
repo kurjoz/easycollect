@@ -3162,7 +3162,7 @@ button {
   line-height: 16px; }
 
 .btn-xs {
-  padding: 4px 0;
+  padding: 0;
   margin: 0;
   height: 24px;
   width: 24px; }
@@ -3410,27 +3410,6 @@ button {
   width: 24px;
   height: 24px;
   vertical-align: middle; }
-
-.icon.icon__alert {
-  background-image: url(assets/icons/icon-alert.svg); }
-
-.icon.icon__cog {
-  background-image: url(assets/icons/icon-cog.svg); }
-
-.icon.icon__service-stripe {
-  background-image: url(assets/icons/icon-service-stripe.svg); }
-
-.icon.icon__service-paypal {
-  background-image: url(assets/icons/icon-service-paypal.svg); }
-
-.icon.icon__doc-csv {
-  background-image: url(assets/icons/icon-doc-csv.svg); }
-
-.icon.icon__doc-download {
-  background-image: url(assets/icons/icon-doc-download.svg); }
-
-.icon.icon.icon__bin-light {
-  background-image: url(assets/icons/icon-bin-light.svg); }
 
 .icon.__icon_xs {
   display: inline-block;
@@ -3705,8 +3684,16 @@ button {
   top: 50%;
   margin-top: -27px;
   width: 41px;
-  height: 54px;
-  background: transparent url(assets/upload-status-default.svg) 50% no-repeat; }
+  height: 54px; }
+
+.file-upload__icon > img {
+  position: absolute; }
+
+.file-upload__icon .__state_default {
+  opacity: 1; }
+
+.file-upload__icon .__state_error, .file-upload__icon .__state_progress, .file-upload__icon .__state_success {
+  opacity: 0; }
 
 .file-upload.__highlight {
   border-color: #35ba59;
@@ -3715,8 +3702,11 @@ button {
 .file-upload.__success {
   border: 1px solid #35ba59; }
 
-.file-upload.__success .file-upload__icon {
-  background: transparent url(assets/upload-status-success.svg) 50% no-repeat; }
+.file-upload.__success .file-upload__icon .__state_success {
+  opacity: 1; }
+
+.file-upload.__success .file-upload__icon .__state_default, .file-upload.__success .file-upload__icon .__state_error, .file-upload.__success .file-upload__icon .__state_progress {
+  opacity: 0; }
 
 .file-upload.__progress {
   border: 1px solid #35ba59; }
@@ -3730,17 +3720,13 @@ button {
 .file-upload.__progress .file-upload__icon {
   background: none; }
 
-.file-upload.__progress .file-upload__container:before {
-  content: "";
-  position: absolute;
-  width: 41px;
-  height: 41px;
-  left: 0;
-  top: 50%;
-  margin-top: -20px;
+.file-upload.__progress .file-upload__icon .__state_progress {
+  opacity: 1;
   -webkit-animation: spinner 1s linear infinite;
-  animation: spinner 1s linear infinite;
-  background: transparent url(assets/upload-status-progress.svg) 50% no-repeat; }
+  animation: spinner 1s linear infinite; }
+
+.file-upload.__progress .file-upload__icon .__state_default, .file-upload.__progress .file-upload__icon .__state_error, .file-upload.__progress .file-upload__icon .__state_success {
+  opacity: 0; }
 
 .file-upload.__error {
   border: 1px solid #e21d1d; }
@@ -3751,8 +3737,11 @@ button {
 .file-upload.__error .file-upload__lead.__show-default, .file-upload.__error .file-upload__lead.__show-in-progress {
   display: none; }
 
-.file-upload.__error .file-upload__icon {
-  background: transparent url(assets/upload-status-error.svg) 50% no-repeat; }
+.file-upload.__error .file-upload__icon .__state_error {
+  opacity: 1; }
+
+.file-upload.__error .file-upload__icon .__state_default, .file-upload.__error .file-upload__icon .__state_progress, .file-upload.__error .file-upload__icon .__state_success {
+  opacity: 0; }
 
 .file-upload.__error .file-upload__template a {
   color: #e21d1d; }
@@ -3792,7 +3781,7 @@ button {
   text-decoration: none; }
 
 .paginator .paginator__item.__next .icon, .paginator .paginator__item.__prev .icon {
-  top: 2px;
+  top: -2px;
   position: relative; }
 
 .header {
