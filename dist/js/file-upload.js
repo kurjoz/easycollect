@@ -73,7 +73,6 @@ function uploadFile(file, i) {
 
   // Update progress (can be used to show progress indicator)
   xhr.upload.addEventListener("progress", function(e) {
-    console.log('Progress');
     dropArea.className = 'file-upload __progress'
     updateProgress(i, (e.loaded * 100.0 / e.total) || 100)
   })
@@ -81,13 +80,11 @@ function uploadFile(file, i) {
   xhr.addEventListener('readystatechange', function(e) {
     if (xhr.readyState == 4 && xhr.status == 200) {
       dropArea.className = 'file-upload __success'
-      console.log('Success');
       updateProgress(i, 100) // <- Add this
     }
     else if (xhr.readyState == 4 && xhr.status != 200) {
       // Error. Inform the user
       dropArea.className = 'file-upload __error'
-      console.log('Error');
     }
   })
 

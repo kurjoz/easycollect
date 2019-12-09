@@ -2,7 +2,6 @@
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 .file-upload {
   margin: 0 0 16px 0;
   padding: 30px 0;
@@ -53,10 +52,20 @@
   margin-top: -27px;
   width: 41px;
   height: 54px;
-  background: transparent url('./assets/upload-status-default.svg') center no-repeat;
+  > img {
+    position: absolute;
+  }
+  .__state_default {
+    opacity: 1;
+  }
+  .__state_success,
+  .__state_progress,
+  .__state_error {
+    opacity: 0;
+  }
+
 }
 .file-upload.__highlight {
-  //border: 1px solid #ACACB2;
   border-color: $primary;
   box-shadow: 0 0 5px rgba(53, 186, 89, .5 );
 }
@@ -64,7 +73,14 @@
 .file-upload.__success {
   border: 1px solid $primary;
   .file-upload__icon {
-    background: transparent url('./assets/upload-status-success.svg') center no-repeat;
+    .__state_success {
+      opacity: 1;
+    }
+    .__state_default,
+    .__state_progress,
+    .__state_error {
+      opacity: 0;
+    }
   }
 }
 .file-upload.__progress {
@@ -84,17 +100,15 @@
   }
   .file-upload__icon {
     background: none;
-  }
-  .file-upload__container:before {
-    content: '';
-    position: absolute;
-    width: 41px;
-    height: 41px;
-    left: 0;
-    top: 50%;
-    margin-top: -20px;
-    animation: spinner 1s linear infinite;
-    background: transparent url('./assets/upload-status-progress.svg') center no-repeat;
+    .__state_progress {
+      opacity: 1;
+      animation: spinner 1s linear infinite;
+    }
+    .__state_default,
+    .__state_success,
+    .__state_error {
+      opacity: 0;
+    }
   }
 }
 .file-upload.__error {
@@ -111,7 +125,15 @@
   }
 
   .file-upload__icon {
-    background: transparent url('./assets/upload-status-error.svg') center no-repeat;
+    .__state_error {
+      opacity: 1;
+    }
+    .__state_default,
+    .__state_success,
+    .__state_progress {
+      opacity: 0;
+    }
+
   }
   .file-upload__template a {
     color: $red;
