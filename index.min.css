@@ -3736,19 +3736,6 @@ button {
 .file-upload.__error .file-upload__template a {
   color: #e21d1d; }
 
-#gallery, #progress-bar {
-  display: none; }
-
-#gallery {
-  margin-top: 10px; }
-
-#gallery img {
-  width: 150px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  vertical-align: middle;
-  display: none; }
-
 #fileElem {
   display: none; }
 
