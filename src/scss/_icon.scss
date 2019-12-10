@@ -5,25 +5,32 @@
   vertical-align: middle;
 
   &.icon__alert {
-    //background-image: url('./assets/icons/icon-alert.svg');
+    background-image: url('./assets/icons/icon-alert.svg');
+    background-image: image-url('./assets/icons/icon-alert.svg');
   }
   &.icon__cog {
-    //background-image: url('./assets/icons/icon-cog.svg');
+    background-image: url('./assets/icons/icon-cog.svg');
+    background-image: image-url('./assets/icons/icon-cog.svg')
   }
   &.icon__service-stripe {
-    //background-image: url('./assets/icons/icon-service-stripe.svg');
+    background-image: url('./assets/icons/icon-service-stripe.svg');
+    background-image: image-url('./assets/icons/icon-service-stripe.svg')
   }
   &.icon__service-paypal {
-    //background-image: url('./assets/icons/icon-service-paypal.svg');
+    background-image: url('./assets/icons/icon-service-paypal.svg');
+    background-image: image-url('./assets/icons/icon-service-paypal.svg')
   }
   &.icon__doc-csv {
-    //background-image: url('./assets/icons/icon-doc-csv.svg');
+    background-image: url('./assets/icons/icon-doc-csv.svg');
+    background-image: image-url('./assets/icons/icon-doc-csv.svg')
   }
   &.icon__doc-download {
-    //background-image: url('./assets/icons/icon-doc-download.svg');
+    background-image: url('./assets/icons/icon-doc-download.svg');
+    background-image: image-url('./assets/icons/icon-doc-download.svg')
   }
   &.icon.icon__bin-light {
-    //background-image: url('./assets/icons/icon-bin-light.svg');
+    background-image: url('./assets/icons/icon-bin-light.svg');
+    background-image: image-url('./assets/icons/icon-bin-light.svg')
   }
 
   // icons. XS
