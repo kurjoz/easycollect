@@ -2511,6 +2511,11 @@ body {
 .container-fluid {
   max-width: 1440px; }
 
+.container-fluid.__size_full_width {
+  padding-right: 40px;
+  padding-left: 40px;
+  max-width: none; }
+
 .container {
   max-width: 1170px; }
 
@@ -3154,6 +3159,7 @@ button {
   line-height: 20px; }
 
 .checkbox__lbl {
+  margin: 0;
   position: relative;
   display: inline-block;
   width: 100%;
@@ -3220,6 +3226,7 @@ button {
   line-height: 20px; }
 
 .radio__lbl {
+  margin: 0;
   position: relative;
   display: inline-block;
   width: 100%;
@@ -3403,16 +3410,40 @@ button {
 .icon.icon__doc-download {
   background-image: url(assets/icons/icon-doc-download.svg); }
 
-.icon.icon.icon__bin-light {
+.icon.icon__bin-light {
   background-image: url(assets/icons/icon-bin-light.svg); }
+
+.icon.icon__modify_rec {
+  background-image: url(assets/icons/16/icon-edit.svg); }
+
+.icon.icon__acknowledge {
+  background-image: url(assets/icons/16/icon-check.svg); }
+
+.icon.icon__ignore {
+  background-image: url(assets/icons/16/icon-ignore.svg); }
+
+.icon.icon__arrow_l {
+  background-image: url(assets/icons/16/icon-arrow-l.svg); }
+
+.icon.icon__arrow_r {
+  background-image: url(assets/icons/16/icon-arrow-r.svg); }
 
 .icon.__icon_xs {
   display: inline-block;
   width: 16px;
-  height: 16px;
-  vertical-align: baseline; }
+  height: 16px; }
+
+.btn.__active .icon__modify_rec {
+  background-image: url(assets/icons/16/icon-edit-active.svg); }
+
+.btn.__active .icon__acknowledge {
+  background-image: url(assets/icons/16/icon-check-active.svg); }
+
+.btn.__active .icon__ignore {
+  background-image: url(assets/icons/16/icon-ignore-active.svg); }
 
 .sidebar-nav {
+  padding: 0;
   list-style-type: none; }
 
 .sidebar-nav__item {
