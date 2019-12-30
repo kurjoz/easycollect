@@ -3410,14 +3410,37 @@ button {
 .icon.icon__doc-download {
   background-image: url(assets/icons/icon-doc-download.svg); }
 
-.icon.icon.icon__bin-light {
+.icon.icon__bin-light {
   background-image: url(assets/icons/icon-bin-light.svg); }
+
+.icon.icon__modify_rec {
+  background-image: url(assets/icons/16/icon-edit.svg); }
+
+.icon.icon__acknowledge {
+  background-image: url(assets/icons/16/icon-check.svg); }
+
+.icon.icon__ignore {
+  background-image: url(assets/icons/16/icon-ignore.svg); }
+
+.icon.icon__arrow_l {
+  background-image: url(assets/icons/16/icon-arrow-l.svg); }
+
+.icon.icon__arrow_r {
+  background-image: url(assets/icons/16/icon-arrow-r.svg); }
 
 .icon.__icon_xs {
   display: inline-block;
   width: 16px;
-  height: 16px;
-  vertical-align: baseline; }
+  height: 16px; }
+
+.btn.__active .icon__modify_rec {
+  background-image: url(assets/icons/16/icon-edit-active.svg); }
+
+.btn.__active .icon__acknowledge {
+  background-image: url(assets/icons/16/icon-check-active.svg); }
+
+.btn.__active .icon__ignore {
+  background-image: url(assets/icons/16/icon-ignore-active.svg); }
 
 .sidebar-nav {
   padding: 0;

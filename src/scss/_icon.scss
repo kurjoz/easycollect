@@ -22,8 +22,23 @@
   &.icon__doc-download {
     background-image: url('assets/icons/icon-doc-download.svg');
   }
-  &.icon.icon__bin-light {
+  &.icon__bin-light {
     background-image: url('assets/icons/icon-bin-light.svg');
+  }
+  &.icon__modify_rec {
+    background-image: url('assets/icons/16/icon-edit.svg');
+  }
+  &.icon__acknowledge {
+    background-image: url('assets/icons/16/icon-check.svg');
+  }
+  &.icon__ignore {
+    background-image: url('assets/icons/16/icon-ignore.svg');
+  }
+  &.icon__arrow_l {
+    background-image: url('assets/icons/16/icon-arrow-l.svg');
+  }
+  &.icon__arrow_r {
+    background-image: url('assets/icons/16/icon-arrow-r.svg');
   }
 
   // icons. XS
@@ -31,6 +46,19 @@
     display: inline-block;
     width: 16px;
     height: 16px;
-    vertical-align: baseline;
+  }
+
+
+}
+//Context:
+.btn.__active {
+  .icon__modify_rec {
+    background-image: url('assets/icons/16/icon-edit-active.svg');
+  }
+  .icon__acknowledge {
+    background-image: url('assets/icons/16/icon-check-active.svg');
+  }
+  .icon__ignore {
+    background-image: url('assets/icons/16/icon-ignore-active.svg');
   }
 }
