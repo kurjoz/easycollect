@@ -46,29 +46,11 @@
                       %th.table-cell-hd
                         %a.table-cell-hd__sortable.__sort_none{href: "#"}
                           Details
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    %tr.tr
-                      %td.table-cell
-                        .checkbox.__context_no_lbl.__context_boxed
-                          %input.checkbox__input#prop-1{type: "checkbox"}
-                          %label.checkbox__lbl{for: "prop-1"}
-                      %td.table-cell
-                        @@include('./components/data-table/_data-table_row_actions_act.html')
-                      %td.table-cell
-                        \#001
-                      %td.table-cell
-                        %span.alert-label.__context_state_error Error
-                      %td.table-cell
-                        Swift Transaction
-                      %td.table-cell
-                        15/11/2019
-                      %td.table-cell
-                        $1250
-                      %td.table-cell
-                        Private substantially Fitch bull
+                    @@include('./components/data-table/_data-table_row_success.html')
+                    @@include('./components/data-table/_data-table_row_error.html')
+                    @@include('./components/data-table/_data-table_row_ignore.html')
+                    @@include('./components/data-table/_data-table_row_success.html')
+                    @@include('./components/data-table/_data-table_row_error.html')
                     %tr.tr-expanded
                       %td.table-cell
                         .checkbox.__context_no_lbl.__context_boxed
@@ -79,7 +61,7 @@
                       %td.table-cell
                         \#001
                       %td.table-cell
-                        %span.alert-label.__context_state_error Error
+                        %span.alert-label.__context_state_success Success
                       %td.table-cell
                         Swift Transaction
                       %td.table-cell{colspan: "3"}
@@ -166,9 +148,9 @@
                         %i.icon.icon__doc-generic
                         %span.tr-separator__lbl
                           Next_File_1.csv
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
+                    @@include('./components/data-table/_data-table_row_success.html')
+                    @@include('./components/data-table/_data-table_row_error.html')
+                    @@include('./components/data-table/_data-table_row_ignore.html')
                     @@include('./components/data-table/_data-table_row.html')
                     @@include('./components/data-table/_data-table_row.html')
                     @@include('./components/data-table/_data-table_row.html')

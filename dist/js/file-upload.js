@@ -59,7 +59,6 @@ function handleFiles(files) {
   files = [...files]
   initializeProgress(files.length)
   files.forEach(uploadFile)
-  files.forEach(previewFile)
 }
 
 // Modify part below due to provide correct url for upload destination
