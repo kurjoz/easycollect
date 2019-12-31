@@ -14,8 +14,9 @@
   }
   tbody > .tr-details > td,
   tbody > .tr-details > td:first-child,
-  tbody > .tr-details > td:last-child
-   { padding: 0 0 16px 0; }
+  tbody > .tr-details > td:last-child {
+     padding: 0 0 16px 0;
+   }
 }
 .table-cell-hd__sortable {
   color: $black;
@@ -24,7 +25,7 @@
     text-decoration: underline;
     color: $black;
   }
-  &.__sort_asc:before{ 
+  &.__sort_asc:before{
     content: '';
     width: 10px;
     height: 10px;
@@ -64,6 +65,13 @@
   }
   .table-cell {
     vertical-align: middle;
+    border-color: $grey-borders;
+  }
+  tbody, tbody + tbody {
+    border: none;
+  }
+  thead th {
+    border-bottom-width: 1px;
     border-color: $grey-borders;
   }
 }

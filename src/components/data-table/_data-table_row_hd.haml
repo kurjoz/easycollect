@@ -1,0 +1,26 @@
+%tr.table-row
+  %th.table-cell-hd.__context_type_checkbox_x1
+    .checkbox.__context_no_lbl.__context_boxed
+      %input.checkbox__input#prop-1{type: "checkbox"}
+      %label.checkbox__lbl{for: "prop-1"}
+  //Comment
+  %th.table-cell-hd.__context_type_buttons_x3
+    @@include('_data-table_row_actions.html')
+  %th.table-cell-hd
+    %a.table-cell-hd__sortable.__sort_asc{href: "#"}
+      ID
+  %th.table-cell-hd
+    %a.table-cell-hd__sortable.__sort_desc{href: "#"}
+      Status
+  %th.table-cell-hd
+    %a.table-cell-hd__sortable.__sort_none{href: "#"}
+      Name
+  %th.table-cell-hd
+    %a.table-cell-hd__sortable.__sort_none{href: "#"}
+      Date
+  %th.table-cell-hd
+    %a.table-cell-hd__sortable.__sort_none{href: "#"}
+      Cost
+  %th.table-cell-hd
+    %a.table-cell-hd__sortable.__sort_none{href: "#"}
+      Details

@@ -20,141 +20,36 @@
                         %option Status: Ignore
                       %input.input-control.__table_filter{type: "text", placeholder: "Filter..."}
                   %table.table
-                    %tr.table-row
-                      %th.table-cell-hd.__context_type_checkbox_x1
-                        .checkbox.__context_no_lbl.__context_boxed
-                          %input.checkbox__input#prop-1{type: "checkbox"}
-                          %label.checkbox__lbl{for: "prop-1"}
-                      //Comment
-                      %th.table-cell-hd.__context_type_buttons_x3
-                        @@include('./components/data-table/_data-table_row_actions.html')
-                      %th.table-cell-hd
-                        %a.table-cell-hd__sortable.__sort_asc{href: "#"}
-                          ID
-                      %th.table-cell-hd
-                        %a.table-cell-hd__sortable.__sort_desc{href: "#"}
-                          Status
-                      %th.table-cell-hd
-                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
-                          Name
-                      %th.table-cell-hd
-                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
-                          Date
-                      %th.table-cell-hd
-                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
-                          Cost
-                      %th.table-cell-hd
-                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
-                          Details
-                    @@include('./components/data-table/_data-table_row_success.html')
-                    @@include('./components/data-table/_data-table_row_error.html')
-                    @@include('./components/data-table/_data-table_row_ignore.html')
-                    @@include('./components/data-table/_data-table_row_success.html')
-                    @@include('./components/data-table/_data-table_row_error.html')
-                    %tr.tr-expanded
-                      %td.table-cell
-                        .checkbox.__context_no_lbl.__context_boxed
-                          %input.checkbox__input#prop-1{type: "checkbox"}
-                          %label.checkbox__lbl{for: "prop-1"}
-                      %td.table-cell
-                        @@include('./components/data-table/_data-table_row_actions_act.html')
-                      %td.table-cell
-                        \#001
-                      %td.table-cell
-                        %span.alert-label.__context_state_success Success
-                      %td.table-cell
-                        Swift Transaction
-                      %td.table-cell{colspan: "3"}
-                        .table-row__actions_expanded
-                          %button.btn.btn-sm.btn-secondary Cancel
-                          %button.btn.btn-sm.btn-primary Save
-
-                    %tr.tr-details
-                      %td{colspan: "8"}
-                        .item-form
-                          %form.form-tabular
-                            .row
-                              .col-md-6
-                                %h4 Form Column 1
-                                .input-grp
-                                  %label.input-grp__lbl Field 100% width
-                                  %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                  %small.control-info *Field Descriptions
-                                .row
-                                  .col-md-6
-                                    .input-grp
-                                      %label.input-grp__lbl Field 50% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                  .col-md-6
-                                    .input-grp
-                                      %label.input-grp__lbl Field 50% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                .row
-                                  .col-md-4
-                                    .input-grp
-                                      %label.input-grp__lbl Field 33% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                  .col-md-4
-                                    .input-grp
-                                      %label.input-grp__lbl Field 33% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                  .col-md-4
-                                    .input-grp
-                                      %label.input-grp__lbl Field 33% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                              .col-md-6
-                                %h4 Form Column 1
-                                .input-grp
-                                  %label.input-grp__lbl Field 100% width
-                                  %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                  %small.control-info *Field Descriptions
-                                .row
-                                  .col-md-6
-                                    .input-grp
-                                      %label.input-grp__lbl Field 50% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                  .col-md-6
-                                    .input-grp
-                                      %label.input-grp__lbl Field 50% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                .row
-                                  .col-md-4
-                                    .input-grp
-                                      %label.input-grp__lbl Field 33% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                  .col-md-4
-                                    .input-grp
-                                      %label.input-grp__lbl Field 33% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                                  .col-md-4
-                                    .input-grp
-                                      %label.input-grp__lbl Field 33% width
-                                      %input.input-control.__text{type: "text", placeholder: "Input text"}
-                                      %small.control-info *Field Descriptions
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    %tr.tr-separator
-                      %td{colspan: "8"}
-                        %i.icon.icon__doc-generic
-                        %span.tr-separator__lbl
-                          Next_File_1.csv
-                    @@include('./components/data-table/_data-table_row_success.html')
-                    @@include('./components/data-table/_data-table_row_error.html')
-                    @@include('./components/data-table/_data-table_row_ignore.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
-                    @@include('./components/data-table/_data-table_row.html')
+                    %thead
+                      @@include('./components/data-table/_data-table_row_hd.html')
+                    %tbody
+                      %tr.tr-separator
+                        %td{colspan: "8"}
+                          %i.icon.icon__doc-generic
+                          %span.tr-separator__lbl
+                            Next_File_0.csv
+                      @@include('./components/data-table/_data-table_row_success.html')
+                      @@include('./components/data-table/_data-table_row_error.html')
+                      @@include('./components/data-table/_data-table_row_ignore.html')
+                      @@include('./components/data-table/_data-table_row_success.html')
+                      @@include('./components/data-table/_data-table_row_error.html')
+                      @@include('./components/data-table/_data-table_row_expanded.html')
+                      @@include('./components/data-table/_data-table_row.html')
+                      @@include('./components/data-table/_data-table_row.html')
+                      @@include('./components/data-table/_data-table_row.html')
+                    %tbody
+                      %tr.tr-separator
+                        %td{colspan: "8"}
+                          %i.icon.icon__doc-generic
+                          %span.tr-separator__lbl
+                            Next_File_1.csv
+                      @@include('./components/data-table/_data-table_row_success.html')
+                      @@include('./components/data-table/_data-table_row_error.html')
+                      @@include('./components/data-table/_data-table_row_ignore.html')
+                      @@include('./components/data-table/_data-table_row.html')
+                      @@include('./components/data-table/_data-table_row.html')
+                      @@include('./components/data-table/_data-table_row.html')
+                      @@include('./components/data-table/_data-table_row.html')
                   @@include('./components/paginator/_paginator.html')
     @@include('./components/footer/_footer.html')
     @@include('./components/scripts/_scripts.html')
