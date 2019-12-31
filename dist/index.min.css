@@ -3421,43 +3421,43 @@ button {
   vertical-align: middle; }
 
 .icon.icon__alert {
-  background-image: url(/assets/icons/icon-alert.svg); }
+  background-image: url(assets/icons/icon-alert.svg); }
 
 .icon.icon__cog {
-  background-image: url(/assets/icons/icon-cog.svg); }
+  background-image: url(assets/icons/icon-cog.svg); }
 
 .icon.icon__service-stripe {
-  background-image: url(/assets/icons/icon-service-stripe.svg); }
+  background-image: url(assets/icons/icon-service-stripe.svg); }
 
 .icon.icon__service-paypal {
-  background-image: url(/assets/icons/icon-service-paypal.svg); }
+  background-image: url(assets/icons/icon-service-paypal.svg); }
 
 .icon.icon__doc-csv {
-  background-image: url(/assets/icons/icon-doc-csv.svg); }
+  background-image: url(assets/icons/icon-doc-csv.svg); }
 
 .icon.icon__doc-generic {
-  background-image: url(/assets/icons/icon-doc-generic.svg); }
+  background-image: url(assets/icons/icon-doc-generic.svg); }
 
 .icon.icon__doc-download {
-  background-image: url(/assets/icons/icon-doc-download.svg); }
+  background-image: url(assets/icons/icon-doc-download.svg); }
 
 .icon.icon__bin-light {
-  background-image: url(/assets/icons/icon-bin-light.svg); }
+  background-image: url(assets/icons/icon-bin-light.svg); }
 
 .icon.icon__modify_rec {
-  background-image: url(/assets/icons/16/icon-edit.svg); }
+  background-image: url(assets/icons/16/icon-edit.svg); }
 
 .icon.icon__acknowledge {
-  background-image: url(/assets/icons/16/icon-check.svg); }
+  background-image: url(assets/icons/16/icon-check.svg); }
 
 .icon.icon__ignore {
-  background-image: url(/assets/icons/16/icon-ignore.svg); }
+  background-image: url(assets/icons/16/icon-ignore.svg); }
 
 .icon.icon__arrow_l {
-  background-image: url(/assets/icons/16/icon-arrow-l.svg); }
+  background-image: url(assets/icons/16/icon-arrow-l.svg); }
 
 .icon.icon__arrow_r {
-  background-image: url(/assets/icons/16/icon-arrow-r.svg); }
+  background-image: url(assets/icons/16/icon-arrow-r.svg); }
 
 .icon.__icon_xs {
   display: inline-block;
@@ -3465,13 +3465,13 @@ button {
   height: 16px; }
 
 .btn.__active .icon__modify_rec {
-  background-image: url(/assets/icons/16/icon-edit-active.svg); }
+  background-image: url(assets/icons/16/icon-edit-active.svg); }
 
 .btn.__active .icon__acknowledge {
-  background-image: url(/assets/icons/16/icon-check-active.svg); }
+  background-image: url(assets/icons/16/icon-check-active.svg); }
 
 .btn.__active .icon__ignore {
-  background-image: url(/assets/icons/16/icon-ignore-active.svg); }
+  background-image: url(assets/icons/16/icon-ignore-active.svg); }
 
 .sidebar-nav {
   padding: 0;
@@ -3743,7 +3743,7 @@ button {
   margin-top: -27px;
   width: 41px;
   height: 54px;
-  background: transparent url(/assets/upload-status-default.svg) 50% no-repeat; }
+  background: transparent url(assets/upload-status-default.svg) 50% no-repeat; }
 
 .file-upload.__highlight {
   border-color: #35ba59;
@@ -3753,7 +3753,7 @@ button {
   border: 1px solid #35ba59; }
 
 .file-upload.__success .file-upload__icon {
-  background: transparent url(/assets/upload-status-success.svg) 50% no-repeat; }
+  background: transparent url(assets/upload-status-success.svg) 50% no-repeat; }
 
 .file-upload.__progress {
   border: 1px solid #35ba59; }
@@ -3777,7 +3777,7 @@ button {
   margin-top: -20px;
   -webkit-animation: spinner 1s linear infinite;
   animation: spinner 1s linear infinite;
-  background: transparent url(/assets/upload-status-progress.svg) 50% no-repeat; }
+  background: transparent url(assets/upload-status-progress.svg) 50% no-repeat; }
 
 .file-upload.__error {
   border: 1px solid #e21d1d; }
@@ -3789,7 +3789,7 @@ button {
   display: none; }
 
 .file-upload.__error .file-upload__icon {
-  background: transparent url(/assets/upload-status-error.svg) 50% no-repeat; }
+  background: transparent url(assets/upload-status-error.svg) 50% no-repeat; }
 
 .file-upload.__error .file-upload__template a {
   color: #e21d1d; }
