@@ -2892,6 +2892,34 @@ a:focus, a:hover {
 .table tbody > .tr-details > td, .table tbody > .tr-details > td:first-child, .table tbody > .tr-details > td:last-child, table tbody > .tr-details > td, table tbody > .tr-details > td:first-child, table tbody > .tr-details > td:last-child {
   padding: 0 0 16px; }
 
+.table-cell-hd__sortable {
+  color: #000;
+  position: relative; }
+
+.table-cell-hd__sortable:hover {
+  text-decoration: underline;
+  color: #000; }
+
+.table-cell-hd__sortable.__sort_asc:before {
+  margin-top: -6px; }
+
+.table-cell-hd__sortable.__sort_asc:before, .table-cell-hd__sortable.__sort_desc:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5L7.464.5H.536L4 5z' fill='%23000'/%3E%3C/svg%3E");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 100%;
+  margin-left: 5px;
+  top: 50%; }
+
+.table-cell-hd__sortable.__sort_desc:before {
+  margin-top: -4px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
 .table {
   font-size: 14px; }
 
@@ -3393,43 +3421,43 @@ button {
   vertical-align: middle; }
 
 .icon.icon__alert {
-  background-image: image-url("icons/icon-alert.svg"); }
+  background-image: url(../assets/icons/icon-alert.svg); }
 
 .icon.icon__cog {
-  background-image: image-url("icons/icon-cog.svg"); }
+  background-image: url(../assets/icons/icon-cog.svg); }
 
 .icon.icon__service-stripe {
-  background-image: image-url("icons/icon-service-stripe.svg"); }
+  background-image: url(../assets/icons/icon-service-stripe.svg); }
 
 .icon.icon__service-paypal {
-  background-image: image-url("icons/icon-service-paypal.svg"); }
+  background-image: url(../assets/icons/icon-service-paypal.svg); }
 
 .icon.icon__doc-csv {
-  background-image: image-url("icons/icon-doc-csv.svg"); }
+  background-image: url(../assets/icons/icon-doc-csv.svg); }
 
 .icon.icon__doc-generic {
-  background-image: image-url("icons/icon-doc-generic.svg"); }
+  background-image: url(../assets/icons/icon-doc-generic.svg); }
 
 .icon.icon__doc-download {
-  background-image: image-url("icons/icon-doc-download.svg"); }
+  background-image: url(../assets/icons/icon-doc-download.svg); }
 
 .icon.icon__bin-light {
-  background-image: image-url("icons/icon-bin-light.svg"); }
+  background-image: url(../assets/icons/icon-bin-light.svg); }
 
 .icon.icon__modify_rec {
-  background-image: image-url("icons/16/icon-edit.svg"); }
+  background-image: url(../assets/icons/16/icon-edit.svg); }
 
 .icon.icon__acknowledge {
-  background-image: image-url("icons/16/icon-check.svg"); }
+  background-image: url(../assets/icons/16/icon-check.svg); }
 
 .icon.icon__ignore {
-  background-image: image-url("icons/16/icon-ignore.svg"); }
+  background-image: url(../assets/icons/16/icon-ignore.svg); }
 
 .icon.icon__arrow_l {
-  background-image: image-url("icons/16/icon-arrow-l.svg"); }
+  background-image: url(../assets/icons/16/icon-arrow-l.svg); }
 
 .icon.icon__arrow_r {
-  background-image: image-url("icons/16/icon-arrow-r.svg"); }
+  background-image: url(../assets/icons/16/icon-arrow-r.svg); }
 
 .icon.__icon_xs {
   display: inline-block;
@@ -3437,13 +3465,13 @@ button {
   height: 16px; }
 
 .btn.__active .icon__modify_rec {
-  background-image: image-url("icons/16/icon-edit-active.svg"); }
+  background-image: url(../assets/icons/16/icon-edit-active.svg); }
 
 .btn.__active .icon__acknowledge {
-  background-image: image-url("icons/16/icon-check-active.svg"); }
+  background-image: url(../assets/icons/16/icon-check-active.svg); }
 
 .btn.__active .icon__ignore {
-  background-image: image-url("icons/16/icon-ignore-active.svg"); }
+  background-image: url(../assets/icons/16/icon-ignore-active.svg); }
 
 .sidebar-nav {
   padding: 0;
@@ -3715,7 +3743,7 @@ button {
   margin-top: -27px;
   width: 41px;
   height: 54px;
-  background: transparent image-url("upload-status-default.svg") 50% no-repeat; }
+  background: transparent url(../assets/upload-status-default.svg) 50% no-repeat; }
 
 .file-upload.__highlight {
   border-color: #35ba59;
@@ -3725,7 +3753,7 @@ button {
   border: 1px solid #35ba59; }
 
 .file-upload.__success .file-upload__icon {
-  background: transparent image-url("upload-status-success.svg") 50% no-repeat; }
+  background: transparent url(../assets/upload-status-success.svg) 50% no-repeat; }
 
 .file-upload.__progress {
   border: 1px solid #35ba59; }
@@ -3749,7 +3777,7 @@ button {
   margin-top: -20px;
   -webkit-animation: spinner 1s linear infinite;
   animation: spinner 1s linear infinite;
-  background: transparent image-url("upload-status-progress.svg") 50% no-repeat; }
+  background: transparent url(../assets/upload-status-progress.svg) 50% no-repeat; }
 
 .file-upload.__error {
   border: 1px solid #e21d1d; }
@@ -3761,7 +3789,7 @@ button {
   display: none; }
 
 .file-upload.__error .file-upload__icon {
-  background: transparent image-url("upload-status-error.svg") 50% no-repeat; }
+  background: transparent url(../assets/upload-status-error.svg) 50% no-repeat; }
 
 .file-upload.__error .file-upload__template a {
   color: #e21d1d; }

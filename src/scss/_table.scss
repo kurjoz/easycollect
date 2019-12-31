@@ -17,7 +17,44 @@
   tbody > .tr-details > td:last-child
    { padding: 0 0 16px 0; }
 }
+.table-cell-hd__sortable {
+  color: $black;
+  position: relative;
+  &:hover {
+    text-decoration: underline;
+    color: $black;
+  }
+  &.__sort_asc:before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5L7.4641 0.5H0.535898L4 5Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-position:  center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 100%;
+    margin-left: 5px;
+    top: 50%;
+    margin-top: -6px;
+  }
+  &.__sort_desc:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 5L7.4641 0.5H0.535898L4 5Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 100%;
+    margin-left: 5px;
+    top: 50%;
+    margin-top: -4px;
+    transform: rotate(180deg);
+  }
+  &.__sort_none {
 
+  }
+}
 .table {
   font-size: 14px;
   .table-cell-hd{

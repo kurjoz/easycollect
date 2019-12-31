@@ -29,17 +29,23 @@
                       %th.table-cell-hd.__context_type_buttons_x3
                         @@include('./components/data-table/_data-table_row_actions.html')
                       %th.table-cell-hd
-                        ID
+                        %a.table-cell-hd__sortable.__sort_asc{href: "#"}
+                          ID
                       %th.table-cell-hd
-                        Status
+                        %a.table-cell-hd__sortable.__sort_desc{href: "#"}
+                          Status
                       %th.table-cell-hd
-                        Name
+                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
+                          Name
                       %th.table-cell-hd
-                        Date
+                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
+                          Date
                       %th.table-cell-hd
-                        Cost
+                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
+                          Cost
                       %th.table-cell-hd
-                        Details
+                        %a.table-cell-hd__sortable.__sort_none{href: "#"}
+                          Details
                     @@include('./components/data-table/_data-table_row.html')
                     @@include('./components/data-table/_data-table_row.html')
                     @@include('./components/data-table/_data-table_row.html')
