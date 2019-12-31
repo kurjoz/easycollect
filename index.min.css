@@ -3135,7 +3135,8 @@ button {
 
 .btn-ico {
   padding-right: 8px;
-  padding-left: 8px; }
+  padding-left: 8px;
+  line-height: 0; }
 
 .btn-tabular-primary {
   border: 1px solid #35ba59; }
@@ -3421,43 +3422,43 @@ button {
   vertical-align: middle; }
 
 .icon.icon__alert {
-  background-image: url(assets/icons/icon-alert.svg); }
+  background-image: url(assets/icon-alert.svg); }
 
 .icon.icon__cog {
-  background-image: url(assets/icons/icon-cog.svg); }
+  background-image: url(assets/icon-cog.svg); }
 
 .icon.icon__service-stripe {
-  background-image: url(assets/icons/icon-service-stripe.svg); }
+  background-image: url(assets/icon-service-stripe.svg); }
 
 .icon.icon__service-paypal {
-  background-image: url(assets/icons/icon-service-paypal.svg); }
+  background-image: url(assets/icon-service-paypal.svg); }
 
 .icon.icon__doc-csv {
-  background-image: url(assets/icons/icon-doc-csv.svg); }
+  background-image: url(assets/icon-doc-csv.svg); }
 
 .icon.icon__doc-generic {
-  background-image: url(assets/icons/icon-doc-generic.svg); }
+  background-image: url(assets/icon-doc-generic.svg); }
 
 .icon.icon__doc-download {
-  background-image: url(assets/icons/icon-doc-download.svg); }
+  background-image: url(assets/icon-doc-download.svg); }
 
 .icon.icon__bin-light {
-  background-image: url(assets/icons/icon-bin-light.svg); }
+  background-image: url(assets/icon-bin-light.svg); }
 
 .icon.icon__modify_rec {
-  background-image: url(assets/icons/16/icon-edit.svg); }
+  background-image: url(assets/icon-edit.svg); }
 
 .icon.icon__acknowledge {
-  background-image: url(assets/icons/16/icon-check.svg); }
+  background-image: url(assets/icon-check.svg); }
 
 .icon.icon__ignore {
-  background-image: url(assets/icons/16/icon-ignore.svg); }
+  background-image: url(assets/icon-ignore.svg); }
 
 .icon.icon__arrow_l {
-  background-image: url(assets/icons/16/icon-arrow-l.svg); }
+  background-image: url(assets/icon-arrow-l.svg); }
 
 .icon.icon__arrow_r {
-  background-image: url(assets/icons/16/icon-arrow-r.svg); }
+  background-image: url(assets/icon-arrow-r.svg); }
 
 .icon.__icon_xs {
   display: inline-block;
@@ -3465,13 +3466,13 @@ button {
   height: 16px; }
 
 .btn.__active .icon__modify_rec {
-  background-image: url(assets/icons/16/icon-edit-active.svg); }
+  background-image: url(assets/icon-edit-active.svg); }
 
 .btn.__active .icon__acknowledge {
-  background-image: url(assets/icons/16/icon-check-active.svg); }
+  background-image: url(assets/icon-check-active.svg); }
 
 .btn.__active .icon__ignore {
-  background-image: url(assets/icons/16/icon-ignore-active.svg); }
+  background-image: url(assets/icon-ignore-active.svg); }
 
 .sidebar-nav {
   padding: 0;
