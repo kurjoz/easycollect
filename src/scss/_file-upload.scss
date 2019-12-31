@@ -19,7 +19,7 @@
 
 .file-upload__lead {
   margin-bottom: 8px;
-  color: $black;
+  color: $black; 
   font-size: 16px;
   &.__show-in-progress,
   &.__show-in-error {
@@ -53,7 +53,7 @@
   margin-top: -27px;
   width: 41px;
   height: 54px;
-  background: transparent url('assets/upload-status-default.svg') center no-repeat;
+  background: transparent image-url('upload-status-default.svg') center no-repeat;
 }
 .file-upload.__highlight {
   //border: 1px solid #ACACB2;
@@ -64,7 +64,7 @@
 .file-upload.__success {
   border: 1px solid $primary;
   .file-upload__icon {
-    background: transparent url('assets/upload-status-success.svg') center no-repeat;
+    background: transparent image-url('upload-status-success.svg') center no-repeat;
   }
 }
 .file-upload.__progress {
@@ -94,7 +94,7 @@
     top: 50%;
     margin-top: -20px;
     animation: spinner 1s linear infinite;
-    background: transparent url('assets/upload-status-progress.svg') center no-repeat;
+    background: transparent image-url('upload-status-progress.svg') center no-repeat;
   }
 }
 .file-upload.__error {
@@ -111,7 +111,7 @@
   }
 
   .file-upload__icon {
-    background: transparent url('assets/upload-status-error.svg') center no-repeat;
+    background: transparent image-url('upload-status-error.svg') center no-repeat;
   }
   .file-upload__template a {
     color: $red;

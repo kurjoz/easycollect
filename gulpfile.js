@@ -15,6 +15,7 @@ const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
 const sass = require("gulp-sass");
+const sassImage = require('gulp-sass-image');
 const webpack = require("webpack");
 const webpackconfig = require("./webpack.config.js");
 const webpackstream = require("webpack-stream");
@@ -25,7 +26,11 @@ const uglify = require('gulp-uglify-es').default;
 const concat = require('gulp-concat');
 const flattern = require('gulp-flatten');
 const sourcemaps = require('gulp-sourcemaps');
-const formatHtml = require('gulp-format-html')
+const formatHtml = require('gulp-format-html');
+
+const paths = {
+  images: 'assets/**/*.+(jpeg|jpg|png|gif|svg)',
+}
 
 // BrowserSync
 function browserSync(done) {
@@ -42,6 +47,17 @@ function browserSync(done) {
 function browserSyncReload(done) {
   browsersync.reload();
   done();
+}
+
+function image() {
+    return gulp.src(paths.images)
+        .pipe(sassImage({
+            targetFile: '_generated-imagehelper.scss', // default target filename is '_sass-image.scss'
+            // template: 'your-sass-image-template.mustache',
+            images_path: './src/assets/',
+            css_path: './src/scss/'
+        }))
+        .pipe(gulp.dest('./src/scss'));
 }
 
 // CSS task
@@ -123,6 +139,7 @@ function deploy () {
 
 // Watch files
 function watchFiles() {
+  gulp.watch(paths.images, image);
   gulp.watch(
     [
       "./src/scss/**/*",
@@ -156,6 +173,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 //exports.images = images;
 exports.partials =    partials;
 exports.html =        html;
+exports.image =       image;
 exports.css =         css;
 exports.js =          js;
 exports.clean =       clean;

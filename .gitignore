@@ -17,3 +17,4 @@ node_modules
 
 # Project files:
 src/.DS_Store
+src/scss/_generated-imagehelper.scss

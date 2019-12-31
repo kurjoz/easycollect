@@ -13,6 +13,7 @@
     "gulp-file-include": "^2.1.1",
     "gulp-format-html": "^1.2.3",
     "gulp-gh-pages": "^0.5.4",
+    "gulp-sass-image": "^1.1.2",
     "gulp-uglify-es": "^2.0.0"
   },
   "dependencies": {
