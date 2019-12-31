@@ -24,7 +24,7 @@
     text-decoration: underline;
     color: $black;
   }
-  &.__sort_asc:before{
+  &.__sort_asc:before{ 
     content: '';
     width: 10px;
     height: 10px;

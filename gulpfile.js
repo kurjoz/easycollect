@@ -54,7 +54,8 @@ function image() {
         .pipe(sassImage({
             targetFile: '_generated-imagehelper.scss', // default target filename is '_sass-image.scss'
             // template: 'your-sass-image-template.mustache',
-            images_path: './src/assets/',
+            //images_path: '/assets/',
+            http_images_path: '/assets/',
             css_path: './src/scss/'
         }))
         .pipe(gulp.dest('./src/scss'));
