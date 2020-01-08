@@ -240,19 +240,19 @@ button {
   }
 }
 .btn-tabular-danger {
-  border: 1px solid $red-darken;
+  border: 1px solid $red;
   background-color: #fefefe;
 
   &.disabled:hover,
   &:disabled:hover {
-    border: 1px solid $red-darken;
+    border: 1px solid $red;
     background-color: #fefefe;
   }
 
   &.__active,
   &:hover {
     border: none;
-    background-color: $red-darken;
+    background-color: $red;
   }
 }
 

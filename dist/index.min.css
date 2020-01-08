@@ -3180,12 +3180,12 @@ button {
   background-color: #9b9fb5; }
 
 .btn-tabular-danger, .btn-tabular-danger.disabled:hover, .btn-tabular-danger:disabled:hover {
-  border: 1px solid #b51717;
+  border: 1px solid #e21d1d;
   background-color: #fefefe; }
 
 .btn-tabular-danger.__active, .btn-tabular-danger:hover {
   border: none;
-  background-color: #b51717; }
+  background-color: #e21d1d; }
 
 .btn-sm {
   padding: 8px;
