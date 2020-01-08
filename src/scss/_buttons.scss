@@ -206,16 +206,18 @@ button {
 
 .btn-tabular-secondary {
   border: 1px solid $grey-dimmed;
-  .icon svg {
-    fill: $grey-dimmed;
-  }
 
   &.__active {
     border: none;
     background-color: $grey-dimmed;
-    .icon svg {
-      fill: $white;
-    }
+  }
+}
+.btn-tabular-danger {
+  border: 1px solid $red;
+
+  &.__active {
+    border: none;
+    background-color: $red;
   }
 }
 // Button Sizes:

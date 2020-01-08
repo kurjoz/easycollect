@@ -3162,15 +3162,16 @@ button {
 .btn-tabular-secondary {
   border: 1px solid #c7c7c7; }
 
-.btn-tabular-secondary .icon svg {
-  fill: #c7c7c7; }
-
 .btn-tabular-secondary.__active {
   border: none;
   background-color: #c7c7c7; }
 
-.btn-tabular-secondary.__active .icon svg {
-  fill: #fff; }
+.btn-tabular-danger {
+  border: 1px solid #e21d1d; }
+
+.btn-tabular-danger.__active {
+  border: none;
+  background-color: #e21d1d; }
 
 .btn-sm {
   padding: 8px;
@@ -3462,6 +3463,9 @@ button {
 .icon.icon__ignore {
   background-image: url(assets/icon-ignore.svg); }
 
+.icon.icon__bin_sm {
+  background-image: url(assets/icon-bin-sm.svg); }
+
 .icon.icon__arrow_l {
   background-image: url(assets/icon-arrow-l.svg); }
 
@@ -3481,6 +3485,9 @@ button {
 
 .btn.__active .icon__ignore {
   background-image: url(assets/icon-ignore-active.svg); }
+
+.btn.__active .icon__bin_sm {
+  background-image: url(assets/icon-bin-sm-active.svg); }
 
 .sidebar-nav {
   padding: 0;

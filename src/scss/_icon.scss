@@ -37,6 +37,9 @@
   &.icon__ignore {
     background-image: image-url('icon-ignore.svg');
   }
+  &.icon__bin_sm {
+    background-image: image-url('icon-bin-sm.svg');
+  }
   &.icon__arrow_l {
     background-image: image-url('icon-arrow-l.svg');
   }
@@ -63,5 +66,8 @@
   }
   .icon__ignore {
     background-image: image-url('icon-ignore-active.svg');
+  }
+  .icon__bin_sm {
+    background-image: image-url('icon-bin-sm-active.svg');
   }
 }
