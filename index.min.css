@@ -2947,7 +2947,9 @@ a:focus, a:hover {
 
 .table-row__actions {
   display: -webkit-box;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end; }
 
 .table-row__actions .btn {
   margin-left: 8px; }
@@ -2955,7 +2957,7 @@ a:focus, a:hover {
 .table-row__actions .btn:first-child {
   margin-left: 0; }
 
-.table-row__actions_expanded {
+.table-cell-hd .table-row__actions, .table-row__actions_expanded {
   text-align: right; }
 
 .table-row__actions_expanded .btn {
@@ -3057,7 +3059,8 @@ button {
 .btn.disabled, .btn:disabled {
   opacity: .7;
   outline: 0;
-  box-shadow: none; }
+  box-shadow: none;
+  cursor: not-allowed; }
 
 .btn:not(:disabled):not(.disabled).active, .btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled):active:focus {
   outline: 0;
@@ -3149,32 +3152,40 @@ button {
   padding-left: 8px;
   line-height: 0; }
 
-.btn-tabular-primary {
-  border: 1px solid #35ba59; }
+.btn-tabular-solid, .btn-tabular-solid.disabled:hover, .btn-tabular-solid:disabled:hover {
+  border: 1px solid #4a4a4b;
+  background-color: #fefefe; }
 
-.btn-tabular-primary .icon svg {
-  fill: #35ba59; }
+.btn-tabular-solid.__active, .btn-tabular-solid:hover {
+  border: none;
+  background-color: #4a4a4b; }
 
-.btn-tabular-primary.__active {
+.btn-tabular-primary, .btn-tabular-primary.disabled:hover, .btn-tabular-primary:disabled:hover {
+  border: 1px solid #35ba59;
+  background-color: #fefefe; }
+
+.btn-tabular-primary.__active, .btn-tabular-primary:hover {
   border: none;
   background-color: #35ba59; }
 
-.btn-tabular-primary.__active .icon svg {
+.btn-tabular-primary.__active .icon svg, .btn-tabular-primary:hover .icon svg {
   fill: #fff; }
 
-.btn-tabular-secondary {
-  border: 1px solid #c7c7c7; }
+.btn-tabular-secondary, .btn-tabular-secondary.disabled:hover, .btn-tabular-secondary:disabled:hover {
+  border: 1px solid #9b9fb5;
+  background-color: #fefefe; }
 
-.btn-tabular-secondary.__active {
+.btn-tabular-secondary.__active, .btn-tabular-secondary:hover {
   border: none;
-  background-color: #c7c7c7; }
+  background-color: #9b9fb5; }
 
-.btn-tabular-danger {
-  border: 1px solid #e21d1d; }
+.btn-tabular-danger, .btn-tabular-danger.disabled:hover, .btn-tabular-danger:disabled:hover {
+  border: 1px solid #b51717;
+  background-color: #fefefe; }
 
-.btn-tabular-danger.__active {
+.btn-tabular-danger.__active, .btn-tabular-danger:hover {
   border: none;
-  background-color: #e21d1d; }
+  background-color: #b51717; }
 
 .btn-sm {
   padding: 8px;
@@ -3480,17 +3491,29 @@ button {
   width: 16px;
   height: 16px; }
 
-.btn.__active .icon__modify_rec {
+.btn.__active .icon__modify_rec, .btn:hover .icon__modify_rec {
   background-image: url(assets/icon-edit-active.svg); }
 
-.btn.__active .icon__acknowledge {
+.btn.__active .icon__acknowledge, .btn:hover .icon__acknowledge {
   background-image: url(assets/icon-check-active.svg); }
 
-.btn.__active .icon__ignore {
+.btn.__active .icon__ignore, .btn:hover .icon__ignore {
   background-image: url(assets/icon-ignore-active.svg); }
 
-.btn.__active .icon__bin_sm {
+.btn.__active .icon__bin_sm, .btn:hover .icon__bin_sm {
   background-image: url(assets/icon-bin-sm-active.svg); }
+
+.btn.disabled:hover .icon__modify_rec, .btn:disabled:hover .icon__modify_rec {
+  background-image: url(assets/icon-edit.svg); }
+
+.btn.disabled:hover .icon__acknowledge, .btn:disabled:hover .icon__acknowledge {
+  background-image: url(assets/icon-check.svg); }
+
+.btn.disabled:hover .icon__ignore, .btn:disabled:hover .icon__ignore {
+  background-image: url(assets/icon-ignore.svg); }
+
+.btn.disabled:hover .icon__bin_sm, .btn:disabled:hover .icon__bin_sm {
+  background-image: url(assets/icon-bin-sm.svg); }
 
 .sidebar-nav {
   padding: 0;
