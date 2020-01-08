@@ -57,17 +57,35 @@
 
 }
 //Context:
-.btn.__active {
-  .icon__modify_rec {
-    background-image: image-url('icon-edit-active.svg');
+.btn {
+  &.__active,
+  &:hover {
+    .icon__modify_rec {
+      background-image: image-url('icon-edit-active.svg');
+    }
+    .icon__acknowledge {
+      background-image: image-url('icon-check-active.svg');
+    }
+    .icon__ignore {
+      background-image: image-url('icon-ignore-active.svg');
+    }
+    .icon__bin_sm {
+      background-image: image-url('icon-bin-sm-active.svg');
+    }
   }
-  .icon__acknowledge {
-    background-image: image-url('icon-check-active.svg');
-  }
-  .icon__ignore {
-    background-image: image-url('icon-ignore-active.svg');
-  }
-  .icon__bin_sm {
-    background-image: image-url('icon-bin-sm-active.svg');
+  &.disabled:hover,
+  &:disabled:hover {
+    .icon__modify_rec {
+      background-image: image-url('icon-edit.svg');
+    }
+    .icon__acknowledge {
+      background-image: image-url('icon-check.svg');
+    }
+    .icon__ignore {
+      background-image: image-url('icon-ignore.svg');
+    }
+    .icon__bin_sm {
+      background-image: image-url('icon-bin-sm.svg');
+    }
   }
 }

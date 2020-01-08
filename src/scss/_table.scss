@@ -85,12 +85,16 @@
 }
 .table-row__actions {
   display: flex;
+  justify-content: flex-end;
   .btn {
     margin-left: 8px;
     &:first-child{
       margin-left: 0;
     }
   }
+}
+.table-cell-hd .table-row__actions {
+  text-align: right;
 }
 .table-row__actions_expanded {
   text-align: right;

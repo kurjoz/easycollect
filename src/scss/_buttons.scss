@@ -41,6 +41,8 @@ button {
     opacity: .7;
     outline: 0;
     box-shadow: none;
+    cursor: not-allowed;
+    //pointer-events: none;
     //opacity: $btn-disabled-opacity;
     //@include box-shadow(none);
   }
@@ -190,12 +192,30 @@ button {
   line-height: 0;
 }
 //Tables:
+.btn-tabular-solid {
+  border: 1px solid $grey-dark;
+  background-color: #fefefe;
+  &.disabled:hover,
+  &:disabled:hover {
+    border: 1px solid $grey-dark;
+    background-color: #fefefe;
+  }
+  &.__active,
+  &:hover {
+    border: none;
+    background-color: $grey-dark;
+  }
+}
 .btn-tabular-primary {
   border: 1px solid $primary;
-  .icon svg {
-    fill: $primary;
+  background-color: #fefefe;
+  &.disabled:hover,
+  &:disabled:hover {
+    border: 1px solid $primary;
+    background-color: #fefefe;
   }
-  &.__active {
+  &.__active,
+  &:hover {
     border: none;
     background-color: $primary;
     .icon svg {
@@ -205,21 +225,37 @@ button {
 }
 
 .btn-tabular-secondary {
-  border: 1px solid $grey-dimmed;
+  border: 1px solid $grey-darken;
+  background-color: #fefefe;
 
-  &.__active {
+  &.disabled:hover,
+  &:disabled:hover {
+    border: 1px solid $grey-darken;
+    background-color: #fefefe;
+  }
+  &.__active,
+  &:hover {
     border: none;
-    background-color: $grey-dimmed;
+    background-color: $grey-darken;
   }
 }
 .btn-tabular-danger {
-  border: 1px solid $red;
+  border: 1px solid $red-darken;
+  background-color: #fefefe;
 
-  &.__active {
+  &.disabled:hover,
+  &:disabled:hover {
+    border: 1px solid $red-darken;
+    background-color: #fefefe;
+  }
+
+  &.__active,
+  &:hover {
     border: none;
-    background-color: $red;
+    background-color: $red-darken;
   }
 }
+
 // Button Sizes:
 .btn-sm {
   padding: 8px;
