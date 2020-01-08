@@ -14,6 +14,7 @@ node_modules
 
 # Project folders:
 #dist/
+.publish/
 
 # Project files:
 src/.DS_Store
