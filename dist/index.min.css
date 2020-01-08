@@ -2878,15 +2878,15 @@ a:focus, a:hover {
 .form-tabular .control-info, .form-tabular .feedback-message, .form-tabular .input-grp__lbl {
   font-size: 12px; }
 
-.table tbody > tr > td, .table tbody > tr > th, table tbody > tr > td, table tbody > tr > th {
+.table tbody > tr > td, .table thead > tr > th, table tbody > tr > td, table thead > tr > th {
   margin: 0;
   padding: 16px 8px;
   border-color: #f1f1f3; }
 
-.table tbody > tr > td:first-child, .table tbody > tr > th:first-child, table tbody > tr > td:first-child, table tbody > tr > th:first-child {
+.table tbody > tr > td:first-child, .table thead > tr > th:first-child, table tbody > tr > td:first-child, table thead > tr > th:first-child {
   padding-left: 16px; }
 
-.table tbody > tr > td:last-child, .table tbody > tr > th:last-child, table tbody > tr > td:last-child, table tbody > tr > th:last-child {
+.table tbody > tr > td:last-child, .table thead > tr > th:last-child, table tbody > tr > td:last-child, table thead > tr > th:last-child {
   padding-right: 16px; }
 
 .table tbody > .tr-details > td, .table tbody > .tr-details > td:first-child, .table tbody > .tr-details > td:last-child, table tbody > .tr-details > td, table tbody > .tr-details > td:first-child, table tbody > .tr-details > td:last-child {
