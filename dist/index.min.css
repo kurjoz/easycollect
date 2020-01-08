@@ -2976,7 +2976,10 @@ a:focus, a:hover {
   width: 18px; }
 
 .table-cell-hd.__context_type_buttons_x3, .table-cell.__context_type_buttons_x3 {
-  max-width: 96px; }
+  width: 96px; }
+
+.table-cell-hd.__context_type_buttons_x4, .table-cell.__context_type_buttons_x4 {
+  width: 144px; }
 
 .table-widget__hd {
   display: -webkit-box;
