@@ -2898,7 +2898,8 @@ a:focus, a:hover {
 
 .table-cell-hd__sortable:hover {
   text-decoration: underline;
-  color: #000; }
+  color: #000;
+  cursor: pointer; }
 
 .table-cell-hd__sortable.__sort_asc:before {
   margin-top: -6px; }
