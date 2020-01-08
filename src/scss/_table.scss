@@ -24,6 +24,7 @@
   &:hover {
     text-decoration: underline;
     color: $black;
+    cursor: pointer;
   }
   &.__sort_asc:before{
     content: '';
