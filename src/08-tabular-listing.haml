@@ -9,7 +9,7 @@
           .content
             .row
               .col-md-12
-                .box-panel
+                .box-panel#records-listing
                   .table-widget__hd
                     %h1.table-widget__txt Transactions Listing
                     .table-widget__actions
@@ -56,3 +56,10 @@
                   @@include('./components/paginator/_paginator.html')
     @@include('./components/footer/_footer.html')
     @@include('./components/scripts/_scripts.html')
+    %script{src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"}
+    %script
+
+    %script
+      var app = new Vue({
+        el: '#records-listing'
+          })
