@@ -112,6 +112,17 @@
     position: relative;
     top: 2px;
   }
+  .tr-separator__attrs {
+    float: right;
+    position: relative;
+    font-size: 13px;
+    top: 4px;
+
+    .tr-separator__attrs_records {
+      font-weight: normal;
+      margin-right: 8px;
+    }
+  }
 }
 //Modifications:
   //1. Sizes
