@@ -2974,6 +2974,16 @@ a:focus, a:hover {
   position: relative;
   top: 2px; }
 
+.tr-separator .tr-separator__attrs {
+  float: right;
+  position: relative;
+  font-size: 13px;
+  top: 4px; }
+
+.tr-separator .tr-separator__attrs .tr-separator__attrs_records {
+  font-weight: 400;
+  margin-right: 8px; }
+
 .table-cell-hd.__context_type_checkbox_x1, .table-cell.__context_type_checkbox_x1 {
   width: 18px; }
 
