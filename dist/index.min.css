@@ -3017,7 +3017,27 @@ a:focus, a:hover {
 .table-widget__hd .table-widget__actions .input-control.__table_filter {
   padding: 4px 8px;
   font-size: 14px;
-  height: 32px; }
+  height: 32px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: none; }
+
+.table-widget__hd .table-widget__actions .input-control.__table_filter:focus + .btn {
+  border-color: #35ba59; }
+
+.table-widget__hd .table-widget__actions .input-control.__table_filter + .btn {
+  height: 32px;
+  background-color: #f3f4f7;
+  padding: 4px 8px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 1px solid #a5a6ad;
+  border-left: none; }
+
+.table-widget__hd .table-widget__actions .input-control.__table_filter + .btn .icon {
+  width: 18px;
+  height: 18px;
+  background-size: 100%; }
 
 .error-label {
   font-weight: 500;
@@ -3495,6 +3515,9 @@ button {
 
 .icon.icon__arrow_r {
   background-image: url(assets/icon-arrow-r.svg); }
+
+.icon.icon__search {
+  background-image: url(assets/icon-search.svg); }
 
 .icon.__icon_xs {
   display: inline-block;

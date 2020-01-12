@@ -158,6 +158,29 @@
       padding: 4px 8px;
       font-size: 14px;
       height: 32px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      border-right: none;
+
+      &:focus + .btn {
+        border-color: $green;
+      }
+
+      +.btn {
+        height: 32px;
+        border: 1px solid $grey-basic;
+        background-color: $grey-lighten;
+        padding: 4px 8px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-left: none;
+
+        .icon {
+          width: 18px;
+          height: 18px;
+          background-size: 100%;
+        }
+      }
     }
   }
 }
