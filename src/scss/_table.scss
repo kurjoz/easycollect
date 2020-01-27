@@ -15,8 +15,8 @@
   tbody > .tr-details > td,
   tbody > .tr-details > td:first-child,
   tbody > .tr-details > td:last-child {
-     padding: 0 0 16px 0;
-   }
+    padding: 0 0 16px 0;
+  }
 }
 .table-cell-hd__sortable {
   color: $black;
@@ -26,7 +26,7 @@
     color: $black;
     cursor: pointer;
   }
-  &.__sort_asc:before{
+  &.__sort_asc:before {
     content: '';
     width: 10px;
     height: 10px;
@@ -63,6 +63,7 @@
     vertical-align: middle;
     font-weight: 500;
     color: $black;
+    height: 58px;
   }
   .table-cell {
     vertical-align: middle;
@@ -77,11 +78,11 @@
   }
 }
 .tr-expanded {
-    > td {
-      position: relative;
-      z-index: 3;
-      background-color: $grey-borders;
-    }
+  > td {
+    position: relative;
+    z-index: 3;
+    background-color: $grey-borders;
+  }
 }
 .table-row__actions {
   display: flex;
@@ -98,6 +99,11 @@
 }
 .table-row__actions_expanded {
   text-align: right;
+  position: absolute;
+  right: 0;
+  top: auto;
+  margin-top: -16px;
+  padding-right: 16px;
   .btn {
     margin-left: 6px;
     min-width: 80px;
@@ -107,6 +113,9 @@
   background-color: $grey-borders;
   color: $grey-basic;
   font-weight: 500;
+  > td {
+    border-bottom: 1px solid $grey-dimmed !important;
+  }
   .tr-separator__lbl {
     margin-left: 8px;
     position: relative;
@@ -125,12 +134,12 @@
   }
 }
 //Modifications:
-  //1. Sizes
+//1. Sizes
 .table-cell-hd,
 .table-cell {
   &.__context_type_checkbox_x1 {
     width: 18px;
-      .checkbox {}
+    .checkbox {}
   }
   &.__context_type_buttons_x3 {
     width: 96px;

@@ -160,21 +160,23 @@
   position: relative;
   &::before {
     padding-top: 66px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     content: '';
     width: 100%;
     height: 100%;
-    left: -1px;
-    top: -66px;
+    left: 0;
+    top: 0;
     position: absolute;
     border: 1px solid $grey-borders;
     background-color: $white;
     @include box-shadow;
   }
-  .input-control {
+  .input-control,
+  .select-control {
     padding: 8px 12px;
     font-size: 14px;
     background-color: $white;
+    height: 38px;
   }
   .input-grp__lbl {
     font-size: 12px;
