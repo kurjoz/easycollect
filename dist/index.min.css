@@ -2514,7 +2514,7 @@ body {
 .container-fluid.__size_full_width {
   padding-right: 40px;
   padding-left: 40px;
-  max-width: none; }
+  max-width: 1580px; }
 
 .container {
   max-width: 1170px; }
