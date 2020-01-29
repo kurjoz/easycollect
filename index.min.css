@@ -2514,7 +2514,7 @@ body {
 .container-fluid.__size_full_width {
   padding-right: 40px;
   padding-left: 40px;
-  max-width: none; }
+  max-width: 1580px; }
 
 .container {
   max-width: 1170px; }
@@ -3657,7 +3657,7 @@ button {
   -ms-user-select: none;
   user-select: none;
   width: 308px;
-  z-index: 1;
+  z-index: 5;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   border-radius: 4px; }
 
@@ -3948,7 +3948,8 @@ button {
   padding: 4px;
   display: inline-block;
   color: #4a4a4b;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 .paginator .paginator__item:hover {
   text-decoration: underline; }
@@ -3956,7 +3957,8 @@ button {
 .paginator .paginator__item.__active {
   font-weight: 500;
   color: #35ba59;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: default; }
 
 .paginator .paginator__item.__next .icon, .paginator .paginator__item.__prev .icon {
   top: -2px;
