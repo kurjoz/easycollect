@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;display=swap" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="index.min.css" />
+</head>
+
+</html>
+
+<body>
+  <div class="header">
+    <div class="container-fluid __size_full_width">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="logo">
+            <a href="index.html" class="logo-link">
+              <img src="assets/logo.svg" />
+            </a>
+          </div>
+          <div class="login-panel">
+            <button class="btn btn-primary">Logout</button>
+          </div>
+          <div class="header__nav">
+            <a href="#" class="header__nav-itm">
+              <i class="icon icon__cog"></i>
+            </a>
+            <a href="#" class="header__nav-itm __has-alert">
+              <i class="header__nav-alert">1</i>
+              <i class="icon icon__alert"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid __size_full_width">
+    <div class="sidebar-content-wrapper">
+      <div class="sidebar-left">
+        <ul class="sidebar-nav">
+          <li class="sidebar-nav__item __active">
+            <a href="index.html" class="sidebar-nav__link">0. Styleguide</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="01-registration.html" class="sidebar-nav__link">01. Registration</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="02-login.html" class="sidebar-nav__link">02. Login</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="03-password-recovery-email.html" class="sidebar-nav__link">03. Forgot Password</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="04-password-recovery.html" class="sidebar-nav__link">04. Reset Password</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="05-start.html" class="sidebar-nav__link">05. Blank Page</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="06-upload-1.html" class="sidebar-nav__link">06. Upload Page</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="07-error-states.html" class="sidebar-nav__link">07. Form Errors</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="08-tabular-listing.html" class="sidebar-nav__link">08. Tabular Listing</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="09-tabular-processing.html" class="sidebar-nav__link">09. Transactions Processing</a>
+          </li>
+          <li class="sidebar-nav__item">
+            <a href="#" class="sidebar-nav__link">Transaktionen hinzufüge.</a>
+          </li>
+        </ul>
+      </div>
+      <div class="content-wrapper">
+        <div class="content">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box-panel" id="records-listing">
+                <div class="table-widget__hd">
+                  <h1 class="table-widget__txt">Transactions Listing</h1>
+                  <div class="table-widget__actions">
+                    <select class="select-control __table_dd">
+                      <option>Status: All</option>
+                      <option>Status: Success</option>
+                      <option>Status: Error</option>
+                      <option>Status: Ignore</option>
+                    </select>
+                    <input type="text" placeholder="Filter..." class="input-control __table_filter" />
+                    <button class="btn btn-sm btn-outline">
+                      <i class="icon icon__search"></i>
+                    </button>
+                  </div>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr class="table-row">
+                      <th class="table-cell-hd __context_type_checkbox_x1"></th>
+                      <th class="table-cell-hd">
+                        <span class="table-cell-hd__sortable __sort_asc">ID</span>
+                      </th>
+                      <th class="table-cell-hd">
+                        <span class="table-cell-hd__sortable __sort_desc">Status</span>
+                      </th>
+                      <th class="table-cell-hd">
+                        <span class="table-cell-hd__sortable __sort_none">Name</span>
+                      </th>
+                      <th class="table-cell-hd">
+                        <span class="table-cell-hd__sortable __sort_none">Date</span>
+                      </th>
+                      <th class="table-cell-hd">
+                        <span class="table-cell-hd__sortable __sort_none">Cost</span>
+                      </th>
+                      <th class="table-cell-hd">
+                        <span class="table-cell-hd__sortable __sort_none">Details</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="tr">
+                      <td class="table-cell">
+                        <button class="btn btn-toggle btn-ico btn-xs btn-toggle_expand"></button>
+                      </td>
+                      <td class="table-cell">#001</td>
+                      <td class="table-cell">
+                        <span class="alert-label __context_state_success">Success</span>
+                      </td>
+                      <td class="table-cell">Swift Transaction</td>
+                      <td class="table-cell">15/11/2019</td>
+                      <td class="table-cell">$1250</td>
+                      <td class="table-cell">Private substantially Fitch bull</td>
+                    </tr>
+                    <template functional="functional">
+                      <tr class="tr-expanded">
+                        <td class="table-cell">
+                          <button class="btn btn-toggle btn-ico btn-xs btn-toggle_collapse"></button>
+                        </td>
+                        <td class="table-cell">#001</td>
+                        <td class="table-cell">
+                          <span class="alert-label __context_state_success">Success 1</span>
+                        </td>
+                        <td class="table-cell">Swift Transaction</td>
+                        <td class="table-cell">15/11/2019</td>
+                        <td class="table-cell">$1250</td>
+                        <td class="table-cell">
+                          <div class="table-row__actions_expanded">
+                            <button class="btn btn-sm btn-secondary">Cancel</button>
+                            <button class="btn btn-sm btn-primary">Save</button>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="tr-details">
+                        <td colspan="8">
+                          <div class="item-form">
+                            <div class="form-tabular">
+                              <div class="row">
+                                <div class="col-md-12">
+                                  <h4>Transaction status</h4>
+                                  <div class="transaction-progress">
+                                    <div class="transaction-progress__step transaction-progress__step_completed">
+                                      <div class="transaction-progress__item">
+                                        <div class="transaction-progress__item-date">15.11.2019</div>
+                                        <div class="transaction-progress__item-name">Validation</div>
+                                      </div>
+                                      <div class="transaction-progress__gap"></div>
+                                    </div>
+                                    <div class="transaction-progress__step transaction-progress__step_completed">
+                                      <div class="transaction-progress__item">
+                                        <div class="transaction-progress__item-date">15.11.2019</div>
+                                        <div class="transaction-progress__item-name">Validation</div>
+                                      </div>
+                                      <div class="transaction-progress__gap"></div>
+                                    </div>
+                                    <div class="transaction-progress__step transaction-progress__step_completed">
+                                      <div class="transaction-progress__item">
+                                        <div class="transaction-progress__item-date">15.11.2019</div>
+                                        <div class="transaction-progress__item-name">Validation</div>
+                                      </div>
+                                      <div class="transaction-progress__gap"></div>
+                                    </div>
+                                    <div class="transaction-progress__step transaction-progress__step_active">
+                                      <div class="transaction-progress__item">
+                                        <div class="transaction-progress__item-date">In Progress</div>
+                                        <div class="transaction-progress__item-name">Validation</div>
+                                      </div>
+                                      <div class="transaction-progress__gap"></div>
+                                    </div>
+                                    <div class="transaction-progress__step">
+                                      <div class="transaction-progress__item">
+                                        <div class="transaction-progress__item-date">Next</div>
+                                        <div class="transaction-progress__item-name">Validation</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <h4>Client details</h4>
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Email-Adresse</div>
+                                        <div class="text-grp__value">dpaladino1a@ehow.com</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Firmenname</div>
+                                        <div class="text-grp__value">Yahoo</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Telefonnummer</div>
+                                        <div class="text-grp__value">8003996940</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Vorname</div>
+                                        <div class="text-grp__value">Desi</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Nachname</div>
+                                        <div class="text-grp__value">Paladino</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Postleitzahl</div>
+                                        <div class="text-grp__value">79000</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Straße</div>
+                                        <div class="text-grp__value">Carpenter</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Hausnummer</div>
+                                        <div class="text-grp__value">20</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Land</div>
+                                        <div class="text-grp__value">United States</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Stadt</div>
+                                        <div class="text-grp__value">Jatiraya</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <h4>Transaction details</h4>
+                                  <div class="row">
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">UnbezahlterBetrag</div>
+                                        <div class="text-grp__value">70</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-3">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Produktpreis</div>
+                                        <div class="text-grp__value">250</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-2">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Währung</div>
+                                        <div class="text-grp__value">USD</div>
+                                      </div>
+                                    </div>
+                                    <div class="col-4">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Produktname</div>
+                                        <div class="text-grp__value">Product 1, Product 2, Product 3</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-6">
+                                      <div class="row">
+                                        <div class="col-12">
+                                          <div class="text-grp">
+                                            <div class="text-grp__lbl">Wiederkehrende Zahlung</div>
+                                            <div class="text-grp__value">Ja</div>
+                                          </div>
+                                        </div>
+                                        <div class="col-6">
+                                          <div class="text-grp">
+                                            <div class="text-grp__lbl">Bestelldatum</div>
+                                            <div class="text-grp__value">22.10.2019</div>
+                                          </div>
+                                        </div>
+                                        <div class="col-6">
+                                          <div class="text-grp">
+                                            <div class="text-grp__lbl">Fälligkeitsdatum</div>
+                                            <div class="text-grp__value">22.10.2019</div>
+                                          </div>
+                                        </div>
+                                        <div class="col-12">
+                                          <div class="text-grp">
+                                            <div class="text-grp__lbl">Kosten durch Rücklastschriften</div>
+                                            <div class="text-grp__value">45</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-6">
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Produktlink</div>
+                                        <div class="text-grp__value">
+                                          <a href="#">https://www.apple.com/shop/buy-iphone/iphone-11</a>
+                                        </div>
+                                      </div>
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Produktlink</div>
+                                        <div class="text-grp__value">
+                                          <a href="#">https://www.apple.com/shop/buy-iphone/iphone-11</a>
+                                        </div>
+                                      </div>
+                                      <div class="text-grp">
+                                        <div class="text-grp__lbl">Produktlink</div>
+                                        <div class="text-grp__value">
+                                          <a href="#">https://www.apple.com/shop/buy-iphone/iphone-11</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="processing-term">
+                                    <div class="processing-term_action">
+                                      <button class="btn btn-link btn-link_danger">Stop processing</button>
+                                    </div>
+                                    <div class="processing-term_desc"> Transaction status will be switched to ‘Ignored’</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </template>
+                    <tr class="tr">
+                      <td class="table-cell">
+                        <button class="btn btn-toggle btn-ico btn-xs btn-toggle_expand"></button>
+                      </td>
+                      <td class="table-cell">#001</td>
+                      <td class="table-cell">
+                        <span class="alert-label __context_state_success">Success</span>
+                      </td>
+                      <td class="table-cell">Swift Transaction</td>
+                      <td class="table-cell">15/11/2019</td>
+                      <td class="table-cell">$1250</td>
+                      <td class="table-cell">Private substantially Fitch bull</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="paginator">
+                  <a href="#" class="paginator__item __prev">
+                    <i class="icon __icon_xs icon__arrow_l"></i>
+                  </a>
+                  <a href="#" class="paginator__item">1</a>
+                  <a href="#" class="paginator__item">2</a>
+                  <a href="#" class="paginator__item">3</a>
+                  <a href="#" class="paginator__item">4</a>
+                  <a href="#" class="paginator__item __active">5</a>
+                  <a href="#" class="paginator__item">6</a>
+                  <a href="#" class="paginator__item">7</a>
+                  <a href="#" class="paginator__item">8</a>
+                  <a href="#" class="paginator__item __next">
+                    <i class="icon __icon_xs icon__arrow_r"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <ul class="footer-nav">
+            <li class="footer-nav__itm">
+              <a href="#" class="footer-nav__itm-link">About</a>
+            </li>
+            <li class="footer-nav__itm">
+              <a href="#" class="footer-nav__itm-link">Contacts</a>
+            </li>
+            <li class="footer-nav__itm">
+              <a href="#" class="footer-nav__itm-link">FAQ</a>
+            </li>
+          </ul>
+          <div class="copyright">Copyright © 2019 All Rights Reserved</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script></script>
+  <script>var app = new Vue({  el: '#records-listing'    })</script>
+</body>
