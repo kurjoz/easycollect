@@ -2614,6 +2614,28 @@ a:focus, a:hover {
 .__content-spaced {
   margin-bottom: 38px; }
 
+.text-grp {
+  margin-bottom: 16px;
+  color: #4a4a4b; }
+
+.text-grp .text-grp__lbl {
+  margin-bottom: 2px;
+  color: #a5a6ad;
+  font-size: 12px;
+  line-height: 16px; }
+
+.text-grp .text-grp__value {
+  font-size: 14px;
+  line-height: 1.25; }
+
+.text-grp .text-grp__value, .text-grp .text-grp__value > a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.text-grp .text-grp__value > a {
+  display: block; }
+
 .sitemap {
   margin: 0 0 20px;
   padding: 0;
@@ -3052,6 +3074,17 @@ a:focus, a:hover {
   height: 18px;
   background-size: 100%; }
 
+.processing-term {
+  border-top: 1px solid #f1f1f3;
+  padding: 16px 0 0; }
+
+.processing-term .processing-term_action {
+  margin-bottom: 6px; }
+
+.processing-term .processing-term_desc {
+  color: #a5a6ad;
+  font-weight: 500; }
+
 .error-label {
   font-weight: 500;
   color: #e21d1d; }
@@ -3194,6 +3227,27 @@ button {
   padding-right: 8px;
   padding-left: 8px;
   line-height: 0; }
+
+.btn-toggle {
+  background-image: url(assets/icon-chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-color: transparent; }
+
+.btn-toggle.btn-toggle_collapse {
+  background-image: url(assets/icon-chevron-up.svg); }
+
+.btn-toggle.btn-toggle_expand {
+  background-image: url(assets/icon-chevron-down.svg); }
+
+.btn-link {
+  padding: 0;
+  font-weight: 400;
+  color: #35ba59;
+  text-decoration: underline; }
+
+.btn-link.btn-link_danger {
+  color: #e21d1d; }
 
 .btn-tabular-solid, .btn-tabular-solid.disabled:hover, .btn-tabular-solid:disabled:hover {
   border: 1px solid #4a4a4b;
@@ -3887,7 +3941,8 @@ button {
 
 .paginator {
   text-align: center;
-  display: block; }
+  display: block;
+  font-size: 14px; }
 
 .paginator .paginator__item {
   padding: 4px;
@@ -3906,6 +3961,78 @@ button {
 .paginator .paginator__item.__next .icon, .paginator .paginator__item.__prev .icon {
   top: -2px;
   position: relative; }
+
+.transaction-progress {
+  margin: 0 0 16px;
+  padding: 0 0 16px;
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #f1f1f3; }
+
+.transaction-progress .transaction-progress__step {
+  padding-left: 38px;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: flex;
+  position: relative; }
+
+.transaction-progress .transaction-progress__step:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background-color: #c7c7c7; }
+
+.transaction-progress .transaction-progress__step .transaction-progress__item {
+  color: #c7c7c7; }
+
+.transaction-progress .transaction-progress__step .transaction-progress__item .transaction-progress__item-date {
+  font-size: 11px;
+  text-transform: uppercase; }
+
+.transaction-progress .transaction-progress__step .transaction-progress__item .transaction-progress__item-name {
+  font-size: 14px;
+  font-weight: 500; }
+
+.transaction-progress .transaction-progress__step .transaction-progress__gap {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  text-align: center;
+  background-image: url(assets/icon-progress-divider-dimmed.svg);
+  background-position: 50%;
+  background-repeat: no-repeat; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_active:before, .transaction-progress .transaction-progress__step.transaction-progress__step_completed:before {
+  background-color: #35ba59; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_active .transaction-progress__item .transaction-progress__item-date, .transaction-progress .transaction-progress__step.transaction-progress__step_completed .transaction-progress__item .transaction-progress__item-date {
+  color: #4a4a4b; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_active .transaction-progress__item .transaction-progress__item-name, .transaction-progress .transaction-progress__step.transaction-progress__step_completed .transaction-progress__item .transaction-progress__item-name {
+  color: #35ba59; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_active .transaction-progress__gap, .transaction-progress .transaction-progress__step.transaction-progress__step_completed .transaction-progress__gap {
+  color: red; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_completed:before {
+  background-color: #35ba59; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_completed:after {
+  background-image: url(assets/icon-check-active.svg);
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: 7px; }
+
+.transaction-progress .transaction-progress__step.transaction-progress__step_completed .transaction-progress__gap {
+  background-image: url(assets/icon-progress-divider.svg); }
 
 .header {
   margin: 0 0 24px;

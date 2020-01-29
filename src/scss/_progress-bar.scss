@@ -1,0 +1,68 @@
+.transaction-progress {
+  margin: 0 0 16px;
+  padding: 0 0 16px;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid $grey-borders;
+  .transaction-progress__step {
+    padding-left: 38px;
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    background-color: $grey-dimmed;
+  }
+    .transaction-progress__item {
+      color: $grey-dimmed;
+      .transaction-progress__item-date {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+      .transaction-progress__item-name {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+    .transaction-progress__gap {
+      flex-grow: 1;
+      text-align: center;
+      background-image: image-url('icon-progress-divider-dimmed.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &.transaction-progress__step_active,
+    &.transaction-progress__step_completed {
+        &::before { background-color: $primary}
+        .transaction-progress__item {
+          .transaction-progress__item-date { color: $grey;}
+          .transaction-progress__item-name { color: $primary;}
+        }
+        .transaction-progress__gap { color: #ff0000;}
+
+    }
+    &.transaction-progress__step_completed {
+      &::before { background-color: $primary}
+      &::after {
+        background-image: image-url('icon-check-active.svg');
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 8px;
+        left: 7px;
+      }
+      .transaction-progress__gap {
+        background-image: image-url('icon-progress-divider.svg');
+      }
+    }
+  }
+}

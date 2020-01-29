@@ -1,0 +1,41 @@
+@@include('./components/head/_head.html')
+  %body
+    @@include('./components/header/_header__auth_wide.html')
+    .container-fluid.__size_full_width
+      .sidebar-content-wrapper
+        .sidebar-left
+          @@include('./components/sidebar-nav/_sidebar-nav.html')
+        .content-wrapper
+          .content
+            .row
+              .col-md-12
+                .box-panel#records-listing
+                  .table-widget__hd
+                    %h1.table-widget__txt Transactions Listing
+                    .table-widget__actions
+                      %select.select-control.__table_dd{}
+                        %option Status: All
+                        %option Status: Success
+                        %option Status: Error
+                        %option Status: Ignore
+                      %input.input-control.__table_filter{type: "text", placeholder: "Filter..."}
+                      %button.btn.btn-sm.btn-outline
+                        %i.icon.icon__search
+
+                  %table.table
+                    %thead
+                      @@include('./components/data-table_processing/_data-table_row_hd.html')
+                    %tbody
+                      @@include('./components/data-table_processing/_data-table_row.html')
+                      @@include('./components/data-table_processing/_data-table_row_processing.html')
+                      @@include('./components/data-table_processing/_data-table_row.html')
+                  @@include('./components/paginator/_paginator.html')
+    @@include('./components/footer/_footer.html')
+    @@include('./components/scripts/_scripts.html')
+    %script{src: "https://cdn.jsdelivr.net/npm/vue/dist/vue.js"}
+    %script
+
+    %script
+      var app = new Vue({
+        el: '#records-listing'
+          })

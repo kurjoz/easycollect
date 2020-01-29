@@ -1,0 +1,169 @@
+%template{functional: true}
+  %tr.tr-expanded
+    %td.table-cell
+      %button.btn.btn-toggle.btn-ico.btn-xs.btn-toggle_collapse
+    %td.table-cell
+      \#001
+    %td.table-cell
+      %span.alert-label.__context_state_success Success 1
+    %td.table-cell
+      Swift Transaction
+    %td.table-cell
+      15/11/2019
+    %td.table-cell
+      $1250
+    %td.table-cell
+      .table-row__actions_expanded
+        %button.btn.btn-sm.btn-secondary Cancel
+        %button.btn.btn-sm.btn-primary Save
+  %tr.tr-details
+    %td{colspan: "8"}
+      .item-form
+        .form-tabular
+          .row
+            .col-md-12
+              %h4 Transaction status
+              @@include('./../progress-bars/_progress-bar.html')
+            .col-md-6
+              %h4 Client details
+              .row
+                .col-6
+                  .text-grp
+                    .text-grp__lbl
+                      Email-Adresse
+                    .text-grp__value
+                      dpaladino1a@ehow.com
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Firmenname
+                    .text-grp__value
+                      Yahoo
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Telefonnummer
+                    .text-grp__value
+                      8003996940
+              .row
+                .col-6
+                  .text-grp
+                    .text-grp__lbl
+                      Vorname
+                    .text-grp__value
+                      Desi
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Nachname
+                    .text-grp__value
+                      Paladino
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Postleitzahl
+                    .text-grp__value
+                      79000
+              .row
+                .col-6
+                  .text-grp
+                    .text-grp__lbl
+                      Straße
+                    .text-grp__value
+                      Carpenter
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Hausnummer
+                    .text-grp__value
+                      20
+              .row
+                .col-6
+                  .text-grp
+                    .text-grp__lbl
+                      Land
+                    .text-grp__value
+                      United States
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Stadt
+                    .text-grp__value
+                      Jatiraya
+            .col-md-6
+              %h4 Transaction details
+              .row
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      UnbezahlterBetrag
+                    .text-grp__value
+                      70
+                .col-3
+                  .text-grp
+                    .text-grp__lbl
+                      Produktpreis
+                    .text-grp__value
+                      250
+                .col-2
+                  .text-grp
+                    .text-grp__lbl
+                      Währung
+                    .text-grp__value
+                      USD
+                .col-4
+                  .text-grp
+                    .text-grp__lbl
+                      Produktname
+                    .text-grp__value
+                      Product 1, Product 2, Product 3
+              .row
+                .col-6
+                  .row
+                    .col-12
+                      .text-grp
+                        .text-grp__lbl
+                          Wiederkehrende Zahlung
+                        .text-grp__value
+                          Ja
+                    .col-6
+                      .text-grp
+                        .text-grp__lbl
+                          Bestelldatum
+                        .text-grp__value
+                          22.10.2019
+                    .col-6
+                      .text-grp
+                        .text-grp__lbl
+                          Fälligkeitsdatum
+                        .text-grp__value
+                          22.10.2019
+                    .col-12
+                      .text-grp
+                        .text-grp__lbl
+                          Kosten durch Rücklastschriften
+                        .text-grp__value
+                          45
+                .col-6
+                  .text-grp
+                    .text-grp__lbl
+                      Produktlink
+                    .text-grp__value
+                      %a{href: "#"} https://www.apple.com/shop/buy-iphone/iphone-11
+                  .text-grp
+                    .text-grp__lbl
+                      Produktlink
+                    .text-grp__value
+                      %a{href: "#"} https://www.apple.com/shop/buy-iphone/iphone-11
+                  .text-grp
+                    .text-grp__lbl
+                      Produktlink
+                    .text-grp__value
+                      %a{href: "#"} https://www.apple.com/shop/buy-iphone/iphone-11
+            .col-12
+              .processing-term
+                .processing-term_action
+                  %button.btn.btn-link.btn-link_danger
+                    Stop processing
+                .processing-term_desc
+                    Transaction status will be switched to ‘Ignored’

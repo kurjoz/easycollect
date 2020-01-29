@@ -82,5 +82,29 @@ a {
   margin-bottom: 38px;
 }
 
+.text-grp {
+  margin-bottom: 16px;
+    color: $grey;
+  .text-grp__lbl{
+    margin-bottom: 2px;
+    color: $grey-basic;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .text-grp__value{
+    font-size: 14px;
+    line-height: 1.25;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    > a {
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
 
 //Todo: Relative font sizes;

@@ -193,3 +193,12 @@
     }
   }
 }
+
+.processing-term {
+  border-top: 1px solid $grey-borders;
+  padding: 16px 0 0;
+  .processing-term_action {
+    margin-bottom: 6px;
+    .btn.btn-link.btn-link_danger {}}
+    .processing-term_desc {color: $grey-basic; font-weight: 500;}
+    }
