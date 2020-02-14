@@ -13,6 +13,7 @@
 @import "helpers";
 
 //components:
+@import "loader";
 @import "logo";
 @import "forms";
 @import "table";
@@ -29,5 +30,6 @@
 @import "file-upload.scss";
 @import "paginator.scss";
 @import "progress-bar.scss";
+@import "tooltip";
 @import "header.scss";
 @import "footer.scss";

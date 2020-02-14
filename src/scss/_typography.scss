@@ -106,5 +106,34 @@ a {
   }
 }
 
+._text_weight_bold {
+  font-weight: 500;  //Bold Text
+}
+._text_color_primary {
+  color: $primary;  //Primary Green
+}
+._text_color_primary-lighten {
+  color: $primary-lighten;  //Primary Lighter
+}
+._text_color_primary-darken {
+  color: $primary-darken;  //Primary Darker
+}
+._text_color_primary-dimmed {
+  color: $primary-dimmed;  //Primary Green Dimmed
+}
+._text_color_black {
+  color: $black; //Black
+}
+._text_color_grey {
+  color: $grey-basic; //Grey
+}
+._text_color_grey-lighten {
+  color: $grey-lighten; //Light Grey
+}
+._text_color_grey-darken {
+  color: $grey-darken;  //Dark Grey
+}
 
-//Todo: Relative font sizes;
+._text_color_grey-dimmed {
+  color: $grey-dimmed;  //Dimmed Grey
+}
